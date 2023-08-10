@@ -15,13 +15,13 @@ const Navbar = () => {
 
       <div className='flex flex-row justify-between gap-8 sm:gap-16 font-medium text-sm tracking-wider pt-4'>
         <Link href='./projects'>
-          <div className='hover:-translate-y-1 transition-all duration-300'>
+          <div className='hover:-translate-y-1 transition-all duration-300 active:translate-y-1'>
             Projects
           </div>
         </Link>
 
         <Link href='./contact'>
-          <div className='hover:-translate-y-1 transition-all duration-300'>
+          <div className='hover:-translate-y-1 transition-all duration-300 active:translate-y-1'>
             Contact
           </div>
         </Link>
