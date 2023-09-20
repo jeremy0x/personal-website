@@ -7,7 +7,7 @@ interface PreloaderProps {
   setIsLoading: Dispatch<SetStateAction<boolean>>;
 }
 
-const Preloader = ({ setIsLoading }: PreloaderProps) => {
+export const Preloader = ({ setIsLoading }: PreloaderProps) => {
   const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Preloader = ({ setIsLoading }: PreloaderProps) => {
     return () => {
       clearInterval(preloaderInterval);
     };
-  }, []);
+  }, [setIsLoading]);
 
   return (
     <motion.div
@@ -40,5 +40,3 @@ const Preloader = ({ setIsLoading }: PreloaderProps) => {
     </motion.div>
   );
 };
-
-export default Preloader;

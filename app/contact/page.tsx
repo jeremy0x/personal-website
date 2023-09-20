@@ -1,16 +1,12 @@
 'use client';
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Socials from '@/components/Socials';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeInOutAnimation } from '@/utils/framerAnimations';
+import { Blur, Contact, MetaTag, Navbar, Socials } from '@/components';
 
-export default function Contact() {
+export default function Page() {
   return (
     <>
-      <Head>
-        <title>Contact — Jeremy</title>
-      </Head>
+      <MetaTag title='Contact — Jeremy' />
 
       <AnimatePresence mode='wait'>
         <motion.main
@@ -18,9 +14,12 @@ export default function Contact() {
           {...fadeInOutAnimation}
         >
           <motion.div className='page-content' {...fadeInOutAnimation}>
+            <Blur />
             <Navbar />
-
-            <Socials />
+            <Contact />
+            <div className="hidden sm:block">
+              <Socials />
+            </div>
           </motion.div>
         </motion.main>
       </AnimatePresence>

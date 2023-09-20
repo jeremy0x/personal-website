@@ -1,16 +1,12 @@
 'use client';
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Socials from '@/components/Socials';
+import { MetaTag, Navbar, Socials } from '@/components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeInOutAnimation } from '@/utils/framerAnimations';
 
 export default function Projects() {
   return (
     <>
-      <Head>
-        <title>Projects — Jeremy</title>
-      </Head>
+      <MetaTag title='Projects — Jeremy' />
 
       <AnimatePresence mode='wait'>
         <motion.main

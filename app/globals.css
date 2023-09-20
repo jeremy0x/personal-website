@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
 
 .font-kaisei {
   font-family: 'Kaisei Decol', serif;
@@ -15,4 +16,31 @@ html {
 ::selection {
   background-color: #000;
   color: #ffffff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #212326 inset;
+  -webkit-text-fill-color: #ceced4;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.147);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.147);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.147);
 }
