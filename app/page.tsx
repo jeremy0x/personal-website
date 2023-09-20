@@ -1,10 +1,7 @@
 'use client';
 import { useState } from 'react';
-import Blur from '@/components/Blur';
-import Navbar from '@/components/Navbar';
-import Socials from '@/components/Socials';
-import Preloader from '@/components/Preloader';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Blur, MetaTag, Navbar, Preloader, Socials } from '@/components';
 import { fadeInAnimation, fadeInOutAnimation } from '@/utils/framerAnimations';
 
 export default function Home() {
@@ -12,6 +9,8 @@ export default function Home() {
 
   return (
     <>
+      <MetaTag title='Home — Jeremy' />
+
       <AnimatePresence mode='wait'>
         {isLoading ? (
           <Preloader setIsLoading={setIsLoading} />
@@ -29,19 +28,19 @@ export default function Home() {
                 <motion.p
                   {...fadeInAnimation}
                   transition={{ delay: 1, duration: 1 }}
-                  className='text-sm font-normal pl-16 sm:pl-36 tracking-widest'
+                  className='text-sm font-normal pl-16 sm:pl-36 tracking-widest text-neutral-400'
                 >
                   I am
                 </motion.p>
                 <motion.h1
-                  className='tracking-in-contract-bck font-black text-6xl sm:text-9xl'
+                  className='font-black tracking-wide text-6xl sm:text-9xl'
                   {...fadeInAnimation}
                   transition={{ delay: 1.5, duration: 1 }}
                 >
                   Jeremy
                 </motion.h1>
                 <motion.p
-                  className='text-sm font-light text-right tracking-widest'
+                  className='text-sm font-light text-right tracking-widest text-neutral-400'
                   {...fadeInAnimation}
                   transition={{ delay: 2.5, duration: 1.5 }}
                 >
