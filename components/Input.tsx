@@ -6,13 +6,20 @@ interface InputFieldProps {
   [x: string]: any;
 }
 
-export const InputField: React.FC<InputFieldProps> = ({ type, name, placeholder, textarea = false, id, ...rest }) => {
+export const InputField: React.FC<InputFieldProps> = ({
+  type,
+  name,
+  placeholder,
+  textarea = false,
+  id,
+  ...rest
+}) => {
   const uniqueId = `${name}-${Math.random()}`;
 
   if (textarea) {
     return (
       <div>
-        <label htmlFor={uniqueId} className='hidden'>
+        <label htmlFor={uniqueId} className="hidden">
           {placeholder}
         </label>
         <textarea
@@ -20,7 +27,7 @@ export const InputField: React.FC<InputFieldProps> = ({ type, name, placeholder,
           id={uniqueId}
           placeholder={placeholder}
           required
-          className='border-b border-neutral-700 bg-transparent py-4 text-sm w-full focus:outline-none focus:border-neutral-500 tracking-wider placeholder:text-neutral-400'
+          className="w-full border-b border-neutral-700 bg-transparent py-4 text-sm tracking-wider placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none"
           {...rest}
         />
       </div>
@@ -29,7 +36,7 @@ export const InputField: React.FC<InputFieldProps> = ({ type, name, placeholder,
 
   return (
     <div>
-      <label htmlFor={uniqueId} className='hidden'>
+      <label htmlFor={uniqueId} className="hidden">
         {placeholder}
       </label>
       <input
@@ -38,7 +45,7 @@ export const InputField: React.FC<InputFieldProps> = ({ type, name, placeholder,
         id={uniqueId}
         placeholder={placeholder}
         required
-        className='border-b border-neutral-700 bg-transparent py-4 text-sm w-full focus:outline-none focus:border-neutral-500 tracking-wider placeholder:text-neutral-400'
+        className="w-full border-b border-neutral-700 bg-transparent py-4 text-sm tracking-wider placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none"
         {...rest}
       />
     </div>
