@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <nav className='fixed inset-0 w-full z-10 h-fit bg-neutral-900 backdrop-blur-sm lg:backdrop-blur-0 lg:bg-transparent bg-opacity-20'>
       <motion.div {...slideInFromBottomAnimation}
-      transition={{ delay: 0.5, duration: 1 }} className="flex flex-row justify-between p-2 sm:p-6 container mx-auto uppercase">
+      transition={{ delay: 0.5, duration: 0.5 }} className="flex flex-row justify-between p-2 sm:p-6 container mx-auto uppercase">
         <Link href='/' className='font-kaisei text-7xl hover:animate-spin h-12'>
           *
         </Link>
