@@ -85,10 +85,11 @@ function ProjectCard({ project }: ProjectCardProps) {
           width={575}
           height={575}
           src={project.imageSrc}
+          className="rounded-xl grayscale-[0.7] filter transition-all hover:grayscale-0"
         />
       </Link>
 
-      <div className="absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 bg-black/60 py-4 text-center">
+      <div className="absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-black/60 py-4 text-center">
         <p className="text-sm font-medium sm:text-lg">{project.description}</p>
 
         <div className="flex gap-4 text-2xl">
@@ -120,7 +121,7 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" />,
       <BiLogoCss3 key="css" />,
     ],
-    imageSrc: "/sentfi.png",
+    imageSrc: "/sentfi.jpg",
   },
   {
     name: "BahamaFoodie",
@@ -131,7 +132,7 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" />,
       <BiLogoCss3 key="css" />,
     ],
-    imageSrc: "/hellobahamafoodie.png",
+    imageSrc: "/hellobahamafoodie.jpg",
   },
   {
     name: "foodieFetch",
@@ -143,7 +144,7 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" />,
       <BiLogoCss3 key="css" />,
     ],
-    imageSrc: "/foodie-fetch.png",
+    imageSrc: "/foodie-fetch.jpg",
   },
   {
     name: "LingoLookup",
@@ -155,7 +156,7 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" />,
       <BiLogoCss3 key="css" />,
     ],
-    imageSrc: "/lingo-lookup.png",
+    imageSrc: "/lingo-lookup.jpg",
   },
   {
     name: "Sesshin",
@@ -166,7 +167,7 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" />,
       <BiLogoCss3 key="css" />,
     ],
-    imageSrc: "/sesshin.png",
+    imageSrc: "/sesshin.jpg",
   },
   {
     name: "Interllo",
@@ -177,6 +178,6 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" />,
       <BiLogoCss3 key="css" />,
     ],
-    imageSrc: "/interllo.png",
+    imageSrc: "/interllo.jpg",
   },
 ];
