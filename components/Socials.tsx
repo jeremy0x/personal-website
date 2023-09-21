@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { slideInFromBottomAnimation } from "../utils/framerAnimations";
-import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const Socials = () => {
   return (
@@ -18,8 +19,8 @@ export const Socials = () => {
         <AiFillLinkedin className="transition-all duration-300 hover:scale-125" />
       </Link>
 
-      <Link href="https://twitter.com/jeremy0x_" target="blank">
-        <AiOutlineTwitter className="transition-all duration-300 hover:scale-125" />
+      <Link href="https://x.com/jeremy0x_" target="blank">
+        <FaXTwitter className="transition-all duration-300 hover:scale-125" />
       </Link>
     </motion.div>
   );
