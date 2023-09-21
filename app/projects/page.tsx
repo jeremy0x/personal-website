@@ -169,15 +169,4 @@ const projectsData: ProjectData[] = [
     ],
     imageSrc: "/sesshin.jpg",
   },
-  {
-    name: "Interllo",
-    link: "https://interllo.netlify.app",
-    description: "Official website for Interllo.",
-    logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
-    ],
-    imageSrc: "/interllo.jpg",
-  },
 ];
