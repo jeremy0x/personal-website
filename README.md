@@ -1,6 +1,6 @@
 <div align="center">
   <p align="center">
-  <img src="logo.png" alt="Altos AI Logo" width=100>
+  <img src="https://jeremy0x.tech/logo.png" alt="" width=100>
   </p>
 
   <h3 align="center">Jeremy's Portfolio Repository</h3>
