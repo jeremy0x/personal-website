@@ -10,7 +10,7 @@ export const Navbar = () => {
       <motion.div
         {...slideInFromBottomAnimation}
         transition={{ delay: 0.5, duration: 0.5 }}
-        className="container mx-auto flex flex-row justify-between p-2 uppercase sm:p-6"
+        className="mx-auto flex flex-row justify-between p-4 uppercase sm:container sm:p-6"
       >
         <Link href="/" className="font-kaisei h-12 text-7xl hover:animate-spin">
           *
@@ -19,15 +19,13 @@ export const Navbar = () => {
         <div className="flex flex-row items-center justify-between gap-8 text-sm font-medium tracking-wider text-neutral-400 sm:gap-16">
           <Link href="/projects">
             <div className="transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
-              <span className="hidden sm:block">Projects</span>
-              <PiBriefcaseFill className="text-2xl sm:hidden" />
+              <span className="text-xs sm:text-sm">Projects</span>
             </div>
           </Link>
 
           <Link href="/contact">
             <div className="transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
-              <span className="hidden sm:block">Contact</span>
-              <BiSolidMessageRoundedDetail className="text-2xl sm:hidden" />
+              <span className="text-xs sm:text-sm">Contact</span>
             </div>
           </Link>
         </div>
