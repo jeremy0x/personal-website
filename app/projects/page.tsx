@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeInOutAnimation } from "@/utils/framerAnimations";
-import { Blur, MetaTag, Navbar, Socials } from "@/components";
+import { Blur, Navbar, Socials } from "@/components";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -23,8 +23,6 @@ import {
 export default function Projects() {
   return (
     <>
-      <MetaTag title="Projects — Jeremy" />
-
       <AnimatePresence mode="wait">
         <motion.main
           className="mx-auto flex min-h-screen items-center justify-center bg-neutral-900 text-white"

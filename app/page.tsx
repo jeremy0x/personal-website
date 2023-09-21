@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Blur, MetaTag, Navbar, Preloader, Socials } from "@/components";
+import { Blur, Navbar, Preloader, Socials } from "@/components";
 import { fadeInAnimation, fadeInOutAnimation } from "@/utils/framerAnimations";
 
 export default function Home() {
@@ -9,8 +9,6 @@ export default function Home() {
 
   return (
     <>
-      <MetaTag title="Home — Jeremy" />
-
       <AnimatePresence mode="wait">
         {isLoading ? (
           <Preloader setIsLoading={setIsLoading} />
