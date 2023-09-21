@@ -66,7 +66,7 @@ export const Contact: React.FC = () => {
           <input
             type="hidden"
             name="_next"
-            value="https://jeremy0x.tech/contact"
+            value="https://jeremy0x.tech/thank-you"
           />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
