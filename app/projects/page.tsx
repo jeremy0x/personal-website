@@ -173,7 +173,7 @@ const projectsData: ProjectData[] = [
   {
     name: "Interllo",
     link: "https://interllo.netlify.app",
-    description: "Official website for Interllo (dissolved).",
+    description: "Official website for Interllo.",
     logos: [
       <BiLogoJavascript key="js" />,
       <BiLogoHtml5 key="html" />,
