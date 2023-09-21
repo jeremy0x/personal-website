@@ -1,28 +1,31 @@
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { slideInFromBottomAnimation } from '../utils/framerAnimations';
-import { PiBriefcaseFill } from 'react-icons/pi';
-import { BiSolidMessageRoundedDetail } from 'react-icons/bi';
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { slideInFromBottomAnimation } from "../utils/framerAnimations";
+import { PiBriefcaseFill } from "react-icons/pi";
+import { BiSolidMessageRoundedDetail } from "react-icons/bi";
 
 export const Navbar = () => {
   return (
-    <nav className='fixed inset-0 w-full z-10 h-fit bg-neutral-900 backdrop-blur-sm lg:backdrop-blur-0 lg:bg-transparent bg-opacity-20'>
-      <motion.div {...slideInFromBottomAnimation}
-      transition={{ delay: 0.5, duration: 0.5 }} className="flex flex-row justify-between p-2 sm:p-6 container mx-auto uppercase">
-        <Link href='/' className='font-kaisei text-7xl hover:animate-spin h-12'>
+    <nav className="fixed inset-0 z-10 h-fit w-full bg-neutral-900 bg-opacity-20 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-0">
+      <motion.div
+        {...slideInFromBottomAnimation}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="mx-auto flex flex-row justify-between p-4 uppercase sm:container sm:p-6"
+      >
+        <Link href="/" className="font-kaisei h-12 text-7xl hover:animate-spin">
           *
         </Link>
-        <div className='flex flex-row justify-between items-center gap-8 sm:gap-16 font-medium text-sm tracking-wider text-neutral-400'>
-          <Link href='./projects'>
-            <div className='hover:-translate-y-1 transition-all duration-300 active:translate-y-1'>
-              <span className="hidden sm:block">Projects</span>
-              <PiBriefcaseFill className="sm:hidden text-2xl" />
+
+        <div className="flex flex-row items-center justify-between gap-8 text-sm font-medium tracking-wider text-neutral-400 sm:gap-16">
+          <Link href="/projects">
+            <div className="transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
+              <span className="text-xs sm:text-sm">Projects</span>
             </div>
           </Link>
-          <Link href='./contact'>
-            <div className='hover:-translate-y-1 transition-all duration-300 active:translate-y-1'>
-              <span className="hidden sm:block">Contact</span>
-              <BiSolidMessageRoundedDetail className="sm:hidden text-2xl" />
+
+          <Link href="/contact">
+            <div className="transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
+              <span className="text-xs sm:text-sm">Contact</span>
             </div>
           </Link>
         </div>

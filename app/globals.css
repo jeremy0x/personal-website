@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 .font-kaisei {
-  font-family: 'Kaisei Decol', serif;
+  font-family: "Kaisei Decol", serif;
 }
 
 html {
@@ -43,4 +42,26 @@ input:-webkit-autofill:active {
 
 ::-webkit-scrollbar-thumb:active {
   background: rgba(255, 255, 255, 0.147);
+}
+
+.swiper {
+  padding-bottom: 3rem !important;
+}
+
+.swiper-slide {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    width: 100% !important;
+  }
+}
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
 }
