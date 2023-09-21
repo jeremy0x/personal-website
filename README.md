@@ -18,5 +18,4 @@
   [![TypeScript](https://img.shields.io/badge/-TypeScript-blue?logo=TypeScript&logoColor=white&color=blue)](https://developer.mozilla.org/en-US/docs/Web/TypeScript)
   [![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?logo=Tailwind%20CSS&logoColor=black&color=white)](https://tailwindcss.com/)
   [![Framer Motion](https://img.shields.io/badge/-Framer%20Motion-blue?logo=Framer)](https://www.framer.com/api/motion/)
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/af000efa-0df1-4421-9602-09cdbff70851/deploy-status)](https://app.netlify.com/sites/jeremy0x/deploys)
 </div>
