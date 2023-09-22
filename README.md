@@ -14,7 +14,7 @@
     <a href="https://github.com/jeremy0x/personal-website/issues/new?assignees=jeremy0x&labels=bug&projects=&template=bug_report.yml&title=%5BBUG%5D%3A+">Report Bug</a>
   </p>
 
-  [![Next.js](https://img.shields.io/badge/-Next.js-06B6D4?logo=Next.js&logoColor=white&color=black)](https://tailwindcss.com/)
+  [![Next.js](https://img.shields.io/badge/-Next.js-06B6D4?logo=Next.js&logoColor=white&color=black)](https://nextjs.org/)
   [![TypeScript](https://img.shields.io/badge/-TypeScript-blue?logo=TypeScript&logoColor=white&color=blue)](https://developer.mozilla.org/en-US/docs/Web/TypeScript)
   [![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?logo=Tailwind%20CSS&logoColor=black&color=white)](https://tailwindcss.com/)
   [![Framer Motion](https://img.shields.io/badge/-Framer%20Motion-blue?logo=Framer)](https://www.framer.com/api/motion/)
