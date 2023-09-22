@@ -137,7 +137,7 @@ const projectsData: ProjectData[] = [
   {
     name: "SentFi",
     link: "https://sentfi.netlify.app",
-    githubLink: "https://github.com/jeremy0x/sentiinel-finance",
+    githubLink: "https://github.com/jeremy0x/sentinel-finance",
     description: "Proof-of-concept website for a dCommerce platform.",
     logos: [
       <BiLogoJavascript key="js" />,
