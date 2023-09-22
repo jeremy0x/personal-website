@@ -1,12 +1,14 @@
 export const languages = [
-  'Hello', // Default English
-  'Hola', // Spanish
-  'Bonjour', // French
-  'こんにちは', // Japanese
-  'Hallo', // German
-  'Ciao', // Italian
-  '你好', // Chinese
-  'Namaste', // Hindi
-  'Olá', // Portuguese
-  '여보세요', // Korean
+  "Hello", // English
+  "Hola", // Spanish
+  "Bonjour", // French
+  "Pẹlẹ o", // Yoruba
+  "Nnọọ", // Igbo
+  "Sannu", // Hausa
+  "こんにちは", // Japanese
+  "Namaste", // Hindi
+  "你好", // Chinese
+  "Ciao", // Italian
+  "여보세요", // Korean
+  "Hallo", // German
 ];
