@@ -15,12 +15,12 @@ export const Preloader = ({ setIsLoading }: PreloaderProps) => {
       setCurrentLanguageIndex(
         (prevIndex) => (prevIndex + 1) % languages.length,
       );
-    }, 200);
+    }, 285);
 
     setTimeout(() => {
       clearInterval(preloaderInterval);
       setIsLoading(false);
-    }, 2000);
+    }, 2500);
 
     return () => {
       clearInterval(preloaderInterval);
