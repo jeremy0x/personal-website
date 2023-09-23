@@ -23,7 +23,7 @@ export const handleSubmit = ({ event, setIsLoading }: HandleSubmitProps) => {
     boxShadow: "0 0 40px #1b1b1c",
   };
 
-  fetch("https://formsubmit.co/aax/5ad6e90d1d6c9847586699d8ecf9fee2", {
+  fetch("https://formsubmit.co/ajax/5ad6e90d1d6c9847586699d8ecf9fee2", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
