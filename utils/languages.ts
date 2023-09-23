@@ -1,14 +1,11 @@
 export const languages = [
   "Hello", // English
-  "Hola", // Spanish
   "Bonjour", // French
-  "Pẹlẹ o", // Yoruba
-  "Nnọọ", // Igbo
-  "Sannu", // Hausa
+  "Ẹ Ǹlẹ́ o", // Yoruba
+  "Hola", // Spanish
   "こんにちは", // Japanese
+  "Sannu", // Hausa
   "Namaste", // Hindi
   "你好", // Chinese
   "Ciao", // Italian
-  "여보세요", // Korean
-  "Hallo", // German
 ];
