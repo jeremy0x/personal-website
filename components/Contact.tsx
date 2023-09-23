@@ -1,7 +1,9 @@
 import { InputField } from "./Input";
-import { ImSpinner9 } from "react-icons/im";
+import { Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
+import { ImSpinner9 } from "react-icons/im";
 import { BiSolidPaperPlane } from "react-icons/bi";
+import { handleSubmit } from "@/utils/handleSubmit";
 
 export const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -9,10 +11,6 @@ export const Contact: React.FC = () => {
   useEffect(() => {
     setIsLoading(false);
   }, []);
-
-  const handleSubmit = () => {
-    setIsLoading(true);
-  };
 
   return (
     <div className="mx-auto flex flex-col items-center justify-center gap-20 px-2 pb-16 pt-36 sm:px-8 lg:flex-row lg:py-20">
@@ -49,8 +47,7 @@ export const Contact: React.FC = () => {
       </article>
 
       <form
-        onSubmit={handleSubmit}
-        action="https://formsubmit.co/5ad6e90d1d6c9847586699d8ecf9fee2"
+        onSubmit={(event) => handleSubmit({ event, setIsLoading })}
         method="POST"
         className="grid w-full max-w-xl flex-1 gap-10 rounded-xl bg-opacity-50 backdrop-blur-lg backdrop-filter md:p-14 md:shadow-2xl"
       >
@@ -62,14 +59,6 @@ export const Contact: React.FC = () => {
           <InputField type="text" name="name" placeholder="Your name" />
           <InputField type="email" name="email" placeholder="Your email" />
           <InputField textarea name="message" placeholder="Message" rows={1} />
-
-          <input
-            type="hidden"
-            name="_next"
-            value="https://jeremy0x.tech/thank-you"
-          />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
 
           <button
             type="submit"
@@ -85,6 +74,8 @@ export const Contact: React.FC = () => {
           </button>
         </div>
       </form>
+
+      <Toaster position="bottom-center" />
     </div>
   );
 };
