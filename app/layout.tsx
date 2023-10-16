@@ -6,18 +6,18 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jeremy • Frontend Developer",
+  title: "Jeremy | Frontend Developer",
   description:
-    "V1 of Jeremy's personal website, a frontend web developer. Built with Next.js, TailwindCSS, and Framer Motion.",
+    "I'm Jeremiah Aworetan, a frontend web developer based in Nigeria. I specialize in building beautiful, responsive and performant websites using modern web technologies.",
   publisher: "Jeremiah Aworetan",
-  authors: [{ name: "Jeremy", url: "https://github.com/jeremy0x" }],
+  authors: [{ name: "Jeremiah Aworetan", url: "https://github.com/jeremy0x" }],
   metadataBase: new URL("https://jeremy0x.tech"),
   openGraph: {
-    title: "Jeremy • Frontend Developer",
+    title: "Jeremiah Aworetan | Frontend Developer",
     description:
-      "V1 of Jeremy's personal website, a frontend web developer. Built with Next.js, TailwindCSS, and Framer Motion.",
+      "I'm Jeremiah Aworetan, a frontend web developer based in Nigeria. I specialize in building beautiful, responsive and performant websites using modern web technologies.",
     url: "https://jeremy0x.tech",
-    siteName: "Jeremy",
+    siteName: "Jeremy Aworetan",
     images: [
       {
         url: "/thumbnail.jpg",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jeremy • Frontend Developer",
+    title: "Jeremiah Aworetan | Frontend Developer",
     description:
-      "V1 of Jeremy's personal website, a frontend web developer. Built with Next.js, TailwindCSS, and Framer Motion.",
+      "I'm Jeremiah Aworetan, a frontend web developer based in Nigeria. I specialize in building beautiful, responsive and performant websites using modern web technologies.",
     creator: "@jeremy0x_",
     images: ["/thumbnail.jpg"],
   },
