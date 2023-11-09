@@ -31,14 +31,14 @@ export default function Home() {
                   I am
                 </motion.p>
                 <motion.h1
-                  className="text-6xl font-black tracking-wide sm:text-9xl"
+                  className="text-7xl font-black tracking-wide sm:text-9xl"
                   {...fadeInAnimation}
                   transition={{ delay: 1.5, duration: 1 }}
                 >
                   Jeremy
                 </motion.h1>
                 <motion.p
-                  className="text-right text-sm font-light tracking-widest text-neutral-400"
+                  className="text-right text-base tracking-widest text-neutral-400 sm:text-lg"
                   {...fadeInAnimation}
                   transition={{ delay: 2.5, duration: 1.5 }}
                 >
