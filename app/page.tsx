@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Blur, Navbar, Preloader, Socials } from "@/components";
-import { fadeInAnimation, fadeInOutAnimation } from "@/utils/framerAnimations";
+import { fadeInAnimation } from "@/utils/framerAnimations";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,9 +15,9 @@ export default function Home() {
         ) : (
           <motion.main
             className="container mx-auto flex min-h-screen items-center justify-center bg-neutral-900 uppercase text-white"
-            {...fadeInOutAnimation}
+            {...fadeInAnimation}
           >
-            <motion.div className="page-content" {...fadeInOutAnimation}>
+            <motion.div className="page-content" {...fadeInAnimation}>
               <Navbar />
 
               <Blur />

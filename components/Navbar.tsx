@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { slideInFromBottomAnimation } from "../utils/framerAnimations";
+import { fadeInAnimation } from "../utils/framerAnimations";
 
 export const Navbar = () => {
   return (
     <nav className="fixed inset-0 z-10 h-fit w-full bg-neutral-900 bg-opacity-20 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-0">
       <motion.div
-        {...slideInFromBottomAnimation}
+        {...fadeInAnimation}
         transition={{ delay: 0.5, duration: 0.5 }}
         className="mx-auto flex flex-row justify-between p-4 uppercase sm:container sm:p-6"
       >

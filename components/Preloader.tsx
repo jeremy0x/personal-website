@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { languages } from "../utils/languages";
-import { fadeInOutAnimation } from "../utils/framerAnimations";
+import { fadeInAnimation } from "../utils/framerAnimations";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface PreloaderProps {
@@ -30,9 +30,9 @@ export const Preloader = ({ setIsLoading }: PreloaderProps) => {
   return (
     <motion.div
       className="flex min-h-screen items-center justify-center bg-neutral-900 uppercase text-white"
-      {...fadeInOutAnimation}
+      {...fadeInAnimation}
     >
-      <motion.div className="preloader-text" {...fadeInOutAnimation}>
+      <motion.div className="preloader-text" {...fadeInAnimation}>
         <p className="text-3xl font-bold">{languages[currentLanguageIndex]}</p>
       </motion.div>
     </motion.div>
