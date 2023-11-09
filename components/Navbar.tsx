@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { slideInFromBottomAnimation } from "../utils/framerAnimations";
-import { PiBriefcaseFill } from "react-icons/pi";
-import { BiSolidMessageRoundedDetail } from "react-icons/bi";
 
 export const Navbar = () => {
   return (
