@@ -6,16 +6,16 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jeremy | Frontend Developer",
+  title: "Jeremiah Aworetan | Skilled Frontend Developer in Nigeria",
   description:
-    "I'm Jeremiah Aworetan, a frontend web developer based in Nigeria. I specialize in building beautiful, responsive and performant websites using modern web technologies.",
+    "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
   publisher: "Jeremiah Aworetan",
   authors: [{ name: "Jeremiah Aworetan", url: "https://github.com/jeremy0x" }],
   metadataBase: new URL("https://jeremy0x.tech"),
   openGraph: {
-    title: "Jeremiah Aworetan | Frontend Developer",
+    title: "Jeremiah Aworetan | Skilled Frontend Developer in Nigeria",
     description:
-      "I'm Jeremiah Aworetan, a frontend web developer based in Nigeria. I specialize in building beautiful, responsive and performant websites using modern web technologies.",
+      "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
     url: "https://jeremy0x.tech",
     siteName: "Jeremy Aworetan",
     images: [
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jeremiah Aworetan | Frontend Developer",
+    title: "Jeremiah Aworetan | Skilled Frontend Developer in Nigeria",
     description:
-      "I'm Jeremiah Aworetan, a frontend web developer based in Nigeria. I specialize in building beautiful, responsive and performant websites using modern web technologies.",
+      "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
     creator: "@jeremy0x_",
     images: ["/thumbnail.jpg"],
   },
