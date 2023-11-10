@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Blur, Navbar, Preloader, Socials } from "@/components";
 import { fadeInAnimation } from "@/utils/framerAnimations";
+import Image from "next/image";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +15,7 @@ export default function Home() {
           <Preloader setIsLoading={setIsLoading} />
         ) : (
           <motion.main
-            className="container mx-auto flex min-h-screen items-center justify-center bg-neutral-900 uppercase text-white"
+            className="container relative mx-auto flex min-h-screen w-full items-center justify-center bg-neutral-900 uppercase text-white"
             {...fadeInAnimation}
           >
             <motion.div className="page-content" {...fadeInAnimation}>
@@ -44,6 +45,19 @@ export default function Home() {
                 >
                   a frontend developer
                 </motion.p>
+              </motion.div>
+
+              <motion.div
+                {...fadeInAnimation}
+                transition={{ delay: 3, duration: 3 }}
+              >
+                <Image
+                  src="/arrow-up.svg"
+                  alt=""
+                  width={125}
+                  height={125}
+                  className="absolute right-4 top-28 animate-pulse opacity-90 md:right-28"
+                />
               </motion.div>
 
               <Socials />
