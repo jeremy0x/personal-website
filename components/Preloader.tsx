@@ -12,15 +12,19 @@ export const Preloader = ({ setIsLoading }: PreloaderProps) => {
 
   useEffect(() => {
     const preloaderInterval = setInterval(() => {
-      setCurrentLanguageIndex(
-        (prevIndex) => (prevIndex + 1) % languages.length,
-      );
-    }, 225);
+      setCurrentLanguageIndex((prevIndex) => {
+        if (prevIndex === languages.length - 1) {
+          return prevIndex;
+        } else {
+          return prevIndex + 1;
+        }
+      });
+    }, 200);
 
     setTimeout(() => {
       clearInterval(preloaderInterval);
       setIsLoading(false);
-    }, 2250);
+    }, 2000);
 
     return () => {
       clearInterval(preloaderInterval);

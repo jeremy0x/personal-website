@@ -1,12 +1,11 @@
 export const languages = [
-  "Hello", // English
+  "Hi", // English
+  "Aloha", // Hawaiian
+  "Ciao", // Italian
   "Bonjour", // French
   "Hola", // Spanish
   "こんにちは", // Japanese
-  "Sannu", // Hausa
   "Namaste", // Hindi
-  "你好", // Chinese
   "Ẹ Ǹlẹ́ o", // Yoruba
-  "Ciao", // Italian
-  "Welcome", // English
+  "Hello", // English
 ];
