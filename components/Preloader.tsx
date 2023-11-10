@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { languages } from "../utils/languages";
-import { fadeInOutAnimation } from "../utils/framerAnimations";
+import { fadeInAnimation } from "../utils/framerAnimations";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface PreloaderProps {
@@ -12,15 +12,19 @@ export const Preloader = ({ setIsLoading }: PreloaderProps) => {
 
   useEffect(() => {
     const preloaderInterval = setInterval(() => {
-      setCurrentLanguageIndex(
-        (prevIndex) => (prevIndex + 1) % languages.length,
-      );
-    }, 225);
+      setCurrentLanguageIndex((prevIndex) => {
+        if (prevIndex === languages.length - 1) {
+          return prevIndex;
+        } else {
+          return prevIndex + 1;
+        }
+      });
+    }, 200);
 
     setTimeout(() => {
       clearInterval(preloaderInterval);
       setIsLoading(false);
-    }, 2250);
+    }, 2000);
 
     return () => {
       clearInterval(preloaderInterval);
@@ -30,9 +34,9 @@ export const Preloader = ({ setIsLoading }: PreloaderProps) => {
   return (
     <motion.div
       className="flex min-h-screen items-center justify-center bg-neutral-900 uppercase text-white"
-      {...fadeInOutAnimation}
+      {...fadeInAnimation}
     >
-      <motion.div className="preloader-text" {...fadeInOutAnimation}>
+      <motion.div className="preloader-text" {...fadeInAnimation}>
         <p className="text-3xl font-bold">{languages[currentLanguageIndex]}</p>
       </motion.div>
     </motion.div>

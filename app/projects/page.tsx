@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeInOutAnimation } from "@/utils/framerAnimations";
+
 import { Blur, Navbar, Socials } from "@/components";
+import { fadeInAnimation } from "@/utils/framerAnimations";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -21,8 +23,8 @@ import {
   BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
-import { useState } from "react";
 import { ImSpinner9 } from "react-icons/im";
+import { SiFramer, SiNextdotjs } from "react-icons/si";
 
 export default function Projects() {
   return (
@@ -30,9 +32,9 @@ export default function Projects() {
       <AnimatePresence mode="wait">
         <motion.main
           className="mx-auto flex min-h-screen items-center justify-center bg-neutral-900 text-white"
-          {...fadeInOutAnimation}
+          {...fadeInAnimation}
         >
-          <motion.div className="page-content" {...fadeInOutAnimation}>
+          <motion.div className="page-content" {...fadeInAnimation}>
             <Blur />
             <Navbar />
 
@@ -107,7 +109,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-black/60 py-4 text-center">
         <p className="text-sm font-medium sm:text-lg">{description}</p>
 
-        <div className="flex gap-4 text-2xl">
+        <div className="flex items-center gap-4 text-2xl">
           <Link href={link} target="blank" rel="noopener noreferrer">
             <BiLinkExternal />
           </Link>
@@ -116,7 +118,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               <BiLogoGithub />
             </Link>
           )}
-
           {logos}
         </div>
       </div>
@@ -134,6 +135,18 @@ interface ProjectData {
 }
 
 const projectsData: ProjectData[] = [
+  {
+    name: "Altos (ClientView)",
+    link: "https://app.helloaltos.com",
+    description: "Altos - an ad tracking platform (now ClientView).",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" />,
+      <BiLogoJavascript key="javascript" />,
+      <BiLogoTailwindCss key="tailwind" />,
+      <SiFramer className="text-lg" key="framer" />,
+    ],
+    imageSrc: "/altos.jpg",
+  },
   {
     name: "SentFi",
     link: "https://sentfi.netlify.app",
@@ -156,6 +169,17 @@ const projectsData: ProjectData[] = [
       <BiLogoCss3 key="css" />,
     ],
     imageSrc: "/hellobahamafoodie.jpg",
+  },
+  {
+    name: "Interllo",
+    link: "https://interllo.netlify.app",
+    description: "Official website for Interllo.",
+    logos: [
+      <BiLogoJavascript key="js" />,
+      <BiLogoHtml5 key="html" />,
+      <BiLogoCss3 key="css" />,
+    ],
+    imageSrc: "/interllo.jpg",
   },
   {
     name: "foodieFetch",

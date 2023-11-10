@@ -55,6 +55,17 @@ export const Contact: React.FC = () => {
           Contact Form
         </h1>
 
+        <p className="text-center text-sm tracking-wider text-neutral-400">
+          It actually works, I promise.{" "}
+          <a
+            href="https://formsubmit.co/"
+            className="underline-offset-2 hover:underline"
+          >
+            FormSubmit
+          </a>
+          &apos;s got my back!
+        </p>
+
         <div className="grid gap-8">
           <InputField type="text" name="name" placeholder="Your name" />
           <InputField type="email" name="email" placeholder="Your email" />

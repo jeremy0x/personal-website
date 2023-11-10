@@ -1,6 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeInOutAnimation } from "@/utils/framerAnimations";
+import { fadeInAnimation } from "@/utils/framerAnimations";
 import { Blur, Contact, Navbar, Socials } from "@/components";
 
 export default function Page() {
@@ -9,9 +9,9 @@ export default function Page() {
       <AnimatePresence mode="wait">
         <motion.main
           className="container mx-auto flex min-h-screen items-center justify-center bg-neutral-900 text-white"
-          {...fadeInOutAnimation}
+          {...fadeInAnimation}
         >
-          <motion.div className="page-content" {...fadeInOutAnimation}>
+          <motion.div className="page-content" {...fadeInAnimation}>
             <Blur />
             <Navbar />
             <Contact />
