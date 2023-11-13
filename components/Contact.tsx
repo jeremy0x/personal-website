@@ -60,6 +60,7 @@ export const Contact: React.FC = () => {
           <a
             href="https://formsubmit.co/"
             className="underline-offset-2 hover:underline"
+            target="blank"
           >
             FormSubmit
           </a>
