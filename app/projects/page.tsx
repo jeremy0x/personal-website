@@ -110,11 +110,21 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         <p className="text-sm font-medium sm:text-lg">{description}</p>
 
         <div className="flex items-center gap-4 text-2xl">
-          <Link href={link} target="blank" rel="noopener noreferrer">
+          <Link
+            href={link}
+            target="blank"
+            rel="noopener noreferrer"
+            title="External Link"
+          >
             <BiLinkExternal />
           </Link>
           {githubLink && (
-            <Link href={githubLink} target="blank" rel="noopener noreferrer">
+            <Link
+              href={githubLink}
+              target="blank"
+              rel="noopener noreferrer"
+              title="GitHub Link"
+            >
               <BiLogoGithub />
             </Link>
           )}

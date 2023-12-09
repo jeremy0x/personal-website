@@ -11,15 +11,19 @@ export const Socials = () => {
       {...fadeInAnimation}
       transition={{ delay: 0.5, duration: 1 }}
     >
-      <Link href="https://github.com/jeremy0x" target="blank">
+      <Link href="https://github.com/jeremy0x" target="blank" title="GitHub">
         <AiFillGithub className="transition-all duration-300 hover:scale-125" />
       </Link>
 
-      <Link href="https://linkedin.com/in/jeremy0x" target="blank">
+      <Link
+        href="https://linkedin.com/in/jeremy0x"
+        target="blank"
+        title="LinkedIn"
+      >
         <AiFillLinkedin className="transition-all duration-300 hover:scale-125" />
       </Link>
 
-      <Link href="https://x.com/jeremy0x_" target="blank">
+      <Link href="https://x.com/jeremy0x_" target="blank" title="Twitter">
         <FaXTwitter className="transition-all duration-300 hover:scale-125" />
       </Link>
     </motion.div>
