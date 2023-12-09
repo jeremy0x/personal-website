@@ -159,7 +159,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "SentFi",
-    link: "https://sentfi.netlify.app",
+    link: "https://sentfi.vercel.app",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
     description: "Proof-of-concept website for a dCommerce platform.",
     logos: [
@@ -182,7 +182,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Interllo",
-    link: "https://interllo.netlify.app",
+    link: "https://interllo.vercel.app",
     githubLink: "https://github.com/jeremy0x/interllo",
     description: "Official website for Interllo.",
     logos: [
@@ -194,7 +194,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "foodieFetch",
-    link: "https://foodie-fetch.netlify.app",
+    link: "https://foodie-fetch.vercel.app",
     githubLink: "https://github.com/jeremy0x/foodie-fetch_react",
     description: "Find recipes with the ingredients you have.",
     logos: [
@@ -206,7 +206,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "LingoLookup",
-    link: "https://lingolookup.netlify.app",
+    link: "https://lingo-lookup.vercel.app",
     githubLink: "https://github.com/jeremy0x/lingo-lookup",
     description: "Explore word definitions, synonyms, pronunciation, and more.",
     logos: [
@@ -218,7 +218,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Sesshin",
-    link: "https://sesshin-dev.netlify.app",
+    link: "https://sesshin.vercel.app",
     githubLink: "https://github.com/jeremy0x/Sesshin",
     description: "Custom website for a brand named Sesshin.",
     logos: [
