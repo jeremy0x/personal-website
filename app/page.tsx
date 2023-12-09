@@ -54,9 +54,9 @@ export default function Home() {
                 <Image
                   src="/arrow-up.svg"
                   alt=""
-                  width={125}
-                  height={125}
-                  className="absolute right-4 top-28 animate-pulse opacity-90 md:right-28"
+                  width={0}
+                  height={0}
+                  className="absolute right-4 top-28 w-32 animate-pulse opacity-90 md:right-28"
                 />
               </motion.div>
 
