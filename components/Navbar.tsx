@@ -11,7 +11,7 @@ export const Navbar = () => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="mx-auto flex flex-row justify-between p-4 uppercase sm:container sm:p-6"
       >
-        <Link href="/" className="hover:animate-spin">
+        <Link href="/" className="hover:animate-spin" title="Home">
           <Image
             src="/logo-icon.svg"
             alt=""
