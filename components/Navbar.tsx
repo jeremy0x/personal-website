@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeInAnimation } from "../utils/framerAnimations";
+import Image from "next/image";
 
 export const Navbar = () => {
   return (
@@ -10,8 +11,14 @@ export const Navbar = () => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="mx-auto flex flex-row justify-between p-4 uppercase sm:container sm:p-6"
       >
-        <Link href="/" className="font-kaisei h-12 text-7xl hover:animate-spin">
-          *
+        <Link href="/" className="hover:animate-spin">
+          <Image
+            src="/logo-icon.svg"
+            alt=""
+            width={0}
+            height={0}
+            className="w-6 sm:w-8"
+          />
         </Link>
 
         <div className="flex flex-row items-center justify-between gap-8 text-sm font-medium tracking-wider text-neutral-400 sm:gap-16">

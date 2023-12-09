@@ -1,12 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.font-kaisei {
-  font-family: "Kaisei Decol", serif;
-}
 
 html {
   background-color: rgb(23 23 23);
