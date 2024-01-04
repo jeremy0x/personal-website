@@ -41,6 +41,13 @@ export const Contact: React.FC = () => {
               >
                 aworetanjeremiah@gmail.com
               </a>
+              ,
+              <a
+                href="mailto:hello@jeremy0x.tech"
+                className="underline-offset-2 hover:underline"
+              >
+                hello@jeremy0x.tech
+              </a>
             </p>
           </div>
         </div>
