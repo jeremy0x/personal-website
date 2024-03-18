@@ -52,7 +52,6 @@ export default function Projects() {
               }}
               pagination={{
                 clickable: true,
-                dynamicBullets: true,
               }}
               modules={[EffectCoverflow, Pagination]}
               spaceBetween={35}
@@ -146,18 +145,6 @@ interface ProjectData {
 
 const projectsData: ProjectData[] = [
   {
-    name: "Altos (ClientView)",
-    link: "https://app.helloaltos.com",
-    description: "Altos - an ad tracking platform (now ClientView).",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" />,
-      <BiLogoJavascript key="javascript" />,
-      <BiLogoTailwindCss key="tailwind" />,
-      <SiFramer className="text-lg" key="framer" />,
-    ],
-    imageSrc: "/altos.jpg",
-  },
-  {
     name: "SentFi",
     link: "https://sentfi.vercel.app",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
@@ -179,18 +166,6 @@ const projectsData: ProjectData[] = [
       <BiLogoCss3 key="css" />,
     ],
     imageSrc: "/hellobahamafoodie.jpg",
-  },
-  {
-    name: "Interllo",
-    link: "https://interllo.vercel.app",
-    githubLink: "https://github.com/jeremy0x/interllo",
-    description: "Official website for Interllo.",
-    logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
-    ],
-    imageSrc: "/interllo.jpg",
   },
   {
     name: "foodieFetch",
@@ -227,5 +202,63 @@ const projectsData: ProjectData[] = [
       <BiLogoCss3 key="css" />,
     ],
     imageSrc: "/sesshin.jpg",
+  },
+  {
+    name: "Interllo",
+    link: "https://interllo.vercel.app",
+    githubLink: "https://github.com/jeremy0x/interllo",
+    description: "Official website for Interllo.",
+    logos: [
+      <BiLogoJavascript key="js" />,
+      <BiLogoHtml5 key="html" />,
+      <BiLogoCss3 key="css" />,
+    ],
+    imageSrc: "/interllo.jpg",
+  },
+  {
+    name: "MentorMeInTech Waitlist",
+    link: "https://mentormeintech.com",
+    description: "MentorMeInTech - a platform for mentorship in tech.",
+    logos: [
+      <BiLogoJavascript key="js" />,
+      <BiLogoHtml5 key="html" />,
+      <BiLogoCss3 key="css" />,
+    ],
+    imageSrc: "/mentormeintech.jpg",
+  },
+  {
+    name: "Altos (ClientView)",
+    link: "https://www.useclientview.com/",
+    description: "Altos - an ad tracking platform (now ClientView).",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" />,
+      <BiLogoJavascript key="javascript" />,
+      <BiLogoTailwindCss key="tailwind" />,
+      <SiFramer className="text-lg" key="framer" />,
+    ],
+    imageSrc: "/altos.jpg",
+  },
+  {
+    name: "Mullti",
+    link: "https://mullti.vercel.app",
+    description:
+      "Multi-vendor e-commerce platform. Created for a client with a given design.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" />,
+      <BiLogoTailwindCss key="tailwind" />,
+      <BiLogoJavascript key="javaScript" />,
+    ],
+    imageSrc: "/mullti.jpg",
+  },
+  {
+    name: "Sways",
+    link: "https://sways.vercel.app",
+    description: "A simple website for a Dutch client with a given design.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" />,
+      <BiLogoTailwindCss key="tailwind" />,
+      <BiLogoJavascript key="javaScript" />,
+    ],
+    imageSrc: "/sways.jpg",
   },
 ];
