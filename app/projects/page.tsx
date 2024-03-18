@@ -52,7 +52,6 @@ export default function Projects() {
               }}
               pagination={{
                 clickable: true,
-                dynamicBullets: true,
               }}
               modules={[EffectCoverflow, Pagination]}
               spaceBetween={35}
@@ -102,33 +101,41 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           src={imageSrc}
           priority={index === 0}
           onLoad={() => setIsLoading(false)}
-          className="rounded-xl bg-black/30 grayscale-[0.7] filter transition-all hover:grayscale-0"
+          className="rounded-2xl bg-black/30 p-2 transition-all"
         />
       </Link>
 
-      <div className="absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-black/60 py-4 text-center">
-        <p className="text-sm font-medium sm:text-lg">{description}</p>
+      <Link
+        href={link}
+        target="blank"
+        rel="noopener noreferrer"
+        className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-alias rounded-xl bg-black/70 transition-opacity duration-500 hover:opacity-40"
+      ></Link>
 
-        <div className="flex items-center gap-4 text-2xl">
-          <Link
-            href={link}
-            target="blank"
-            rel="noopener noreferrer"
-            title="External Link"
-          >
-            <BiLinkExternal />
-          </Link>
-          {githubLink && (
+      <div className="absolute bottom-0 left-0 w-full p-4">
+        <div className="flex w-full flex-col items-center justify-center gap-2 rounded-lg bg-black/60 py-4 text-center">
+          <p className="text-sm font-medium sm:text-base">{description}</p>
+          <div className="flex items-center gap-4 text-2xl">
             <Link
-              href={githubLink}
+              href={link}
               target="blank"
               rel="noopener noreferrer"
-              title="GitHub Link"
+              title="External Link"
             >
-              <BiLogoGithub />
+              <BiLinkExternal />
             </Link>
-          )}
-          {logos}
+            {githubLink && (
+              <Link
+                href={githubLink}
+                target="blank"
+                rel="noopener noreferrer"
+                title="GitHub Link"
+              >
+                <BiLogoGithub />
+              </Link>
+            )}
+            {logos}
+          </div>
         </div>
       </div>
     </div>
@@ -145,18 +152,6 @@ interface ProjectData {
 }
 
 const projectsData: ProjectData[] = [
-  {
-    name: "Altos (ClientView)",
-    link: "https://app.helloaltos.com",
-    description: "Altos - an ad tracking platform (now ClientView).",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" />,
-      <BiLogoJavascript key="javascript" />,
-      <BiLogoTailwindCss key="tailwind" />,
-      <SiFramer className="text-lg" key="framer" />,
-    ],
-    imageSrc: "/altos.jpg",
-  },
   {
     name: "SentFi",
     link: "https://sentfi.vercel.app",
@@ -179,18 +174,6 @@ const projectsData: ProjectData[] = [
       <BiLogoCss3 key="css" />,
     ],
     imageSrc: "/hellobahamafoodie.jpg",
-  },
-  {
-    name: "Interllo",
-    link: "https://interllo.vercel.app",
-    githubLink: "https://github.com/jeremy0x/interllo",
-    description: "Official website for Interllo.",
-    logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
-    ],
-    imageSrc: "/interllo.jpg",
   },
   {
     name: "foodieFetch",
@@ -227,5 +210,63 @@ const projectsData: ProjectData[] = [
       <BiLogoCss3 key="css" />,
     ],
     imageSrc: "/sesshin.jpg",
+  },
+  {
+    name: "Interllo",
+    link: "https://interllo.vercel.app",
+    githubLink: "https://github.com/jeremy0x/interllo",
+    description: "Official website for Interllo.",
+    logos: [
+      <BiLogoJavascript key="js" />,
+      <BiLogoHtml5 key="html" />,
+      <BiLogoCss3 key="css" />,
+    ],
+    imageSrc: "/interllo.jpg",
+  },
+  {
+    name: "MentorMeInTech Waitlist",
+    link: "https://mentormeintech.com",
+    description: "MentorMeInTech - a platform for mentorship in tech.",
+    logos: [
+      <BiLogoJavascript key="js" />,
+      <BiLogoHtml5 key="html" />,
+      <BiLogoCss3 key="css" />,
+    ],
+    imageSrc: "/mentormeintech.jpg",
+  },
+  {
+    name: "Altos (ClientView)",
+    link: "https://www.useclientview.com/",
+    description: "Altos - an ad tracking platform (now ClientView).",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" />,
+      <BiLogoJavascript key="javascript" />,
+      <BiLogoTailwindCss key="tailwind" />,
+      <SiFramer className="text-lg" key="framer" />,
+    ],
+    imageSrc: "/altos.jpg",
+  },
+  {
+    name: "Mullti",
+    link: "https://mullti.vercel.app",
+    description:
+      "E-commerce platform for buyers & sellers, tailored to client's design.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" />,
+      <BiLogoTailwindCss key="tailwind" />,
+      <BiLogoJavascript key="javaScript" />,
+    ],
+    imageSrc: "/mullti.jpg",
+  },
+  {
+    name: "Sways",
+    link: "https://sways.vercel.app",
+    description: "A simple website for a Dutch client with a given design.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" />,
+      <BiLogoTailwindCss key="tailwind" />,
+      <BiLogoJavascript key="javaScript" />,
+    ],
+    imageSrc: "/sways.jpg",
   },
 ];
