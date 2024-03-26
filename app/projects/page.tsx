@@ -101,7 +101,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           src={imageSrc}
           priority={index === 0}
           onLoad={() => setIsLoading(false)}
-          className="rounded-2xl bg-black/30 p-2 transition-all"
+          className="rounded-lg bg-black/30 transition-all"
         />
       </Link>
 
@@ -109,11 +109,11 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         href={link}
         target="blank"
         rel="noopener noreferrer"
-        className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-alias rounded-xl bg-black/70 transition-opacity duration-500 hover:opacity-40"
+        className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-alias rounded-lg bg-black/60 transition-opacity duration-500 hover:opacity-40"
       ></Link>
 
-      <div className="absolute bottom-0 left-0 w-full p-4">
-        <div className="flex w-full flex-col items-center justify-center gap-2 rounded-lg bg-black/60 py-4 text-center">
+      <div className="absolute bottom-0 left-0 w-full p-2">
+        <div className="flex w-full flex-col items-center justify-center gap-2 rounded-md bg-black/60 px-2 py-4 text-center">
           <p className="text-sm font-medium sm:text-base">{description}</p>
           <div className="flex items-center gap-4 text-2xl">
             <Link
@@ -175,6 +175,30 @@ const projectsData: ProjectData[] = [
     ],
     imageSrc: "/hellobahamafoodie.jpg",
   },
+
+  {
+    name: "Valtrix",
+    link: "https://valtrix.co",
+    githubLink: "https://github.com/jeremy0x/interllo",
+    description: "Official website for Valtrix.",
+    logos: [
+      <BiLogoJavascript key="js" />,
+      <BiLogoHtml5 key="html" />,
+      <BiLogoCss3 key="css" />,
+    ],
+    imageSrc: "/valtrix.jpg",
+  },
+  {
+    name: "MentorMeInTech Waitlist",
+    link: "https://mentormeintech.com",
+    description: "MentorMeInTech - a platform for mentorship in tech.",
+    logos: [
+      <BiLogoJavascript key="js" />,
+      <BiLogoHtml5 key="html" />,
+      <BiLogoCss3 key="css" />,
+    ],
+    imageSrc: "/mentormeintech.jpg",
+  },
   {
     name: "foodieFetch",
     link: "https://foodie-fetch.vercel.app",
@@ -212,41 +236,6 @@ const projectsData: ProjectData[] = [
     imageSrc: "/sesshin.jpg",
   },
   {
-    name: "Interllo",
-    link: "https://interllo.vercel.app",
-    githubLink: "https://github.com/jeremy0x/interllo",
-    description: "Official website for Interllo.",
-    logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
-    ],
-    imageSrc: "/interllo.jpg",
-  },
-  {
-    name: "MentorMeInTech Waitlist",
-    link: "https://mentormeintech.com",
-    description: "MentorMeInTech - a platform for mentorship in tech.",
-    logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
-    ],
-    imageSrc: "/mentormeintech.jpg",
-  },
-  {
-    name: "Altos (ClientView)",
-    link: "https://www.useclientview.com/",
-    description: "Altos - an ad tracking platform (now ClientView).",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" />,
-      <BiLogoJavascript key="javascript" />,
-      <BiLogoTailwindCss key="tailwind" />,
-      <SiFramer className="text-lg" key="framer" />,
-    ],
-    imageSrc: "/altos.jpg",
-  },
-  {
     name: "Mullti",
     link: "https://mullti.vercel.app",
     description:
@@ -268,5 +257,17 @@ const projectsData: ProjectData[] = [
       <BiLogoJavascript key="javaScript" />,
     ],
     imageSrc: "/sways.jpg",
+  },
+  {
+    name: "Altos (ClientView)",
+    link: "https://www.useclientview.com/",
+    description: "Altos - an ad tracking platform (now ClientView).",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" />,
+      <BiLogoJavascript key="javascript" />,
+      <BiLogoTailwindCss key="tailwind" />,
+      <SiFramer className="text-lg" key="framer" />,
+    ],
+    imageSrc: "/altos.jpg",
   },
 ];
