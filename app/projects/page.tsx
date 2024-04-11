@@ -24,7 +24,7 @@ import {
   BiLogoTypescript,
 } from "react-icons/bi";
 import { ImSpinner9 } from "react-icons/im";
-import { SiFramer, SiNextdotjs } from "react-icons/si";
+import { SiFramer, SiNextdotjs, SiRemix } from "react-icons/si";
 
 export default function Projects() {
   return (
@@ -153,14 +153,25 @@ interface ProjectData {
 
 const projectsData: ProjectData[] = [
   {
+    name: "Paycrest",
+    link: "https://paycrest.io",
+    description: "Decentralized Crypto-to-Fiat Payment Protocol.",
+    logos: [
+      <SiRemix key="remix" className="text-lg" title="Remix JS" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+    ],
+    imageSrc: "/paycrest.jpg",
+  },
+  {
     name: "SentFi",
     link: "https://sentfi.vercel.app",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
     description: "Proof-of-concept website for a dCommerce platform.",
     logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
     ],
     imageSrc: "/sentfi.jpg",
   },
@@ -169,9 +180,9 @@ const projectsData: ProjectData[] = [
     link: "https://hellobahamafoodie.com",
     description: "Digital plant-based restaurant in The Bahamas.",
     logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
     ],
     imageSrc: "/hellobahamafoodie.jpg",
   },
@@ -182,9 +193,9 @@ const projectsData: ProjectData[] = [
     githubLink: "https://github.com/jeremy0x/interllo",
     description: "Official website for Valtrix.",
     logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
     ],
     imageSrc: "/valtrix.jpg",
   },
@@ -193,9 +204,9 @@ const projectsData: ProjectData[] = [
     link: "https://mentormeintech.com",
     description: "MentorMeInTech - a platform for mentorship in tech.",
     logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
     ],
     imageSrc: "/mentormeintech.jpg",
   },
@@ -205,9 +216,9 @@ const projectsData: ProjectData[] = [
     githubLink: "https://github.com/jeremy0x/foodie-fetch_react",
     description: "Find recipes with the ingredients you have.",
     logos: [
-      <BiLogoReact key="react" />,
-      <BiLogoTailwindCss key="tailwind" />,
-      <BiLogoTypescript key="typescript" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
     ],
     imageSrc: "/foodie-fetch.jpg",
   },
@@ -217,9 +228,9 @@ const projectsData: ProjectData[] = [
     githubLink: "https://github.com/jeremy0x/lingo-lookup",
     description: "Explore word definitions, synonyms, pronunciation, and more.",
     logos: [
-      <BiLogoReact key="react" />,
-      <BiLogoTailwindCss key="tailwind" />,
-      <BiLogoTypescript key="typescript" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
     ],
     imageSrc: "/lingo-lookup.jpg",
   },
@@ -229,9 +240,9 @@ const projectsData: ProjectData[] = [
     githubLink: "https://github.com/jeremy0x/Sesshin",
     description: "Custom website for a brand named Sesshin.",
     logos: [
-      <BiLogoJavascript key="js" />,
-      <BiLogoHtml5 key="html" />,
-      <BiLogoCss3 key="css" />,
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
     ],
     imageSrc: "/sesshin.jpg",
   },
@@ -241,9 +252,9 @@ const projectsData: ProjectData[] = [
     description:
       "E-commerce platform for buyers & sellers, tailored to client's design.",
     logos: [
-      <SiNextdotjs className="text-xl" key="next.js" />,
-      <BiLogoTailwindCss key="tailwind" />,
-      <BiLogoJavascript key="javaScript" />,
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoJavascript key="javaScript" title="JavaScript" />,
     ],
     imageSrc: "/mullti.jpg",
   },
@@ -252,9 +263,9 @@ const projectsData: ProjectData[] = [
     link: "https://sways.vercel.app",
     description: "A simple website for a Dutch client with a given design.",
     logos: [
-      <SiNextdotjs className="text-xl" key="next.js" />,
-      <BiLogoTailwindCss key="tailwind" />,
-      <BiLogoJavascript key="javaScript" />,
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoJavascript key="javaScript" title="JavaScript" />,
     ],
     imageSrc: "/sways.jpg",
   },
@@ -263,10 +274,10 @@ const projectsData: ProjectData[] = [
     link: "https://www.useclientview.com/",
     description: "Altos - an ad tracking platform (now ClientView).",
     logos: [
-      <SiNextdotjs className="text-xl" key="next.js" />,
-      <BiLogoJavascript key="javascript" />,
-      <BiLogoTailwindCss key="tailwind" />,
-      <SiFramer className="text-lg" key="framer" />,
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoJavascript key="javascript" title="JavaScript" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
     ],
     imageSrc: "/altos.jpg",
   },
