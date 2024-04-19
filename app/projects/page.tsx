@@ -158,10 +158,23 @@ const projectsData: ProjectData[] = [
     description: "Decentralized Crypto-to-Fiat Payment Protocol.",
     logos: [
       <SiRemix key="remix" className="text-lg" title="Remix JS" />,
+      <BiLogoReact key="react" title="React" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
     ],
     imageSrc: "/paycrest.jpg",
+  },
+  {
+    name: "$Dogatoshi",
+    link: "https://dogatoshi.dog",
+    githubLink: "https://github.com/jeremy0x/dogatoshi",
+    description: "A website for the $Dogatoshi meme coin.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+    ],
+    imageSrc: "/dogatoshi.jpg",
   },
   {
     name: "SentFi",
