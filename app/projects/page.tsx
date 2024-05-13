@@ -172,7 +172,7 @@ const projectsData: ProjectData[] = [
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
       <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoCss3 key="css" title="CSS" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
     ],
     imageSrc: "/dogatoshi.jpg",
   },
@@ -187,6 +187,18 @@ const projectsData: ProjectData[] = [
       <BiLogoCss3 key="css" title="CSS" />,
     ],
     imageSrc: "/sentfi.jpg",
+  },
+  {
+    name: "Elder Wallet",
+    link: "https://elderwallet-dev.vercel.app",
+    githubLink: "https://github.com/jeremy0x/elder-wallet",
+    description: "Manages bitcoin and blockchain protocols on Runes Network.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+    ],
+    imageSrc: "/elder-wallet.jpg",
   },
   {
     name: "BahamaFoodie",
@@ -223,6 +235,7 @@ const projectsData: ProjectData[] = [
     ],
     imageSrc: "/mentormeintech.jpg",
   },
+
   {
     name: "foodieFetch",
     link: "https://foodie-fetch.vercel.app",
