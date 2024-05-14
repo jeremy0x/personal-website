@@ -25,6 +25,7 @@ import {
 } from "react-icons/bi";
 import { ImSpinner9 } from "react-icons/im";
 import { SiFramer, SiNextdotjs, SiRemix } from "react-icons/si";
+import ParticlesComponent from "@/components/Particles";
 
 export default function Projects() {
   return (
@@ -34,6 +35,8 @@ export default function Projects() {
           className="mx-auto flex min-h-screen items-center justify-center bg-neutral-900 text-white"
           {...fadeInAnimation}
         >
+          <ParticlesComponent id="tsparticles" />
+
           <motion.div className="page-content" {...fadeInAnimation}>
             <Blur />
             <Navbar />
