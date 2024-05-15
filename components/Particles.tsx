@@ -12,23 +12,23 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
     () => ({
       particles: {
         number: {
-          value: 24,
+          value: 4,
           density: {
             enable: true,
             value_area: 800,
           },
         },
         color: {
-          value: "#343434",
+          value: "#1f2123",
         },
         shape: {
-          type: "circle",
+          type: "polygon",
           stroke: {
             width: 0,
             color: "#000000",
           },
           polygon: {
-            nb_sides: 5,
+            nb_sides: 6,
           },
           image: {
             src: "img/github.svg",
@@ -37,8 +37,8 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
           },
         },
         opacity: {
-          value: 0.5,
-          random: false,
+          value: 0.3,
+          random: true,
           anim: {
             enable: false,
             speed: 1,
@@ -47,25 +47,25 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
           },
         },
         size: {
-          value: 3,
+          value: 160,
           random: true,
           anim: {
             enable: false,
-            speed: 40,
+            speed: 10,
             size_min: 0.1,
             sync: false,
           },
         },
         line_linked: {
-          enable: true,
-          distance: 150,
+          enable: false,
+          distance: 200,
           color: "#3e3e3e",
-          opacity: 0.4,
-          width: 1,
+          opacity: 1,
+          width: 2,
         },
         move: {
           enable: true,
-          speed: 3,
+          speed: 5,
           direction: "none",
           random: false,
           straight: false,
@@ -110,7 +110,7 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
             duration: 0.4,
           },
           push: {
-            particles_nb: 4,
+            particles_nb: 1,
           },
           remove: {
             particles_nb: 2,
