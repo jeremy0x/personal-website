@@ -181,7 +181,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "SentFi",
-    link: "https://sentfi.vercel.app",
+    link: "https://sentfi.jeremy0x.tech",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
     description: "Proof-of-concept website for a dCommerce platform.",
     logos: [
@@ -193,7 +193,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Elder Wallet",
-    link: "https://elderwallet-dev.vercel.app",
+    link: "https://elderwallet.jeremy0x.tech",
     githubLink: "https://github.com/jeremy0x/elder-wallet",
     description: "Manages bitcoin and blockchain protocols on Runes Network.",
     logos: [
@@ -241,7 +241,7 @@ const projectsData: ProjectData[] = [
 
   {
     name: "foodieFetch",
-    link: "https://foodie-fetch.vercel.app",
+    link: "https://foodie-fetch.jeremy0x.tech",
     githubLink: "https://github.com/jeremy0x/foodie-fetch_react",
     description: "Find recipes with the ingredients you have.",
     logos: [
@@ -253,7 +253,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "LingoLookup",
-    link: "https://lingo-lookup.vercel.app",
+    link: "https://lingolookup.jeremy0x.tech",
     githubLink: "https://github.com/jeremy0x/lingo-lookup",
     description: "Explore word definitions, synonyms, pronunciation, and more.",
     logos: [
@@ -265,7 +265,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Sesshin",
-    link: "https://sesshin.vercel.app",
+    link: "https://sesshin.jeremy0x.tech",
     githubLink: "https://github.com/jeremy0x/Sesshin",
     description: "Custom website for a brand named Sesshin.",
     logos: [
@@ -277,7 +277,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Mullti",
-    link: "https://mullti.vercel.app",
+    link: "https://mullti.jeremy0x.tech",
     description:
       "E-commerce platform for buyers & sellers, tailored to client's design.",
     logos: [
@@ -289,7 +289,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Sways",
-    link: "https://sways.vercel.app",
+    link: "https://sways.jeremy0x.tech",
     description: "A simple website for a Dutch client with a given design.",
     logos: [
       <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
