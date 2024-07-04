@@ -36,8 +36,7 @@ export const handleSubmit = ({ event, setIsLoading }: HandleSubmitProps) => {
     }),
   })
     .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
+    .then(() => {
       setIsLoading(false);
       target.name.value = "";
       target.email.value = "";
