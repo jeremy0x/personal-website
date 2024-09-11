@@ -1,6 +1,17 @@
 {
-  "name": "personal-website",
-  "version": "0.1.0",
+  "name": "@jeremy0x/personal-website",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "author": {
+    "name": "Jeremy",
+    "email": "aworetanjeremiah@gmail.com",
+    "url": "https://jeremy0x.codes"
+  },
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremy0x/personal-website.git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
