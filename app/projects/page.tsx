@@ -5,13 +5,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { Blur, Navbar, Socials } from "@/components";
+import ParticlesComponent from "@/components/Particles";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import type { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import {
   BiLinkExternal,
@@ -25,14 +27,21 @@ import {
 } from "react-icons/bi";
 import { ImSpinner9 } from "react-icons/im";
 import { SiFramer, SiNextdotjs, SiRemix } from "react-icons/si";
-import ParticlesComponent from "@/components/Particles";
 
 export default function Projects() {
+  const [swiper, setSwiper] = useState<SwiperType | null>(null);
+
+  const handleSlideClick = (index: number) => {
+    if (swiper) {
+      swiper.slideTo(index);
+    }
+  };
+
   return (
     <>
       <AnimatePresence mode="wait">
         <motion.main
-          className="mx-auto flex min-h-screen items-center justify-center bg-neutral-900 text-white"
+          className="mx-auto flex min-h-screen items-center justify-center bg-neutral-900 pt-10 text-white"
           {...fadeInAnimation}
         >
           <ParticlesComponent id="tsparticles" />
@@ -45,7 +54,7 @@ export default function Projects() {
               effect={"coverflow"}
               grabCursor={true}
               centeredSlides={true}
-              slidesPerView={"auto"}
+              slidesPerView="auto"
               coverflowEffect={{
                 rotate: 50,
                 stretch: 0,
@@ -56,16 +65,30 @@ export default function Projects() {
               pagination={{
                 clickable: true,
               }}
-              modules={[EffectCoverflow, Pagination]}
+              modules={[EffectCoverflow, Pagination, Navigation]}
               spaceBetween={35}
               className="mySwiper"
+              onSwiper={setSwiper}
             >
               {projectsData.map((project, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide
+                  key={index}
+                  onClick={() => handleSlideClick(index)}
+                >
                   <ProjectCard project={project} index={index} />
                 </SwiperSlide>
               ))}
             </Swiper>
+
+            <p className="relative z-10 mt-4 text-center text-sm text-gray-500">
+              Click on the{" "}
+              <BiLinkExternal className="inline-block text-gray-500" /> external
+              link icon to see the project preview.
+            </p>
+
+            <p className="relative z-10 mt-2 text-center text-sm text-gray-500">
+              Use pagination or drag to navigate through projects.
+            </p>
 
             <Socials />
           </motion.div>
@@ -86,12 +109,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <div className="relative">
-      <Link
-        href={link}
-        target="blank"
-        rel="noopener noreferrer"
-        className="cursor-alias"
-      >
+      <div className="cursor-grab">
         {isLoading && (
           <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center">
             <ImSpinner9 className="animate-spin text-4xl" />
@@ -104,19 +122,14 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           src={imageSrc}
           priority={index === 0}
           onLoad={() => setIsLoading(false)}
-          className="rounded-lg bg-black/30 transition-all"
+          className="rounded-xl bg-black/30 transition-all"
         />
-      </Link>
+      </div>
 
-      <Link
-        href={link}
-        target="blank"
-        rel="noopener noreferrer"
-        className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-alias rounded-lg bg-black/60 transition-opacity duration-500 hover:opacity-40"
-      ></Link>
+      <div className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-grab rounded-xl bg-black/50 opacity-40 transition-opacity duration-500 sm:opacity-100 sm:hover:opacity-20" />
 
       <div className="absolute bottom-0 left-0 w-full p-2">
-        <div className="flex w-full flex-col items-center justify-center gap-2 rounded-md bg-black/60 px-2 py-4 text-center">
+        <div className="flex w-full cursor-default flex-col items-center justify-center gap-2 rounded-lg bg-black/60 px-2 py-4 text-center backdrop-blur-sm">
           <p className="text-sm font-medium sm:text-base">{description}</p>
           <div className="flex items-center gap-4 text-2xl">
             <Link
@@ -124,6 +137,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               target="blank"
               rel="noopener noreferrer"
               title="External Link"
+              className="cursor-pointer"
             >
               <BiLinkExternal />
             </Link>
@@ -156,6 +170,18 @@ interface ProjectData {
 
 const projectsData: ProjectData[] = [
   {
+    name: "Zap by Paycrest",
+    link: "https://zap.paycrest.io",
+    description: "dApp for instant crypto-to-fiat payments.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/zap.jpg",
+  },
+  {
     name: "Paycrest",
     link: "https://paycrest.io",
     description: "Decentralized Crypto-to-Fiat Payment Protocol.",
@@ -181,7 +207,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "SentFi",
-    link: "https://sentfi.jeremy0x.tech",
+    link: "https://sentfi.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
     description: "Proof-of-concept website for a dCommerce platform.",
     logos: [
@@ -193,7 +219,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Elder Wallet",
-    link: "https://elderwallet.jeremy0x.tech",
+    link: "https://elderwallet.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/elder-wallet",
     description: "Manages bitcoin and blockchain protocols on Runes Network.",
     logos: [
@@ -241,7 +267,7 @@ const projectsData: ProjectData[] = [
 
   {
     name: "foodieFetch",
-    link: "https://foodie-fetch.jeremy0x.tech",
+    link: "https://foodie-fetch.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/foodie-fetch_react",
     description: "Find recipes with the ingredients you have.",
     logos: [
@@ -253,7 +279,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "LingoLookup",
-    link: "https://lingolookup.jeremy0x.tech",
+    link: "https://lingolookup.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/lingo-lookup",
     description: "Explore word definitions, synonyms, pronunciation, and more.",
     logos: [
@@ -265,7 +291,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Sesshin",
-    link: "https://sesshin.jeremy0x.tech",
+    link: "https://sesshin.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/Sesshin",
     description: "Custom website for a brand named Sesshin.",
     logos: [
@@ -277,7 +303,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Mullti",
-    link: "https://mullti.jeremy0x.tech",
+    link: "https://mullti.jeremy0x.codes",
     description:
       "E-commerce platform for buyers & sellers, tailored to client's design.",
     logos: [
@@ -289,7 +315,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Sways",
-    link: "https://sways.jeremy0x.tech",
+    link: "https://sways.jeremy0x.codes",
     description: "A simple website for a Dutch client with a given design.",
     logos: [
       <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,

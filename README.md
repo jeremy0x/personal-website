@@ -1,12 +1,12 @@
 <div align="center">
   <p align="center">
-  <img src="https://jeremy0x.tech/logo.png" alt="" width=100>
+  <img src="https://jeremy0x.vercel.app/logo.png" alt="" width=100>
   </p>
 
   <h3 align="center">Jeremy's Portfolio Repository</h3>
 
   <p align="center">
-    <a href="https://www.jeremy0x.tech"><strong>View The Live App »</strong></a>
+    <a href="https://www.jeremy0x.codes"><strong>View The Live App »</strong></a>
     <br />
     <br />
     <a href="https://github.com/jeremy0x/personal-website/issues/new?assignees=jeremy0x&labels=enhancement&projects=&template=feature_request.yml&title=%5BFEAT%5D%3A+">Request Feature</a>

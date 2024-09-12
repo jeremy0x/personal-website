@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
   publisher: "Jeremiah Aworetan",
   authors: [{ name: "Jeremiah Aworetan", url: "https://github.com/jeremy0x" }],
-  metadataBase: new URL("https://jeremy0x.tech"),
+  metadataBase: new URL("https://jeremy0x.codes"),
   openGraph: {
     title: "Jeremiah Aworetan | Skilled Frontend Developer in Nigeria",
     description:
       "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
-    url: "https://jeremy0x.tech",
+    url: "https://jeremy0x.codes",
     siteName: "Jeremy Aworetan",
     images: [
       {

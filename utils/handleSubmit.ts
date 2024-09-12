@@ -1,5 +1,5 @@
-import { toast } from "react-hot-toast";
 import { Dispatch, FormEvent } from "react";
+import { toast } from "react-toastify";
 
 interface HandleSubmitProps {
   event: FormEvent<HTMLFormElement>;

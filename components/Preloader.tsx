@@ -1,44 +1,56 @@
 import { motion } from "framer-motion";
-import { languages } from "../utils/languages";
-import { fadeInAnimation } from "../utils/framerAnimations";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface PreloaderProps {
+  isLoading: boolean;
   setIsLoading: Dispatch<SetStateAction<boolean>>;
 }
 
-export const Preloader = ({ setIsLoading }: PreloaderProps) => {
-  const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
+export const Preloader = ({ isLoading, setIsLoading }: PreloaderProps) => {
+  const [fadeOut, setFadeOut] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(true);
 
   useEffect(() => {
-    const preloaderInterval = setInterval(() => {
-      setCurrentLanguageIndex((prevIndex) => {
-        if (prevIndex === languages.length - 1) {
-          return prevIndex;
-        } else {
-          return prevIndex + 1;
-        }
-      });
-    }, 200);
-
-    setTimeout(() => {
-      clearInterval(preloaderInterval);
+    const hasSeenAnimation = sessionStorage.getItem("hasSeenAnimation");
+    if (hasSeenAnimation) {
+      setShowAnimation(false);
       setIsLoading(false);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setFadeOut(true);
     }, 2000);
 
+    const fadeOutTimer = setTimeout(() => {
+      setIsLoading(false);
+      sessionStorage.setItem("hasSeenAnimation", "true");
+    }, 3000);
+
     return () => {
-      clearInterval(preloaderInterval);
+      clearTimeout(timer);
+      clearTimeout(fadeOutTimer);
     };
-  }, [setIsLoading]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <motion.div
       className="flex min-h-screen items-center justify-center bg-neutral-900 uppercase text-white"
-      {...fadeInAnimation}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: isLoading ? 1 : 0 }}
+      transition={{ duration: 1 }}
     >
-      <motion.div className="preloader-text" {...fadeInAnimation}>
-        <p className="text-3xl font-bold">{languages[currentLanguageIndex]}</p>
-      </motion.div>
+      {isLoading && showAnimation && (
+        <motion.p
+          className="text-4xl font-bold tracking-widest"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: fadeOut ? 0 : 1 }}
+          transition={{ duration: 1 }}
+        >
+          Hi
+        </motion.p>
+      )}
     </motion.div>
   );
 };

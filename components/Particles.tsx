@@ -19,7 +19,7 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
           },
         },
         color: {
-          value: "#1f2123",
+          value: "#191919",
         },
         shape: {
           type: "polygon",
@@ -59,7 +59,7 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
         line_linked: {
           enable: false,
           distance: 200,
-          color: "#3e3e3e",
+          color: "#171717",
           opacity: 1,
           width: 2,
         },
