@@ -66,7 +66,7 @@ export default function Projects() {
                 clickable: true,
               }}
               modules={[EffectCoverflow, Pagination, Navigation]}
-              spaceBetween={35}
+              spaceBetween={20}
               className="mySwiper"
               onSwiper={setSwiper}
             >
@@ -74,6 +74,7 @@ export default function Projects() {
                 <SwiperSlide
                   key={index}
                   onClick={() => handleSlideClick(index)}
+                  style={{ maxWidth: "100%", width: "100%" }}
                 >
                   <ProjectCard project={project} index={index} />
                 </SwiperSlide>
