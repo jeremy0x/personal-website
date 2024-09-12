@@ -48,7 +48,7 @@ export default function Page() {
                       Address
                     </h2>
                     <p className="tracking-wider text-gray-400">
-                      Ondo State, Nigeria
+                      Akure, Nigeria
                     </p>
                   </div>
                   <div className="grid gap-2">
