@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { Blur, Navbar, Socials } from "@/components";
+import { Blur, Navbar } from "@/components";
 import ParticlesComponent from "@/components/Particles";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 
@@ -90,8 +90,6 @@ export default function Projects() {
             <p className="relative z-10 mt-2 text-center text-sm text-gray-500">
               Use pagination or drag to navigate through projects.
             </p>
-
-            <Socials />
           </motion.div>
         </motion.main>
       </AnimatePresence>
