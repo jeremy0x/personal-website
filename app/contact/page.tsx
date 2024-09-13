@@ -121,8 +121,7 @@ export default function Page() {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.5 }}
                   >
-                    It takes about 30 seconds to a minute to send the message.
-                    Please be patient!
+                    Please wait 30 seconds to 1 minute for message delivery.
                   </motion.p>
                 )}
               </form>
