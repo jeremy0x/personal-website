@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Jeremy Aworetan",
     images: [
       {
-        url: "/thumbnail.jpg",
+        url: "https://jeremy0x.vercel.app/thumbnail.jpg",
       },
     ],
     locale: "en_US",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description:
       "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
     creator: "@jeremy0x_",
-    images: ["/thumbnail.jpg"],
+    images: ["https://jeremy0x.vercel.app/thumbnail.jpg"],
   },
 };
 
