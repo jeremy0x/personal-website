@@ -7,18 +7,18 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jeremiah Aworetan | Skilled Frontend Developer in Nigeria",
+  title: "Jeremiah Aworetan | Frontend Engineer",
   description:
-    "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
+    "Frontend engineer building scalable web solutions for seamless user experiences.",
   publisher: "Jeremiah Aworetan",
   authors: [{ name: "Jeremiah Aworetan", url: "https://github.com/jeremy0x" }],
-  metadataBase: new URL("https://jeremy0x.codes"),
+  metadataBase: new URL("https://jeremy0x.vercel.app"),
   openGraph: {
-    title: "Jeremiah Aworetan | Skilled Frontend Developer in Nigeria",
+    title: "Jeremiah Aworetan | Frontend Engineer",
     description:
-      "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
+      "Frontend engineer building scalable web solutions for seamless user experiences.",
     url: "https://jeremy0x.codes",
-    siteName: "Jeremy Aworetan",
+    siteName: "Jeremy",
     images: [
       {
         url: "https://jeremy0x.vercel.app/thumbnail.jpg",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jeremiah Aworetan | Skilled Frontend Developer in Nigeria",
+    title: "Jeremiah Aworetan | Frontend Engineer",
     description:
-      "Jeremiah Aworetan, a skilled frontend web developer in Nigeria. Experience expertly crafted, responsive websites using cutting-edge technology for a stunning online presence.",
+      "Frontend engineer building scalable web solutions for seamless user experiences.",
     creator: "@jeremy0x_",
     images: ["https://jeremy0x.vercel.app/thumbnail.jpg"],
   },
