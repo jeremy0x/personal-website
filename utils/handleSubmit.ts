@@ -1,5 +1,5 @@
 import { Dispatch, FormEvent } from "react";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 interface HandleSubmitProps {
   event: FormEvent<HTMLFormElement>;
@@ -14,13 +14,6 @@ export const handleSubmit = ({ event, setIsLoading }: HandleSubmitProps) => {
     name: { value: string };
     email: { value: string };
     message: { value: string };
-  };
-
-  const toastStyle = {
-    padding: "16px",
-    color: "#FFFAEE",
-    background: "#171717",
-    boxShadow: "0 0 40px #1b1b1c",
   };
 
   fetch("https://formsubmit.co/ajax/5ad6e90d1d6c9847586699d8ecf9fee2", {
@@ -41,11 +34,15 @@ export const handleSubmit = ({ event, setIsLoading }: HandleSubmitProps) => {
       target.name.value = "";
       target.email.value = "";
       target.message.value = "";
-      toast.success("Message sent successfully!", { style: toastStyle });
+      toast.success("Message sent successfully!", {
+        description: "Keep an eye on your inbox for a response.",
+      });
     })
     .catch((error) => {
       console.log(error);
       setIsLoading(false);
-      toast.error("Oops! Message MIA. Try again!", { style: toastStyle });
+      toast.error("Oops! Message MIA. Try again!", {
+        description: "If the issue persists, reach out via email.",
+      });
     });
 };

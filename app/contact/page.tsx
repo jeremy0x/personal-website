@@ -1,15 +1,14 @@
 "use client";
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
-
 import { useState, useEffect } from "react";
 import { ImSpinner9 } from "react-icons/im";
 import { BiSolidPaperPlane } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
+import { Toaster } from "sonner";
 
 import { handleSubmit } from "@/utils/handleSubmit";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 import { Blur, InputField, Navbar, Socials } from "@/components";
+import ParticlesComponent from "@/components/Particles";
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
@@ -29,10 +28,12 @@ export default function Page() {
             <Blur />
             <Navbar />
 
+            <ParticlesComponent id="tsparticles" />
+
             <div className="z-10 mx-auto flex flex-col items-center justify-center gap-20 px-2 pb-16 pt-36 sm:px-8 lg:flex-row lg:py-20">
               <article className="z-10 grid max-w-2xl flex-1 gap-10 text-center">
                 <div className="space-y-5">
-                  <h1 className="text-4xl font-extrabold uppercase tracking-widest">
+                  <h1 className="text-3xl font-black uppercase tracking-widest">
                     Contact
                   </h1>
                   <p className="max-w-lg text-sm leading-loose tracking-wider text-gray-400">
@@ -43,7 +44,7 @@ export default function Page() {
                 </div>
 
                 <div className="grid gap-10 text-sm">
-                  <div className="grid gap-2">
+                  <div className="hidden md:grid md:gap-2">
                     <h2 className="text-lg font-bold tracking-widest">
                       Address
                     </h2>
@@ -54,13 +55,6 @@ export default function Page() {
                   <div className="grid gap-2">
                     <h2 className="text-lg font-bold tracking-widest">Email</h2>
                     <p className="leading-loose tracking-wider text-gray-400">
-                      <a
-                        href="mailto:hi@jeremy0x.codes"
-                        className="underline-offset-2 hover:underline"
-                      >
-                        hi@jeremy0x.codes
-                      </a>
-                      <br />
                       <a
                         href="mailto:aworetanjeremiah@gmail.com"
                         className="underline-offset-2 hover:underline"
@@ -77,7 +71,7 @@ export default function Page() {
                 method="POST"
                 className="grid w-full max-w-xl flex-1 gap-10 rounded-xl backdrop-blur backdrop-filter md:bg-neutral-900/30 md:p-14 md:shadow-xl"
               >
-                <h1 className="text-center text-2xl font-extrabold uppercase tracking-widest sm:text-4xl">
+                <h1 className="text-center text-2xl font-black uppercase tracking-widest sm:text-3xl">
                   Contact Form
                 </h1>
 
@@ -126,15 +120,7 @@ export default function Page() {
                 )}
               </form>
 
-              <ToastContainer
-                position="bottom-right"
-                theme="dark"
-                stacked
-                pauseOnHover
-                pauseOnFocusLoss
-                draggable
-                bodyClassName="font-sans"
-              />
+              <Toaster position="bottom-right" theme="dark" />
             </div>
 
             <div className="hidden sm:block">

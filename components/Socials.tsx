@@ -8,7 +8,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 export const Socials = ({ animationDelay = 0.5 }) => {
   return (
     <motion.div
-      className="fixed bottom-6 left-6 flex flex-col gap-8 text-xl text-gray-400"
+      className="fixed bottom-6 left-6 flex gap-8 text-xl text-gray-400"
       {...fadeInAnimation}
       transition={{ delay: animationDelay, duration: 1 }}
     >

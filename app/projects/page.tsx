@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { Blur, Navbar } from "@/components";
+import { Blur, FloatingContactIcon, Navbar } from "@/components";
 import ParticlesComponent from "@/components/Particles";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 
@@ -91,6 +91,8 @@ export default function Projects() {
               Use pagination or drag to navigate through projects.
             </p>
           </motion.div>
+
+          <FloatingContactIcon />
         </motion.main>
       </AnimatePresence>
     </>
@@ -169,6 +171,32 @@ interface ProjectData {
 
 const projectsData: ProjectData[] = [
   {
+    name: "Basepay",
+    link: "https://basepay.link",
+    description:
+      "Receive direct fiat payments with crypto powered by stablecoins.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/basepay.jpg",
+  },
+  {
+    name: "Noblocks Waitlist",
+    link: "https://noblocks.xyz",
+    description:
+      "Waitlist for the Noblocks web app - Zap by Paycrest reimagined.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/noblocks-waitlist.jpg",
+  },
+  {
     name: "Zap by Paycrest",
     link: "https://zap.paycrest.io",
     description: "dApp for instant crypto-to-fiat payments.",
@@ -178,7 +206,7 @@ const projectsData: ProjectData[] = [
       <BiLogoTypescript key="typescript" title="TypeScript" />,
       <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
     ],
-    imageSrc: "/zap.jpg",
+    imageSrc: "/projects/zap.jpg",
   },
   {
     name: "Paycrest",
@@ -190,7 +218,7 @@ const projectsData: ProjectData[] = [
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
     ],
-    imageSrc: "/paycrest.jpg",
+    imageSrc: "/projects/paycrest.jpg",
   },
   {
     name: "$Dogatoshi",
@@ -202,10 +230,10 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
     ],
-    imageSrc: "/dogatoshi.jpg",
+    imageSrc: "/projects/dogatoshi.jpg",
   },
   {
-    name: "SentFi",
+    name: "Sentinel Finance",
     link: "https://sentfi.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
     description: "Proof-of-concept website for a dCommerce platform.",
@@ -214,7 +242,7 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoCss3 key="css" title="CSS" />,
     ],
-    imageSrc: "/sentfi.jpg",
+    imageSrc: "/projects/sentfi.jpg",
   },
   {
     name: "Elder Wallet",
@@ -226,20 +254,8 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
     ],
-    imageSrc: "/elder-wallet.jpg",
+    imageSrc: "/projects/elder-wallet.jpg",
   },
-  {
-    name: "BahamaFoodie",
-    link: "https://hellobahamafoodie.com",
-    description: "Digital plant-based restaurant in The Bahamas.",
-    logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoCss3 key="css" title="CSS" />,
-    ],
-    imageSrc: "/hellobahamafoodie.jpg",
-  },
-
   {
     name: "Valtrix",
     link: "https://valtrix.co",
@@ -250,18 +266,19 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoCss3 key="css" title="CSS" />,
     ],
-    imageSrc: "/valtrix.jpg",
+    imageSrc: "/projects/valtrix.jpg",
   },
   {
     name: "MentorMeInTech Waitlist",
-    link: "https://mentormeintech.com",
-    description: "MentorMeInTech - a platform for mentorship in tech.",
+    link: "https://mentormeintech.jeremy0x.codes",
+    description:
+      "Waitlist for the MentorMeInTech web app - a mentorship platform.",
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoCss3 key="css" title="CSS" />,
     ],
-    imageSrc: "/mentormeintech.jpg",
+    imageSrc: "/projects/mentormeintech.jpg",
   },
 
   {
@@ -274,7 +291,7 @@ const projectsData: ProjectData[] = [
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
     ],
-    imageSrc: "/foodie-fetch.jpg",
+    imageSrc: "/projects/foodie-fetch.jpg",
   },
   {
     name: "LingoLookup",
@@ -286,7 +303,7 @@ const projectsData: ProjectData[] = [
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
     ],
-    imageSrc: "/lingo-lookup.jpg",
+    imageSrc: "/projects/lingo-lookup.jpg",
   },
   {
     name: "Sesshin",
@@ -298,7 +315,7 @@ const projectsData: ProjectData[] = [
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoCss3 key="css" title="CSS" />,
     ],
-    imageSrc: "/sesshin.jpg",
+    imageSrc: "/projects/sesshin.jpg",
   },
   {
     name: "Mullti",
@@ -310,7 +327,7 @@ const projectsData: ProjectData[] = [
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoJavascript key="javaScript" title="JavaScript" />,
     ],
-    imageSrc: "/mullti.jpg",
+    imageSrc: "/projects/mullti.jpg",
   },
   {
     name: "Sways",
@@ -321,7 +338,18 @@ const projectsData: ProjectData[] = [
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoJavascript key="javaScript" title="JavaScript" />,
     ],
-    imageSrc: "/sways.jpg",
+    imageSrc: "/projects/sways.jpg",
+  },
+  {
+    name: "BahamaFoodie",
+    link: "https://hellobahamafoodie.com",
+    description: "Digital plant-based restaurant in The Bahamas.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+    ],
+    imageSrc: "/projects/hellobahamafoodie.jpg",
   },
   {
     name: "Altos (ClientView)",
@@ -333,6 +361,6 @@ const projectsData: ProjectData[] = [
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
     ],
-    imageSrc: "/altos.jpg",
+    imageSrc: "/projects/altos.jpg",
   },
 ];

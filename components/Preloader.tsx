@@ -20,12 +20,12 @@ export const Preloader = ({ isLoading, setIsLoading }: PreloaderProps) => {
 
     const timer = setTimeout(() => {
       setFadeOut(true);
-    }, 2000);
+    }, 1500);
 
     const fadeOutTimer = setTimeout(() => {
       setIsLoading(false);
       sessionStorage.setItem("hasSeenAnimation", "true");
-    }, 3000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
@@ -39,14 +39,14 @@ export const Preloader = ({ isLoading, setIsLoading }: PreloaderProps) => {
       className="flex min-h-screen items-center justify-center bg-neutral-900 uppercase text-white"
       initial={{ opacity: 1 }}
       animate={{ opacity: isLoading ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
     >
       {isLoading && showAnimation && (
         <motion.p
           className="text-4xl font-bold tracking-widest"
           initial={{ opacity: 0 }}
           animate={{ opacity: fadeOut ? 0 : 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
           Hi
         </motion.p>
