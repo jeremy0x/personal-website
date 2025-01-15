@@ -9,6 +9,7 @@ import { FaGithub } from "react-icons/fa";
 import ParticlesComponent from "@/components/Particles";
 import {
   Blur,
+  ConfettiEffect,
   FloatingContactIcon,
   Navbar,
   Preloader,
@@ -146,6 +147,8 @@ export default function Home() {
 
               <Socials />
               <FloatingContactIcon />
+
+              <ConfettiEffect />
             </motion.div>
           </motion.main>
         )}
