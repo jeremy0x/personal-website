@@ -1,12 +1,12 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { Blur, FloatingContactIcon, Navbar } from "@/components";
+import { Blur, FloatingContactIcon, Navbar, ProjectModal } from "@/components";
 import ParticlesComponent from "@/components/Particles";
 import { fadeInAnimation } from "@/utils/framerAnimations";
+import { ProjectData } from "@/types";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,9 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import {
-  BiLinkExternal,
   BiLogoCss3,
-  BiLogoGithub,
   BiLogoHtml5,
   BiLogoJavascript,
   BiLogoReact,
@@ -30,12 +28,23 @@ import { SiFramer, SiNextdotjs, SiRemix } from "react-icons/si";
 
 export default function Projects() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
+    null,
+  );
 
   const handleSlideClick = (index: number) => {
     if (swiper) {
       swiper.slideTo(index);
     }
   };
+
+  const handleProjectClick = (project: ProjectData) => {
+    setSelectedProject(project);
+  };
+
+  const handleCloseModal = useCallback(() => {
+    setSelectedProject(null);
+  }, []);
 
   return (
     <>
@@ -76,15 +85,18 @@ export default function Projects() {
                   onClick={() => handleSlideClick(index)}
                   style={{ maxWidth: "100%", width: "100%" }}
                 >
-                  <ProjectCard project={project} index={index} />
+                  <ProjectCard
+                    project={project}
+                    index={index}
+                    onClick={() => handleProjectClick(project)}
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
 
             <p className="relative z-10 mt-4 text-center text-sm text-neutral-600 dark:text-gray-500">
-              Click on the{" "}
-              <BiLinkExternal className="inline-block text-neutral-600 dark:text-gray-500" />{" "}
-              external link icon to see the project preview.
+              Click on any project card to see more details, including tech
+              stack and live preview.
             </p>
 
             <p className="relative z-10 mt-2 text-center text-sm text-neutral-600 dark:text-gray-500">
@@ -95,6 +107,8 @@ export default function Projects() {
           <FloatingContactIcon />
         </motion.main>
       </AnimatePresence>
+
+      <ProjectModal project={selectedProject} onClose={handleCloseModal} />
     </>
   );
 }
@@ -102,15 +116,16 @@ export default function Projects() {
 interface ProjectCardProps {
   project: ProjectData;
   index: number;
+  onClick: () => void;
 }
 
-function ProjectCard({ project, index }: ProjectCardProps) {
-  const { name, link, githubLink, description, logos, imageSrc } = project;
+function ProjectCard({ project, index, onClick }: ProjectCardProps) {
+  const { name, description, logos, imageSrc } = project;
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="relative">
-      <div className="cursor-grab">
+    <div className="relative" onClick={onClick}>
+      <div className="cursor-pointer">
         {isLoading && (
           <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center">
             <ImSpinner9 className="animate-spin text-4xl" />
@@ -127,87 +142,19 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-grab rounded-xl bg-white/30 opacity-40 transition-opacity duration-500 dark:bg-black/50 sm:opacity-100 sm:hover:opacity-20" />
+      <div className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-pointer rounded-xl bg-white/30 opacity-40 transition-opacity duration-500 dark:bg-black/50 sm:opacity-100 sm:hover:opacity-20" />
 
       <div className="absolute bottom-0 left-0 w-full p-2">
-        <div className="flex w-full cursor-default flex-col items-center justify-center gap-2 rounded-lg bg-white/80 px-2 py-4 text-center backdrop-blur-sm dark:bg-black/60">
+        <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-white/80 px-2 py-4 text-center backdrop-blur-sm dark:bg-black/60">
           <p className="text-sm font-medium sm:text-base">{description}</p>
-          <div className="flex items-center gap-4 text-2xl">
-            <Link
-              href={link}
-              target="blank"
-              rel="noopener noreferrer"
-              title="External Link"
-              className="cursor-pointer"
-            >
-              <BiLinkExternal />
-            </Link>
-            {githubLink && (
-              <Link
-                href={githubLink}
-                target="blank"
-                rel="noopener noreferrer"
-                title="GitHub Link"
-              >
-                <BiLogoGithub />
-              </Link>
-            )}
-            {logos}
-          </div>
+          <div className="flex items-center gap-4 text-2xl">{logos}</div>
         </div>
       </div>
     </div>
   );
 }
 
-interface ProjectData {
-  name: string;
-  link: string;
-  githubLink?: string;
-  description: string;
-  logos: JSX.Element[];
-  imageSrc: string;
-}
-
 const projectsData: ProjectData[] = [
-  {
-    name: "Basepay",
-    link: "https://basepay.link",
-    description:
-      "Receive direct fiat payments with crypto powered by stablecoins.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/basepay.jpg",
-  },
-  {
-    name: "Noblocks Waitlist",
-    link: "https://noblocks.xyz",
-    description:
-      "Waitlist for the Noblocks web app - Zap by Paycrest reimagined.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/noblocks-waitlist.jpg",
-  },
-  {
-    name: "Zap by Paycrest",
-    link: "https://zap.paycrest.io",
-    description: "dApp for instant crypto-to-fiat payments.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/zap.jpg",
-  },
   {
     name: "Paycrest",
     link: "https://paycrest.io",
@@ -221,8 +168,50 @@ const projectsData: ProjectData[] = [
     imageSrc: "/projects/paycrest.jpg",
   },
   {
+    name: "Noblocks",
+    link: "https://noblocks.xyz",
+    githubLink: "https://github.com/paycrest/noblocks",
+    description:
+      "Upgrade from Zap, fast, secure and gasless crypto-to-fiat payments.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/noblocks.jpg",
+  },
+  // {
+  //   name: "Basepay",
+  //   link: "https://basepay.link",
+  //   description:
+  //     "Receive direct fiat payments with crypto powered by stablecoins.",
+  //   logos: [
+  //     <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+  //     <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+  //     <BiLogoTypescript key="typescript" title="TypeScript" />,
+  //     <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+  //   ],
+  //   imageSrc: "/projects/basepay.jpg",
+  // },
+  {
+    name: "Zap by Paycrest",
+    link: "https://zap-beta.jeremy0x.codes/",
+    githubLink: "https://github.com/paycrest/zap",
+    description:
+      "dApp for instant crypto-to-fiat payments. (Deprecated) - Use Noblocks instead.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/zap.jpg",
+  },
+
+  {
     name: "$Dogatoshi",
-    link: "https://dogatoshi.dog",
+    link: "https://dogatoshi.jeremy0x.codes/",
     githubLink: "https://github.com/jeremy0x/dogatoshi",
     description: "A website for the $Dogatoshi meme coin.",
     logos: [
@@ -258,8 +247,8 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Valtrix",
-    link: "https://valtrix.co",
-    githubLink: "https://github.com/jeremy0x/interllo",
+    link: "https://valtrix.jeremy0x.codes/",
+    githubLink: "https://github.com/valtrix-co/website",
     description: "Official website for Valtrix.",
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
@@ -350,17 +339,5 @@ const projectsData: ProjectData[] = [
       <BiLogoCss3 key="css" title="CSS" />,
     ],
     imageSrc: "/projects/hellobahamafoodie.jpg",
-  },
-  {
-    name: "Altos (ClientView)",
-    link: "https://www.useclientview.com/",
-    description: "Altos - an ad tracking platform (now ClientView).",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoJavascript key="javascript" title="JavaScript" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/altos.jpg",
   },
 ];

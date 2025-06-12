@@ -137,16 +137,6 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* <motion.div {...fadeInAnimation}>
-                <Image
-                  src="/arrow-up.svg"
-                  alt=""
-                  width={0}
-                  height={0}
-                  className="absolute -right-4 top-20 w-20 animate-pulse opacity-80 invert dark:invert-0 md:right-10"
-                />
-              </motion.div> */}
-
               <Socials />
               <FloatingContactIcon />
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInAnimation } from "../utils/framerAnimations";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from ".";
 
 export const Navbar = ({ animationDelay = 0.5 }) => {
   return (
