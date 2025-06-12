@@ -27,7 +27,7 @@ export const InputField: React.FC<InputFieldProps> = ({
           id={uniqueId}
           placeholder={placeholder}
           required
-          className="w-full border-b border-neutral-700 bg-transparent py-4 text-sm tracking-wider placeholder:text-gray-400 focus:border-neutral-500 focus:outline-none"
+          className="w-full border-b border-neutral-400 bg-transparent py-4 text-sm tracking-wider placeholder:text-gray-400 focus:border-neutral-500 focus:outline-none dark:border-neutral-700"
           {...rest}
         />
       </div>
@@ -45,7 +45,7 @@ export const InputField: React.FC<InputFieldProps> = ({
         id={uniqueId}
         placeholder={placeholder}
         required
-        className="w-full border-b border-neutral-700 bg-transparent py-4 text-sm tracking-wider placeholder:text-gray-400 focus:border-neutral-500 focus:outline-none"
+        className="w-full border-b border-neutral-400 bg-transparent py-4 text-sm tracking-wider placeholder:text-gray-400 focus:border-neutral-500 focus:outline-none dark:border-neutral-700"
         {...rest}
       />
     </div>

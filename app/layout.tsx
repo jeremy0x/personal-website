@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider } from "next-themes";
 
 const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"] });
 
@@ -46,11 +47,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={hankenGrotesk.className}>
-        {children}
-        <Analytics />
-        <SpeedInsights />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${hankenGrotesk.className} transition-colors`}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );

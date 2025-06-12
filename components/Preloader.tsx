@@ -36,7 +36,7 @@ export const Preloader = ({ isLoading, setIsLoading }: PreloaderProps) => {
 
   return (
     <motion.div
-      className="flex min-h-screen items-center justify-center bg-neutral-900 uppercase text-white"
+      className="flex min-h-screen items-center justify-center bg-white uppercase text-neutral-900 dark:bg-neutral-900 dark:text-white"
       initial={{ opacity: 1 }}
       animate={{ opacity: isLoading ? 1 : 0 }}
       transition={{ duration: 0.5 }}

@@ -8,12 +8,12 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 export const Socials = ({ animationDelay = 0.5 }) => {
   return (
     <motion.div
-      className="fixed bottom-6 left-6 flex gap-8 text-xl text-gray-400"
+      className="fixed bottom-6 left-6 flex gap-8 text-xl text-neutral-600 dark:text-gray-400"
       {...fadeInAnimation}
       transition={{ delay: animationDelay, duration: 1 }}
     >
       <Link href="https://github.com/jeremy0x" target="blank" title="GitHub">
-        <AiFillGithub className="transition-all duration-300 hover:scale-125" />
+        <AiFillGithub className="transition-all duration-300 hover:scale-125 hover:text-neutral-900 dark:hover:text-white" />
       </Link>
 
       <Link
@@ -21,11 +21,11 @@ export const Socials = ({ animationDelay = 0.5 }) => {
         target="blank"
         title="LinkedIn"
       >
-        <AiFillLinkedin className="transition-all duration-300 hover:scale-125" />
+        <AiFillLinkedin className="transition-all duration-300 hover:scale-125 hover:text-neutral-900 dark:hover:text-white" />
       </Link>
 
       <Link href="https://x.com/jeremy0x_" target="blank" title="Twitter">
-        <FaXTwitter className="transition-all duration-300 hover:scale-125" />
+        <FaXTwitter className="transition-all duration-300 hover:scale-125 hover:text-neutral-900 dark:hover:text-white" />
       </Link>
     </motion.div>
   );

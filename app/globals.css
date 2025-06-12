@@ -2,40 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+
+  :root {
+    --background: 255 255 255;
+    --foreground: 23 23 23;
+  }
+
+  .dark {
+    --background: 23 23 23;
+    --foreground: 255 255 255;
+  }
+}
+
 html {
-  background-color: rgb(23 23 23);
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
 }
 
 ::selection {
-  background-color: #000;
-  color: #ffffff;
+  background-color: rgb(var(--foreground));
+  color: rgb(var(--background));
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #212326 inset;
-  -webkit-text-fill-color: #ceced4;
+  -webkit-box-shadow: 0 0 0 30px rgb(var(--background)) inset !important;
+  -webkit-text-fill-color: rgb(var(--foreground)) !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
-  background: #000;
+  background: rgb(var(--background));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.147);
+  background: rgb(var(--foreground) / 0.15);
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.147);
+  background: rgb(var(--foreground) / 0.25);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: rgba(255, 255, 255, 0.147);
+  background: rgb(var(--foreground) / 0.35);
 }
 
 .swiper {
@@ -52,10 +70,11 @@ input:-webkit-autofill:active {
     width: 100% !important;
   }
 }
+
 .swiper-pagination-bullet-active {
-  background-color: #fff !important;
+  background-color: rgb(var(--foreground)) !important;
 }
 
 .swiper-pagination-bullet {
-  background-color: #fff !important;
+  background-color: rgb(var(--foreground)) !important;
 }

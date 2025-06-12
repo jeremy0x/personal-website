@@ -41,7 +41,7 @@ export default function Projects() {
     <>
       <AnimatePresence mode="wait">
         <motion.main
-          className="mx-auto flex min-h-screen items-center justify-center bg-neutral-900 pt-10 text-white"
+          className="mx-auto flex min-h-screen items-center justify-center bg-white pt-10 text-neutral-900 dark:bg-neutral-900 dark:text-white"
           {...fadeInAnimation}
         >
           <ParticlesComponent id="tsparticles" />
@@ -81,13 +81,13 @@ export default function Projects() {
               ))}
             </Swiper>
 
-            <p className="relative z-10 mt-4 text-center text-sm text-gray-500">
+            <p className="relative z-10 mt-4 text-center text-sm text-neutral-600 dark:text-gray-500">
               Click on the{" "}
-              <BiLinkExternal className="inline-block text-gray-500" /> external
-              link icon to see the project preview.
+              <BiLinkExternal className="inline-block text-neutral-600 dark:text-gray-500" />{" "}
+              external link icon to see the project preview.
             </p>
 
-            <p className="relative z-10 mt-2 text-center text-sm text-gray-500">
+            <p className="relative z-10 mt-2 text-center text-sm text-neutral-600 dark:text-gray-500">
               Use pagination or drag to navigate through projects.
             </p>
           </motion.div>
@@ -127,10 +127,10 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-grab rounded-xl bg-black/50 opacity-40 transition-opacity duration-500 sm:opacity-100 sm:hover:opacity-20" />
+      <div className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-grab rounded-xl bg-white/30 opacity-40 transition-opacity duration-500 dark:bg-black/50 sm:opacity-100 sm:hover:opacity-20" />
 
       <div className="absolute bottom-0 left-0 w-full p-2">
-        <div className="flex w-full cursor-default flex-col items-center justify-center gap-2 rounded-lg bg-black/60 px-2 py-4 text-center backdrop-blur-sm">
+        <div className="flex w-full cursor-default flex-col items-center justify-center gap-2 rounded-lg bg-white/80 px-2 py-4 text-center backdrop-blur-sm dark:bg-black/60">
           <p className="text-sm font-medium sm:text-base">{description}</p>
           <div className="flex items-center gap-4 text-2xl">
             <Link

@@ -4,6 +4,7 @@ import { ImSpinner9 } from "react-icons/im";
 import { BiSolidPaperPlane } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Toaster } from "sonner";
+import { useTheme } from "next-themes";
 
 import { handleSubmit } from "@/utils/handleSubmit";
 import { fadeInAnimation } from "@/utils/framerAnimations";
@@ -12,16 +13,22 @@ import ParticlesComponent from "@/components/Particles";
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setIsLoading(false);
+    setMounted(true);
   }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <>
       <AnimatePresence mode="wait">
         <motion.main
-          className="container mx-auto flex min-h-screen items-center justify-center bg-neutral-900 text-white"
+          className="container mx-auto flex min-h-screen items-center justify-center bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white"
           {...fadeInAnimation}
         >
           <motion.div className="page-content" {...fadeInAnimation}>
@@ -36,25 +43,16 @@ export default function Page() {
                   <h1 className="text-3xl font-black uppercase tracking-widest">
                     Contact
                   </h1>
-                  <p className="max-w-lg text-sm leading-loose tracking-wider text-gray-400">
-                    Whether you&apos;re interested in networking, career advice,
-                    or casual conversation, I&apos;m eager to connect and learn
-                    from our interactions!
+                  <p className="max-w-lg text-sm leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
+                    Messages get delivered to my email. I&apos;ll get back to
+                    you as soon as possible.
                   </p>
                 </div>
 
                 <div className="grid gap-10 text-sm">
-                  <div className="hidden md:grid md:gap-2">
-                    <h2 className="text-lg font-bold tracking-widest">
-                      Address
-                    </h2>
-                    <p className="tracking-wider text-gray-400">
-                      Akure, Nigeria
-                    </p>
-                  </div>
                   <div className="grid gap-2">
                     <h2 className="text-lg font-bold tracking-widest">Email</h2>
-                    <p className="leading-loose tracking-wider text-gray-400">
+                    <p className="leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
                       <a
                         href="mailto:aworetanjeremiah@gmail.com"
                         className="underline-offset-2 hover:underline"
@@ -69,13 +67,13 @@ export default function Page() {
               <form
                 onSubmit={(event) => handleSubmit({ event, setIsLoading })}
                 method="POST"
-                className="grid w-full max-w-xl flex-1 gap-10 rounded-xl backdrop-blur backdrop-filter md:bg-neutral-900/30 md:p-14 md:shadow-xl"
+                className="grid w-full max-w-xl flex-1 gap-10 rounded-xl backdrop-blur backdrop-filter md:bg-neutral-100/30 md:p-14 md:shadow-xl dark:md:bg-neutral-900/30"
               >
                 <h1 className="text-center text-2xl font-black uppercase tracking-widest sm:text-3xl">
                   Contact Form
                 </h1>
 
-                <p className="text-center text-sm tracking-wider text-gray-400">
+                <p className="text-center text-sm tracking-wider text-neutral-600 dark:text-gray-400">
                   It actually works, I promise :)
                 </p>
 
@@ -96,7 +94,7 @@ export default function Page() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="mx-auto mt-4 flex w-fit flex-row items-center justify-center gap-3 rounded-xl bg-zinc-800 bg-opacity-30 px-10 py-4 uppercase tracking-wider shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:-translate-y-0"
+                    className="mx-auto mt-4 flex w-fit flex-row items-center justify-center gap-3 rounded-xl bg-neutral-200 bg-opacity-30 px-10 py-4 uppercase tracking-wider shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:-translate-y-0 dark:bg-zinc-800"
                   >
                     <span>{isLoading ? "Sending..." : "Send Message"}</span>
                     {isLoading ? (
@@ -109,7 +107,7 @@ export default function Page() {
 
                 {isLoading && (
                   <motion.p
-                    className="mt-4 text-center text-sm text-gray-400"
+                    className="mt-4 text-center text-sm text-neutral-600 dark:text-gray-400"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -120,7 +118,10 @@ export default function Page() {
                 )}
               </form>
 
-              <Toaster position="bottom-right" theme="dark" />
+              <Toaster
+                position="bottom-right"
+                theme={theme === "dark" ? "dark" : "light"}
+              />
             </div>
 
             <div className="hidden sm:block">

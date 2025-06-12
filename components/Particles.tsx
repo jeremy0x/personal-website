@@ -2,12 +2,16 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { FC, useCallback, useMemo } from "react";
 import { Engine, ISourceOptions } from "tsparticles-engine";
+import { useTheme } from "next-themes";
 
 interface IParticlesProps {
   id: string;
 }
 
 const ParticlesComponent: FC<IParticlesProps> = (props) => {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
   const options: ISourceOptions = useMemo(
     () => ({
       particles: {
@@ -19,13 +23,13 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
           },
         },
         color: {
-          value: "#191919",
+          value: isDark ? "#232323" : "#d4d4d4",
         },
         shape: {
           type: "polygon",
           stroke: {
             width: 0,
-            color: "#000000",
+            color: isDark ? "#000000" : "#a3a3a3",
           },
           polygon: {
             nb_sides: 6,
@@ -37,7 +41,7 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
           },
         },
         opacity: {
-          value: 0.3,
+          value: 0.5,
           random: true,
           anim: {
             enable: false,
@@ -59,7 +63,7 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
         line_linked: {
           enable: false,
           distance: 200,
-          color: "#171717",
+          color: isDark ? "#171717" : "#a3a3a3",
           opacity: 1,
           width: 2,
         },
@@ -119,7 +123,7 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
       },
       retina_detect: true,
     }),
-    [],
+    [isDark],
   );
 
   const { id } = props;

@@ -27,7 +27,7 @@ export default function Home() {
           <Preloader isLoading setIsLoading={setIsLoading} />
         ) : (
           <motion.main
-            className="container relative mx-auto flex min-h-screen w-full items-center justify-center bg-neutral-900 uppercase text-white"
+            className="container relative mx-auto flex min-h-screen w-full items-center justify-center bg-white uppercase text-neutral-900 dark:bg-neutral-900 dark:text-white"
             {...fadeInAnimation}
           >
             <ParticlesComponent id="tsparticles" />
@@ -39,7 +39,7 @@ export default function Home() {
               <motion.div className="z-20 grid gap-2">
                 <motion.p
                   {...fadeInAnimation}
-                  className="z-10 text-xs font-normal tracking-widest text-gray-400 sm:text-sm"
+                  className="z-10 text-xs font-medium tracking-widest text-neutral-600 dark:text-gray-400 sm:text-sm"
                 >
                   Hey, I&apos;m
                 </motion.p>
@@ -49,7 +49,9 @@ export default function Home() {
                   {...fadeInAnimation}
                 >
                   <span className="relative inline-block">
-                    <span className="relative z-10">JEREMY</span>
+                    <span className="relative z-10 text-neutral-900 dark:text-white">
+                      JEREMY
+                    </span>
                     <motion.span
                       className="absolute left-0 top-0 z-0 text-blue-400"
                       initial={{ x: 0, y: 0 }}
@@ -78,7 +80,7 @@ export default function Home() {
                 </motion.h1>
 
                 <motion.p
-                  className="z-10 text-right text-sm font-medium tracking-wider text-gray-400 sm:text-lg"
+                  className="z-10 text-right text-sm font-semibold tracking-wider text-neutral-600 dark:text-gray-400 sm:text-lg"
                   {...fadeInAnimation}
                 >
                   a frontend developer
@@ -92,9 +94,9 @@ export default function Home() {
                       whileHover="hover"
                       whileFocus="hover"
                     >
-                      <BsArrowRight className="text-sm text-gray-500 transition-colors group-hover:text-white sm:text-lg" />
+                      <BsArrowRight className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-gray-500 dark:group-hover:text-white sm:text-lg" />
                       <span className="relative">
-                        <span className="text-xs font-medium uppercase tracking-wider text-gray-400 transition-colors group-hover:text-white sm:text-sm">
+                        <span className="text-xs font-medium uppercase tracking-wider text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-gray-400 dark:group-hover:text-white sm:text-sm">
                           View Projects
                         </span>
                         <motion.div
@@ -116,9 +118,9 @@ export default function Home() {
                       whileHover="hover"
                       whileFocus="hover"
                     >
-                      <FaGithub className="text-sm text-gray-500 transition-colors group-hover:text-white sm:text-lg" />
+                      <FaGithub className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-gray-500 dark:group-hover:text-white sm:text-lg" />
                       <span className="relative">
-                        <span className="text-xs font-medium uppercase tracking-wider text-gray-400 transition-colors group-hover:text-white sm:text-sm">
+                        <span className="text-xs font-medium uppercase tracking-wider text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-gray-400 dark:group-hover:text-white sm:text-sm">
                           GitHub
                         </span>
                         <motion.div
@@ -135,15 +137,15 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              <motion.div {...fadeInAnimation}>
+              {/* <motion.div {...fadeInAnimation}>
                 <Image
                   src="/arrow-up.svg"
                   alt=""
                   width={0}
                   height={0}
-                  className="absolute -right-4 top-20 w-20 animate-pulse opacity-80 md:right-10"
+                  className="absolute -right-4 top-20 w-20 animate-pulse opacity-80 invert dark:invert-0 md:right-10"
                 />
-              </motion.div>
+              </motion.div> */}
 
               <Socials />
               <FloatingContactIcon />
