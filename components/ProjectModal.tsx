@@ -112,6 +112,15 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   {project.description}
                 </p>
 
+                {project.detailedDescription && (
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-semibold">Project Details:</h3>
+                    <p className="text-neutral-600 dark:text-gray-400">
+                      {project.detailedDescription}
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex flex-wrap items-center gap-4">
                   <h3 className="text-sm font-semibold">Tech Stack:</h3>
                   <div className="flex flex-wrap gap-3 text-xl text-neutral-600 dark:text-gray-400">

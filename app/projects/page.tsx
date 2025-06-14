@@ -24,7 +24,13 @@ import {
   BiLogoTypescript,
 } from "react-icons/bi";
 import { ImSpinner9 } from "react-icons/im";
-import { SiFramer, SiNextdotjs, SiRemix } from "react-icons/si";
+import {
+  SiFramer,
+  SiGreensock,
+  SiNextdotjs,
+  SiRemix,
+  SiVite,
+} from "react-icons/si";
 
 export default function Projects() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
@@ -158,7 +164,10 @@ const projectsData: ProjectData[] = [
   {
     name: "Paycrest",
     link: "https://paycrest.io",
-    description: "Decentralized Crypto-to-Fiat Payment Protocol.",
+    description:
+      "A revolutionary decentralized payment protocol enabling seamless crypto-to-fiat transactions.",
+    detailedDescription:
+      "Paycrest is a cutting-edge payment protocol that bridges the gap between cryptocurrency and traditional fiat payments. Built with Remix.js and TypeScript, it offers a secure, efficient, and user-friendly platform for businesses and individuals to accept crypto payments while receiving fiat currency. The platform features real-time transaction monitoring, automated settlement, and robust security measures.",
     logos: [
       <SiRemix key="remix" className="text-lg" title="Remix JS" />,
       <BiLogoReact key="react" title="React" />,
@@ -172,7 +181,9 @@ const projectsData: ProjectData[] = [
     link: "https://noblocks.xyz",
     githubLink: "https://github.com/paycrest/noblocks",
     description:
-      "Upgrade from Zap, fast, secure and gasless crypto-to-fiat payments.",
+      "Next-generation crypto payment solution eliminating P2P stress with zero gas fees.",
+    detailedDescription:
+      "Noblocks is an advanced upgrade from the Zap platform, offering a more sophisticated and efficient crypto payment solution. Built with Next.js and TypeScript, it eliminates gas fees and provides instant settlements while significantly reducing the complexity and stress of peer-to-peer transactions. The platform features a modern, responsive UI with Framer Motion animations, real-time transaction tracking, and comprehensive merchant tools that streamline the entire payment process.",
     logos: [
       <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
@@ -181,25 +192,14 @@ const projectsData: ProjectData[] = [
     ],
     imageSrc: "/projects/noblocks.jpg",
   },
-  // {
-  //   name: "Basepay",
-  //   link: "https://basepay.link",
-  //   description:
-  //     "Receive direct fiat payments with crypto powered by stablecoins.",
-  //   logos: [
-  //     <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-  //     <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-  //     <BiLogoTypescript key="typescript" title="TypeScript" />,
-  //     <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-  //   ],
-  //   imageSrc: "/projects/basepay.jpg",
-  // },
   {
     name: "Zap by Paycrest",
     link: "https://zap-beta.jeremy0x.codes/",
     githubLink: "https://github.com/paycrest/zap",
     description:
-      "dApp for instant crypto-to-fiat payments. (Deprecated) - Use Noblocks instead.",
+      "Hackathon-winning crypto payment solution (Deprecated) - Upgraded to Noblocks.",
+    detailedDescription:
+      "The initial version of Paycrest's crypto payment solution, developed during the Based Africa hackathon. Built with Next.js, TypeScript, and Framer Motion, it demonstrated the core functionality of crypto-to-fiat payments. The project was a winner in the hackathon and served as the foundation for the more advanced Noblocks solution. The platform has been deprecated in favor of Noblocks but remains a significant milestone in Paycrest's development journey.",
     logos: [
       <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
@@ -210,46 +210,59 @@ const projectsData: ProjectData[] = [
   },
 
   {
-    name: "$Dogatoshi",
-    link: "https://dogatoshi.jeremy0x.codes/",
-    githubLink: "https://github.com/jeremy0x/dogatoshi",
-    description: "A website for the $Dogatoshi meme coin.",
+    name: "Shape Up Fitness",
+    link: "https://shapeupfitnessonline.com",
+    description:
+      "Informative platform showcasing fitness services and gym facilities.",
+    detailedDescription:
+      "A comprehensive information platform for Shape Up Fitness gym, built with React and TypeScript. The website showcases the gym's facilities, services offered, workout schedules, and trainer profiles. Features a modern, responsive design with smooth animations powered by Framer Motion, optimized for both desktop and mobile users.",
     logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoReact key="react" title="React" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+      <SiVite key="vite" title="Vite" />,
     ],
-    imageSrc: "/projects/dogatoshi.jpg",
+    imageSrc: "/projects/shape-up-fitness.jpg",
+  },
+  {
+    name: "Salvage Yard Store",
+    link: "https://www.salvageyardstore.com",
+    description: "Dual-sided e-commerce platform for automotive parts trading.",
+    detailedDescription:
+      "A comprehensive e-commerce platform built with Next.js and TypeScript, featuring separate interfaces for buyers and sellers. The platform enables salvage yards to list their inventory while allowing buyers to browse, search, and purchase parts. Features include inventory management, real-time stock updates, customer accounts, and order tracking. The platform uses Tailwind CSS for styling and Framer Motion for smooth animations.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/salvage-yard-store.jpg",
   },
   {
     name: "Sentinel Finance",
     link: "https://sentfi.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
-    description: "Proof-of-concept website for a dCommerce platform.",
+    description:
+      "Decentralized commerce platform with integrated payment solutions.",
+    detailedDescription:
+      "Sentinel Finance is a proof-of-concept dCommerce platform that combines traditional e-commerce with blockchain technology. Built with vanilla JavaScript and enhanced with GSAP animations, it features a modern UI, secure payment processing, and real-time transaction monitoring. The platform demonstrates the potential of decentralized commerce.",
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
     ],
     imageSrc: "/projects/sentfi.jpg",
-  },
-  {
-    name: "Elder Wallet",
-    link: "https://elderwallet.jeremy0x.codes",
-    githubLink: "https://github.com/jeremy0x/elder-wallet",
-    description: "Manages bitcoin and blockchain protocols on Runes Network.",
-    logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-    ],
-    imageSrc: "/projects/elder-wallet.jpg",
   },
   {
     name: "Valtrix",
     link: "https://valtrix.jeremy0x.codes/",
     githubLink: "https://github.com/valtrix-co/website",
-    description: "Official website for Valtrix.",
+    description:
+      "Official website for Valtrix - showcasing innovative blockchain solutions.",
+    detailedDescription:
+      "The official website for Valtrix, built with modern web technologies. Features a clean, professional design with smooth animations and transitions. The site effectively communicates Valtrix's mission and services while maintaining optimal performance and accessibility.",
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
       <BiLogoHtml5 key="html" title="HTML" />,
@@ -258,10 +271,57 @@ const projectsData: ProjectData[] = [
     imageSrc: "/projects/valtrix.jpg",
   },
   {
+    name: "Sesshin",
+    link: "https://sesshin.jeremy0x.codes",
+    githubLink: "https://github.com/jeremy0x/Sesshin",
+    description:
+      "Custom brand website with immersive animations and modern design.",
+    detailedDescription:
+      "A custom website for the Sesshin brand, featuring immersive animations powered by GSAP. The site combines modern design principles with smooth transitions and interactive elements. Built with vanilla JavaScript for optimal performance and flexibility.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/sesshin.jpg",
+  },
+  {
+    name: "$Dogatoshi",
+    link: "https://dogatoshi.jeremy0x.codes/",
+    githubLink: "https://github.com/jeremy0x/dogatoshi",
+    description: "Informative website for the $Dogatoshi meme coin community.",
+    detailedDescription:
+      "An informative website for the $Dogatoshi meme coin, built with JavaScript and Tailwind CSS. The site provides community information, project details, and an engaging UI that reflects the fun and energetic nature of the project.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+    ],
+    imageSrc: "/projects/dogatoshi.jpg",
+  },
+  {
+    name: "Elder Wallet",
+    link: "https://elderwallet.jeremy0x.codes",
+    githubLink: "https://github.com/jeremy0x/elder-wallet",
+    description:
+      "Proof of concept Bitcoin wallet with Runes Network protocol support.",
+    detailedDescription:
+      "A proof of concept Bitcoin wallet that demonstrates support for the Runes Network protocol. Built with JavaScript and Tailwind CSS, it showcases a user-friendly interface for managing Bitcoin transactions and Runes Network assets. The project serves as a demonstration of the potential integration between Bitcoin wallets and the Runes Network.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+    ],
+    imageSrc: "/projects/elder-wallet.jpg",
+  },
+  {
     name: "MentorMeInTech Waitlist",
     link: "https://mentormeintech.jeremy0x.codes",
     description:
-      "Waitlist for the MentorMeInTech web app - a mentorship platform.",
+      "Waitlist platform for the now-launched MentorMeInTech mentorship program.",
+    detailedDescription:
+      "A waitlist platform for MentorMeInTech, a mentorship program connecting tech professionals with aspiring developers. Built with vanilla JavaScript, it featured a clean design, email collection, and social sharing capabilities. The platform successfully captured user interest and built anticipation for the program launch. The project has since evolved into the full platform at mentormeintech.com.",
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
       <BiLogoHtml5 key="html" title="HTML" />,
@@ -269,12 +329,14 @@ const projectsData: ProjectData[] = [
     ],
     imageSrc: "/projects/mentormeintech.jpg",
   },
-
   {
     name: "foodieFetch",
     link: "https://foodie-fetch.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/foodie-fetch_react",
-    description: "Find recipes with the ingredients you have.",
+    description:
+      "Personal project: Recipe finder app based on available ingredients.",
+    detailedDescription:
+      "A personal project built with React and TypeScript that helps users discover meals based on ingredients they have. Features include ingredient-based search, recipe filtering, nutritional information, and step-by-step cooking instructions. The clean, intuitive interface is styled with Tailwind CSS, showcasing modern web development practices.",
     logos: [
       <BiLogoReact key="react" title="React" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
@@ -286,7 +348,10 @@ const projectsData: ProjectData[] = [
     name: "LingoLookup",
     link: "https://lingolookup.jeremy0x.codes",
     githubLink: "https://github.com/jeremy0x/lingo-lookup",
-    description: "Explore word definitions, synonyms, pronunciation, and more.",
+    description:
+      "Personal project: Comprehensive dictionary app with advanced features.",
+    detailedDescription:
+      "A personal project built with React and TypeScript that serves as a comprehensive dictionary application. Users can explore word definitions, synonyms, antonyms, pronunciation, and usage examples. The app includes features like word of the day, search history, and favorites. The clean, intuitive interface is styled with Tailwind CSS, demonstrating modern web development techniques.",
     logos: [
       <BiLogoReact key="react" title="React" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
@@ -295,22 +360,11 @@ const projectsData: ProjectData[] = [
     imageSrc: "/projects/lingo-lookup.jpg",
   },
   {
-    name: "Sesshin",
-    link: "https://sesshin.jeremy0x.codes",
-    githubLink: "https://github.com/jeremy0x/Sesshin",
-    description: "Custom website for a brand named Sesshin.",
-    logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoCss3 key="css" title="CSS" />,
-    ],
-    imageSrc: "/projects/sesshin.jpg",
-  },
-  {
     name: "Mullti",
     link: "https://mullti.jeremy0x.codes",
-    description:
-      "E-commerce platform for buyers & sellers, tailored to client's design.",
+    description: "Dual-sided e-commerce platform with unique design.",
+    detailedDescription:
+      "A custom e-commerce platform built with Next.js and Tailwind CSS, featuring separate interfaces for buyers and sellers. The platform enables users to list their products while allowing buyers to browse, search, and make purchases. Features include product catalog, shopping cart, user authentication, and order management. The platform is designed with a unique aesthetic and optimized for both desktop and mobile users.",
     logos: [
       <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
@@ -321,7 +375,10 @@ const projectsData: ProjectData[] = [
   {
     name: "Sways",
     link: "https://sways.jeremy0x.codes",
-    description: "A simple website for a Dutch client with a given design.",
+    description:
+      "Custom website for a Dutch client with modern design elements.",
+    detailedDescription:
+      "A custom website built for a Dutch client using Next.js and Tailwind CSS. The site features a modern, minimalist design with smooth animations and transitions. The responsive layout ensures optimal viewing experience across all devices.",
     logos: [
       <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
@@ -332,11 +389,15 @@ const projectsData: ProjectData[] = [
   {
     name: "BahamaFoodie",
     link: "https://hellobahamafoodie.com",
-    description: "Digital plant-based restaurant in The Bahamas.",
+    description:
+      "Digital plant-based restaurant platform (No longer maintained).",
+    detailedDescription:
+      "A digital platform for a plant-based restaurant in The Bahamas. Built with vanilla JavaScript and enhanced with GSAP animations, it featured menu browsing, online ordering, and delivery tracking. The site is no longer actively maintained but served as a foundation for future restaurant platform projects.",
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
     ],
     imageSrc: "/projects/hellobahamafoodie.jpg",
   },

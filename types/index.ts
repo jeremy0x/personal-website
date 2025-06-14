@@ -3,6 +3,7 @@ export interface ProjectData {
   link: string;
   githubLink?: string;
   description: string;
+  detailedDescription?: string;
   logos: JSX.Element[];
   imageSrc: string;
 }
