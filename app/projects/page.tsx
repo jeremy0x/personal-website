@@ -151,7 +151,7 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
       <div className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-pointer rounded-xl bg-white/30 opacity-40 transition-opacity duration-500 dark:bg-black/50 sm:opacity-100 sm:hover:opacity-20" />
 
       <div className="absolute bottom-0 left-0 w-full p-2">
-        <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-white/80 px-2 py-4 text-center backdrop-blur-sm dark:bg-black/60">
+        <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-white/80 px-2 py-4 text-center backdrop-blur-xs dark:bg-black/60">
           <p className="text-sm font-medium sm:text-base">{description}</p>
           <div className="flex items-center gap-4 text-2xl">{logos}</div>
         </div>

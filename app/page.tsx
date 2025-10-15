@@ -100,7 +100,7 @@ export default function Home() {
                           View Projects
                         </span>
                         <motion.div
-                          className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-400"
+                          className="absolute bottom-0 left-0 h-px w-full bg-neutral-400"
                           initial={{ scaleX: 1 }}
                           variants={{
                             hover: { scaleX: 0 },
@@ -124,7 +124,7 @@ export default function Home() {
                           GitHub
                         </span>
                         <motion.div
-                          className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-400"
+                          className="absolute bottom-0 left-0 h-px w-full bg-neutral-400"
                           initial={{ scaleX: 1 }}
                           variants={{
                             hover: { scaleX: 0 },

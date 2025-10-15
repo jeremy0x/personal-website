@@ -67,7 +67,7 @@ export default function Page() {
               <form
                 onSubmit={(event) => handleSubmit({ event, setIsLoading })}
                 method="POST"
-                className="grid w-full max-w-xl flex-1 gap-10 rounded-xl backdrop-blur backdrop-filter md:bg-neutral-100/30 md:p-14 md:shadow-xl dark:md:bg-neutral-900/30"
+                className="grid w-full max-w-xl flex-1 gap-10 rounded-xl backdrop-blur-sm backdrop-filter md:bg-neutral-100/30 md:p-14 md:shadow-xl dark:md:bg-neutral-900/30"
               >
                 <h1 className="text-center text-2xl font-black uppercase tracking-widest sm:text-3xl">
                   Contact Form
