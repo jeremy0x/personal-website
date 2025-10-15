@@ -194,7 +194,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Zap by Paycrest",
-    link: "https://zap-beta.jeremy0x.codes/",
+    link: "https://zap-beta.jeremy0x.dev/",
     githubLink: "https://github.com/paycrest/zap",
     description:
       "Hackathon-winning crypto payment solution (Deprecated) - Upgraded to Noblocks.",
@@ -241,7 +241,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Sentinel Finance",
-    link: "https://sentfi.jeremy0x.codes",
+    link: "https://sentfi.jeremy0x.dev",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
     description:
       "Decentralized commerce platform with integrated payment solutions.",
@@ -257,7 +257,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Valtrix",
-    link: "https://valtrix.jeremy0x.codes/",
+    link: "https://valtrix.jeremy0x.dev/",
     githubLink: "https://github.com/valtrix-co/website",
     description:
       "Official website for Valtrix - showcasing innovative blockchain solutions.",
@@ -272,7 +272,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Sesshin",
-    link: "https://sesshin.jeremy0x.codes",
+    link: "https://sesshin.jeremy0x.dev",
     githubLink: "https://github.com/jeremy0x/Sesshin",
     description:
       "Custom brand website with immersive animations and modern design.",
@@ -288,7 +288,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "$Dogatoshi",
-    link: "https://dogatoshi.jeremy0x.codes/",
+    link: "https://dogatoshi.jeremy0x.dev/",
     githubLink: "https://github.com/jeremy0x/dogatoshi",
     description: "Informative website for the $Dogatoshi meme coin community.",
     detailedDescription:
@@ -302,7 +302,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Elder Wallet",
-    link: "https://elderwallet.jeremy0x.codes",
+    link: "https://elderwallet.jeremy0x.dev",
     githubLink: "https://github.com/jeremy0x/elder-wallet",
     description:
       "Proof of concept Bitcoin wallet with Runes Network protocol support.",
@@ -317,7 +317,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "MentorMeInTech Waitlist",
-    link: "https://mentormeintech.jeremy0x.codes",
+    link: "https://mentormeintech.jeremy0x.dev",
     description:
       "Waitlist platform for the now-launched MentorMeInTech mentorship program.",
     detailedDescription:
@@ -331,7 +331,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "foodieFetch",
-    link: "https://foodie-fetch.jeremy0x.codes",
+    link: "https://foodie-fetch.jeremy0x.dev",
     githubLink: "https://github.com/jeremy0x/foodie-fetch_react",
     description:
       "Personal project: Recipe finder app based on available ingredients.",
@@ -346,7 +346,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "LingoLookup",
-    link: "https://lingolookup.jeremy0x.codes",
+    link: "https://lingolookup.jeremy0x.dev",
     githubLink: "https://github.com/jeremy0x/lingo-lookup",
     description:
       "Personal project: Comprehensive dictionary app with advanced features.",
@@ -361,7 +361,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Mullti",
-    link: "https://mullti.jeremy0x.codes",
+    link: "https://mullti.jeremy0x.dev",
     description: "Dual-sided e-commerce platform with unique design.",
     detailedDescription:
       "A custom e-commerce platform built with Next.js and Tailwind CSS, featuring separate interfaces for buyers and sellers. The platform enables users to list their products while allowing buyers to browse, search, and make purchases. Features include product catalog, shopping cart, user authentication, and order management. The platform is designed with a unique aesthetic and optimized for both desktop and mobile users.",
@@ -374,7 +374,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Sways",
-    link: "https://sways.jeremy0x.codes",
+    link: "https://sways.jeremy0x.dev",
     description:
       "Custom website for a Dutch client with modern design elements.",
     detailedDescription:

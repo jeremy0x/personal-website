@@ -1,5 +1,6 @@
 import { Dispatch, FormEvent } from "react";
 import { toast } from "sonner";
+import { env } from "../config/env";
 
 interface HandleSubmitProps {
   event: FormEvent<HTMLFormElement>;
@@ -16,7 +17,14 @@ export const handleSubmit = ({ event, setIsLoading }: HandleSubmitProps) => {
     message: { value: string };
   };
 
-  fetch("https://formsubmit.co/ajax/5ad6e90d1d6c9847586699d8ecf9fee2", {
+  // Validate that the formsubmit URL is configured
+  if (!env.FORMSUBMIT_URL) {
+    throw new Error(
+      "NEXT_PUBLIC_FORMSUBMIT_URL environment variable is required",
+    );
+  }
+
+  fetch(env.FORMSUBMIT_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

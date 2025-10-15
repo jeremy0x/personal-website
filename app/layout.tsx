@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Jeremiah Aworetan | Frontend Engineer",
     description:
       "Frontend engineer building scalable web solutions for seamless user experiences.",
-    url: "https://jeremy0x.codes",
+    url: "https://jeremy0x.dev",
     siteName: "Jeremy",
     images: [
       {

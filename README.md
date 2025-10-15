@@ -6,7 +6,7 @@
   <h3 align="center">Jeremy's Portfolio Repository</h3>
 
   <p align="center">
-    <a href="https://www.jeremy0x.codes"><strong>View The Live App »</strong></a>
+    <a href="https://www.jeremy0x.dev"><strong>View The Live App »</strong></a>
     <br />
     <br />
     <a href="https://github.com/jeremy0x/personal-website/issues/new?assignees=jeremy0x&labels=enhancement&projects=&template=feature_request.yml&title=%5BFEAT%5D%3A+">Request Feature</a>
