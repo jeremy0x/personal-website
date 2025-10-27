@@ -1,27 +1,35 @@
 import React, { useEffect } from "react";
 import confetti from "canvas-confetti";
 
-// Component shows confetti effect only on January 15th (local time zone)
+// Component shows confetti effect on January 15th or when ?confetti=true is in URL
 interface ConfettiEffectProps {
   duration?: number;
   colors?: string[];
   particleCount?: number;
-  spread?: number;
   interval?: number;
 }
 
 export const ConfettiEffect: React.FC<ConfettiEffectProps> = ({
-  duration = 7500,
+  duration = 5000,
   colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEEAD"],
   particleCount = 3,
-  spread = 55,
   interval = 100,
 }) => {
   useEffect(() => {
+    // Check for query parameter (client-side only)
+    const urlParams = typeof window !== "undefined" 
+      ? new URLSearchParams(window.location.search)
+      : null;
+    const confettiParam = urlParams?.get("confetti");
+    
+    // Check if it's January 15th
     const today = new Date();
     const isJanuary15 = today.getMonth() === 0 && today.getDate() === 15;
+    
+    // Trigger if query parameter is true OR if it's January 15th
+    const shouldTrigger = confettiParam === "true" || isJanuary15;
 
-    if (!isJanuary15) return;
+    if (!shouldTrigger) return;
 
     const animationEnd = Date.now() + duration;
 
@@ -33,27 +41,25 @@ export const ConfettiEffect: React.FC<ConfettiEffectProps> = ({
         return;
       }
 
-      // Launch confetti from the left
+      // Create uniform falling effect across full width
+      // Random x position from 0 to 1 for full width coverage
+      const randomX = Math.random();
+      
       confetti({
         particleCount,
-        angle: 60,
-        spread,
-        origin: { x: 0 },
+        angle: 90, // Straight down
+        spread: 45, // Small spread for natural falling
+        startVelocity: 25, // Moderate falling speed
+        origin: { x: randomX, y: 0 }, // Random x position, top of screen
         colors,
-      });
-
-      // Launch confetti from the right
-      confetti({
-        particleCount,
-        angle: 120,
-        spread,
-        origin: { x: 1 },
-        colors,
+        gravity: 1, // Standard gravity for falling effect
+        drift: 0, // No horizontal drift
+        ticks: 200, // How long particles stay visible
       });
     }, interval);
 
     return () => clearInterval(intervalId);
-  }, [duration, colors, particleCount, spread, interval]);
+  }, [duration, colors, particleCount, interval]);
 
   return null;
 };
