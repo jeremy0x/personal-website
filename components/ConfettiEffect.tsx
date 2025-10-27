@@ -16,9 +16,11 @@ export const ConfettiEffect: React.FC<ConfettiEffectProps> = ({
   interval = 100,
 }) => {
   useEffect(() => {
-    // Check for query parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const confettiParam = urlParams.get("confetti");
+    // Check for query parameter (client-side only)
+    const urlParams = typeof window !== "undefined" 
+      ? new URLSearchParams(window.location.search)
+      : null;
+    const confettiParam = urlParams?.get("confetti");
     
     // Check if it's January 15th
     const today = new Date();
