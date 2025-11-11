@@ -51,7 +51,8 @@
   },
   "pnpm": {
     "overrides": {
-      "brace-expansion": ">=1.1.12"
+      "brace-expansion": ">=1.1.12",
+      "tar": ">=7.5.2"
     }
   }
 }
