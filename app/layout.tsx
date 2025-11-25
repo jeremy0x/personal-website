@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Frontend engineer building scalable web solutions for seamless user experiences.",
   publisher: "Jeremiah Aworetan",
   authors: [{ name: "Jeremiah Aworetan", url: "https://github.com/jeremy0x" }],
-  metadataBase: new URL("https://jeremy0x.vercel.app"),
+  metadataBase: new URL("https://jeremy0x.dev"),
   openGraph: {
     title: "Jeremiah Aworetan | Frontend Engineer",
     description:
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Jeremy",
     images: [
       {
-        url: "https://jeremy0x.vercel.app/thumbnail.jpg",
+        url: "https://jeremy0x.dev/thumbnail.jpg",
       },
     ],
     locale: "en_US",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     title: "Jeremiah Aworetan | Frontend Engineer",
     description:
       "Frontend engineer building scalable web solutions for seamless user experiences.",
-    creator: "@jeremy0x_",
-    images: ["https://jeremy0x.vercel.app/thumbnail.jpg"],
+    creator: "@thejeremy0x",
+    images: ["https://jeremy0x.dev/thumbnail.jpg"],
   },
 };
 

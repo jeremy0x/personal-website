@@ -24,7 +24,7 @@ export const Socials = ({ animationDelay = 0.5 }) => {
         <AiFillLinkedin className="transition-all duration-300 hover:scale-125 hover:text-neutral-900 dark:hover:text-white" />
       </Link>
 
-      <Link href="https://x.com/jeremy0x_" target="blank" title="Twitter">
+      <Link href="https://x.com/thejeremy0x" target="blank" title="Twitter">
         <FaXTwitter className="transition-all duration-300 hover:scale-125 hover:text-neutral-900 dark:hover:text-white" />
       </Link>
     </motion.div>
