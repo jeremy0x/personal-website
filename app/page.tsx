@@ -2,9 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsFileEarmarkPdf } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
 
 import ParticlesComponent from "@/components/Particles";
 import {
@@ -113,17 +112,21 @@ export default function Home() {
                     </motion.div>
                   </Link>
 
-                  <Link href="https://github.com/jeremy0x" target="_blank">
+                  <Link
+                    href="/Resume_JeremiahAworetan.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <motion.div
                       {...fadeInAnimation}
                       className="group relative flex w-fit items-center gap-2"
                       whileHover="hover"
                       whileFocus="hover"
                     >
-                      <FaGithub className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 sm:text-lg dark:text-gray-500 dark:group-hover:text-white" />
+                      <BsFileEarmarkPdf className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 sm:text-lg dark:text-gray-500 dark:group-hover:text-white" />
                       <span className="relative">
                         <span className="text-xs font-medium tracking-wider text-neutral-500 uppercase transition-colors group-hover:text-neutral-900 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
-                          GitHub
+                          Resume
                         </span>
                         <motion.div
                           className="absolute bottom-0 left-0 h-px w-full bg-neutral-400"
