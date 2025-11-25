@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -99,4 +99,9 @@ input:-webkit-autofill:active {
 
 .swiper-pagination-bullet {
   background-color: rgb(var(--foreground)) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgb(var(--foreground)) !important;
 }

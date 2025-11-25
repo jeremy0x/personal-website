@@ -6,7 +6,7 @@ import { ThemeToggle } from ".";
 
 export const Navbar = ({ animationDelay = 0.5 }) => {
   return (
-    <nav className="fixed inset-0 z-20 h-fit w-full bg-transparent backdrop-blur-md transition-all duration-75">
+    <nav className="fixed inset-0 z-20 h-fit w-full bg-transparent backdrop-blur-sm transition-all duration-75">
       <motion.div
         {...fadeInAnimation}
         transition={{ delay: animationDelay, duration: 0.5 }}
@@ -18,7 +18,7 @@ export const Navbar = ({ animationDelay = 0.5 }) => {
             alt=""
             width={0}
             height={0}
-            className="w-7 invert dark:invert-0 sm:w-8"
+            className="w-7 invert sm:w-8 dark:invert-0"
           />
         </Link>
 
@@ -46,7 +46,7 @@ const NavLink = ({
         whileHover="hover"
         whileFocus="hover"
       >
-        <span className="text-xs text-gray-600 transition-all duration-300 group-hover:text-neutral-950 dark:text-gray-400 dark:group-hover:text-white sm:text-sm">
+        <span className="text-xs text-gray-600 transition-all duration-300 group-hover:text-neutral-950 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
           {children}
         </span>
         <motion.div
