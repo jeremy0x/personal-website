@@ -9,6 +9,7 @@ import { FaGithub } from "react-icons/fa";
 import ParticlesComponent from "@/components/Particles";
 import {
   Blur,
+  Breadcrumbs,
   ConfettiEffect,
   FloatingContactIcon,
   Navbar,
@@ -22,12 +23,13 @@ export default function Home() {
 
   return (
     <>
+      <Breadcrumbs items={[{ name: "Home", item: "/" }]} />
       <AnimatePresence mode="wait">
         {isLoading ? (
           <Preloader isLoading setIsLoading={setIsLoading} />
         ) : (
           <motion.main
-            className="container relative mx-auto flex min-h-screen w-full items-center justify-center bg-white uppercase text-neutral-900 dark:bg-neutral-900 dark:text-white"
+            className="relative container mx-auto flex min-h-screen w-full items-center justify-center bg-white text-neutral-900 uppercase dark:bg-neutral-900 dark:text-white"
             {...fadeInAnimation}
           >
             <ParticlesComponent id="tsparticles" />
@@ -39,7 +41,7 @@ export default function Home() {
               <motion.div className="z-20 grid gap-2">
                 <motion.p
                   {...fadeInAnimation}
-                  className="z-10 text-xs font-medium tracking-widest text-neutral-600 dark:text-gray-400 sm:text-sm"
+                  className="z-10 text-xs font-medium tracking-widest text-neutral-600 sm:text-sm dark:text-gray-400"
                 >
                   Hey, I&apos;m
                 </motion.p>
@@ -53,7 +55,7 @@ export default function Home() {
                       JEREMY
                     </span>
                     <motion.span
-                      className="absolute left-0 top-0 z-0 text-blue-400"
+                      className="absolute top-0 left-0 z-0 text-blue-400"
                       initial={{ x: 0, y: 0 }}
                       animate={{ x: [-1, 1, -1], y: [1, -1, 1] }}
                       transition={{
@@ -65,7 +67,7 @@ export default function Home() {
                       JEREMY
                     </motion.span>
                     <motion.span
-                      className="absolute left-0 top-0 z-0 text-red-400"
+                      className="absolute top-0 left-0 z-0 text-red-400"
                       initial={{ x: 0, y: 0 }}
                       animate={{ x: [1, -1, 1], y: [-1, 1, -1] }}
                       transition={{
@@ -80,10 +82,10 @@ export default function Home() {
                 </motion.h1>
 
                 <motion.p
-                  className="z-10 text-right text-sm font-semibold tracking-wider text-neutral-600 dark:text-gray-400 sm:text-lg"
+                  className="z-10 text-right text-sm font-semibold tracking-wider text-neutral-600 sm:text-lg dark:text-gray-400"
                   {...fadeInAnimation}
                 >
-                  a frontend developer
+                  a frontend engineer
                 </motion.p>
 
                 <div className="mt-10 flex items-center justify-between">
@@ -94,9 +96,9 @@ export default function Home() {
                       whileHover="hover"
                       whileFocus="hover"
                     >
-                      <BsArrowRight className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-gray-500 dark:group-hover:text-white sm:text-lg" />
+                      <BsArrowRight className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 sm:text-lg dark:text-gray-500 dark:group-hover:text-white" />
                       <span className="relative">
-                        <span className="text-xs font-medium uppercase tracking-wider text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-gray-400 dark:group-hover:text-white sm:text-sm">
+                        <span className="text-xs font-medium tracking-wider text-neutral-500 uppercase transition-colors group-hover:text-neutral-900 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
                           View Projects
                         </span>
                         <motion.div
@@ -118,9 +120,9 @@ export default function Home() {
                       whileHover="hover"
                       whileFocus="hover"
                     >
-                      <FaGithub className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-gray-500 dark:group-hover:text-white sm:text-lg" />
+                      <FaGithub className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 sm:text-lg dark:text-gray-500 dark:group-hover:text-white" />
                       <span className="relative">
-                        <span className="text-xs font-medium uppercase tracking-wider text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-gray-400 dark:group-hover:text-white sm:text-sm">
+                        <span className="text-xs font-medium tracking-wider text-neutral-500 uppercase transition-colors group-hover:text-neutral-900 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
                           GitHub
                         </span>
                         <motion.div

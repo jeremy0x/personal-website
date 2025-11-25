@@ -1,4 +1,5 @@
 export * from "./Blur";
+export * from "./Breadcrumbs";
 export * from "./ConfettiEffect";
 export * from "./FloatingContactIcon";
 export * from "./Input";

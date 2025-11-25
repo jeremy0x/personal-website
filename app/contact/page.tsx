@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 
 import { handleSubmit } from "@/utils/handleSubmit";
 import { fadeInAnimation } from "@/utils/framerAnimations";
-import { Blur, InputField, Navbar, Socials } from "@/components";
+import { Blur, Breadcrumbs, InputField, Navbar, Socials } from "@/components";
 import ParticlesComponent from "@/components/Particles";
 
 export default function Page() {
@@ -26,6 +26,12 @@ export default function Page() {
 
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Contact", item: "/contact" },
+        ]}
+      />
       <AnimatePresence mode="wait">
         <motion.main
           className="container mx-auto flex min-h-screen items-center justify-center bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white"
@@ -37,10 +43,10 @@ export default function Page() {
 
             <ParticlesComponent id="tsparticles" />
 
-            <div className="z-10 mx-auto flex flex-col items-center justify-center gap-20 px-2 pb-16 pt-36 sm:px-8 lg:flex-row lg:py-20">
+            <div className="z-10 mx-auto flex flex-col items-center justify-center gap-20 px-2 pt-36 pb-16 sm:px-8 lg:flex-row lg:py-20">
               <article className="z-10 grid max-w-2xl flex-1 gap-10 text-center">
                 <div className="space-y-5">
-                  <h1 className="text-3xl font-black uppercase tracking-widest">
+                  <h1 className="text-3xl font-black tracking-widest uppercase">
                     Contact
                   </h1>
                   <p className="max-w-lg text-sm leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
@@ -69,7 +75,7 @@ export default function Page() {
                 method="POST"
                 className="grid w-full max-w-xl flex-1 gap-10 rounded-xl backdrop-blur-sm backdrop-filter md:bg-neutral-100/30 md:p-14 md:shadow-xl dark:md:bg-neutral-900/30"
               >
-                <h1 className="text-center text-2xl font-black uppercase tracking-widest sm:text-3xl">
+                <h1 className="text-center text-2xl font-black tracking-widest uppercase sm:text-3xl">
                   Contact Form
                 </h1>
 
@@ -94,7 +100,7 @@ export default function Page() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="mx-auto mt-4 flex w-fit flex-row items-center justify-center gap-3 rounded-xl bg-neutral-200 bg-opacity-30 px-10 py-4 uppercase tracking-wider shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:-translate-y-0 dark:bg-zinc-800"
+                    className="bg-opacity-30 mx-auto mt-4 flex w-fit flex-row items-center justify-center gap-3 rounded-xl bg-neutral-200 px-10 py-4 tracking-wider uppercase shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:-translate-y-0 dark:bg-zinc-800"
                   >
                     <span>{isLoading ? "Sending..." : "Send Message"}</span>
                     {isLoading ? (
