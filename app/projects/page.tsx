@@ -206,10 +206,10 @@ const projectsData: ProjectData[] = [
 
   {
     name: "Paycrest Dashboard",
-    link: "https://paycrest.io",
-    description: "Interface for interacting with the Paycrest protocol.",
+    link: "https://app.paycrest.io",
+    description: "Operations console for Paycrest's crypto-to-fiat rails.",
     detailedDescription:
-      "Dashboard application providing comprehensive control and monitoring of Paycrest protocol interactions. Features transaction history, analytics, and protocol management tools.",
+      "Operations workspace for Paycrest that tracks settlements, liquidity, compliance states, and merchant activity while orchestrating the crypto-to-fiat bridge in real time. Includes wallets overview, analytics, and payout tooling.",
     logos: [
       <SiRemix className="text-sm" key="remix" title="Remix JS" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
@@ -351,10 +351,9 @@ const projectsData: ProjectData[] = [
   {
     name: "Paycrest Landing Page",
     link: "https://paycrest.io",
-    description:
-      "Decentralized payment protocol for crypto-to-fiat transactions.",
+    description: "Marketing site introducing Paycrest's payments platform.",
     detailedDescription:
-      "Cutting-edge payment protocol bridging cryptocurrency and traditional fiat. Built with Remix.js and TypeScript. Features real-time monitoring, automated settlement, and robust security.",
+      "High-converting landing page that explains Paycrest's crypto-to-fiat infrastructure, highlights instant settlement benefits, and funnels prospects into demos. Built with Next.js, Tailwind CSS, TypeScript, and Framer Motion for polished storytelling.",
     logos: [
       <SiNextdotjs key="next.js" className="text-lg" title="Next.js" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
