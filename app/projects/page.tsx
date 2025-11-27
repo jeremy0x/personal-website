@@ -28,10 +28,10 @@ import {
   BiLogoJavascript,
   BiLogoReact,
   BiLogoTailwindCss,
+  BiLogoTelegram,
   BiLogoTypescript,
 } from "react-icons/bi";
 import { ImSpinner9 } from "react-icons/im";
-import { BsInfoCircle, BsChevronLeft } from "react-icons/bs";
 import {
   SiFramer,
   SiGreensock,
@@ -59,18 +59,6 @@ export default function Projects() {
   const handleCloseModal = useCallback(() => {
     setSelectedProject(null);
   }, []);
-
-  const handlePrevSlide = () => {
-    if (swiper) {
-      swiper.slidePrev();
-    }
-  };
-
-  const handleNextSlide = () => {
-    if (swiper) {
-      swiper.slideNext();
-    }
-  };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -121,12 +109,17 @@ export default function Projects() {
               }}
               pagination={{
                 clickable: true,
+                dynamicBullets: true,
+                dynamicMainBullets: 3,
               }}
               navigation={true}
               modules={[EffectCoverflow, Pagination, Navigation]}
               spaceBetween={20}
               className="mySwiper"
               onSwiper={setSwiper}
+              style={
+                { "--swiper-navigation-size": "25px" } as React.CSSProperties
+              }
             >
               {projectsData.map((project, index) => (
                 <SwiperSlide
@@ -142,17 +135,6 @@ export default function Projects() {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            <p className="relative z-10 mt-4 flex items-center justify-center gap-1 text-center text-sm text-neutral-600 dark:text-gray-500">
-              <BsInfoCircle className="size-3" />
-              Click on any project card to see more details, including tech
-              stack and live preview.
-            </p>
-
-            <p className="relative z-10 mt-2 text-center text-xs text-neutral-600 dark:text-gray-500">
-              Use pagination, arrow buttons, keyboard arrows, or drag to
-              navigate through projects.
-            </p>
           </motion.div>
 
           <FloatingContactIcon />
@@ -229,7 +211,7 @@ const projectsData: ProjectData[] = [
     detailedDescription:
       "Dashboard application providing comprehensive control and monitoring of Paycrest protocol interactions. Features transaction history, analytics, and protocol management tools.",
     logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <SiRemix className="text-sm" key="remix" title="Remix JS" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
       <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
@@ -240,6 +222,7 @@ const projectsData: ProjectData[] = [
   {
     name: "Noblocks Blog",
     link: "https://noblocks.xyz/blog",
+    githubLink: "https://github.com/paycrest/noblocks/tree/main/app/blog",
     description: "Blog platform powered by Sanity.io for Noblocks.",
     detailedDescription:
       "Content management system for Noblocks blog using Sanity.io headless CMS. Features dynamic content rendering, SEO optimization, and seamless integration with the main platform.",
@@ -247,23 +230,25 @@ const projectsData: ProjectData[] = [
       <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
     ],
     imageSrc: "/projects/noblocks-blog.jpg",
   },
 
   {
-    name: "BahamaFoodie",
-    link: "http://hellobahamafoodie.com",
-    description: "Digital plant-based restaurant platform in the Bahamas.",
+    name: "AI Titans",
+    link: "https://t.me/AI_Titans_bot",
+    description: "Battle-focused tap-to-earn RPG built as a Telegram Mini App.",
     detailedDescription:
-      "Platform for a plant-based restaurant in The Bahamas. Featured menu browsing, online ordering, and delivery tracking. Built with vanilla JavaScript and GSAP animations.",
+      "Telegram Mini App that lets players command mech titans, battle through tap-to-earn encounters, and sync rewards directly inside chat. Includes Tailwind-driven UI, Telegram SDK auth, and real-time battle state updates.",
     logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoCss3 key="css" title="CSS" />,
-      <SiGreensock key="greensock" title="GSAP" />,
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+      <BiLogoTelegram key="telegram" title="Telegram Mini Apps SDK" />,
     ],
-    imageSrc: "/projects/hellobahamafoodie.jpg",
+    imageSrc: "/projects/ai-titans.jpg",
   },
 
   {
@@ -282,65 +267,54 @@ const projectsData: ProjectData[] = [
   },
 
   {
-    name: "Paycrest",
-    link: "https://paycrest.io",
-    description:
-      "Decentralized payment protocol for crypto-to-fiat transactions.",
-    detailedDescription:
-      "Cutting-edge payment protocol bridging cryptocurrency and traditional fiat. Built with Remix.js and TypeScript. Features real-time monitoring, automated settlement, and robust security.",
-    logos: [
-      <SiRemix key="remix" className="text-lg" title="Remix JS" />,
-      <BiLogoReact key="react" title="React" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-    ],
-    imageSrc: "/projects/paycrest.jpg",
-  },
-
-  {
     name: "Shape Up Fitness",
     link: "https://shapeupfitnessonline.com",
+    githubLink: "https://github.com/jeremy0x/project-suf",
     description: "Platform showcasing fitness services and gym facilities.",
     detailedDescription:
-      "Information platform for Shape Up Fitness gym. Features facility showcases, service listings, schedules, and trainer profiles. Built with React, TypeScript, and Framer Motion.",
+      "Information platform for Shape Up Fitness gym. Features facility showcases, service listings, schedules, and trainer profiles. Built with React, TypeScript, Vite, and Framer Motion.",
     logos: [
+      <SiVite key="vite" title="Vite" />,
       <BiLogoReact key="react" title="React" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
       <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-      <SiVite key="vite" title="Vite" />,
     ],
     imageSrc: "/projects/shape-up-fitness.jpg",
   },
 
   {
-    name: "Mindlar",
-    link: "https://mindlar.com",
-    description: "Landing page for a learning community.",
+    name: "Qari",
+    link: "https://qariworld.com",
+    githubLink: "https://github.com/jeremy0x/project-qari",
+    description: "Premium ride-hailing waitlist site centered on fair pricing.",
     detailedDescription:
-      "Landing page for Mindlar learning community. Features engaging design that communicates community values and offerings.",
+      "Marketing site for Qari, the Lagos-based ride-hailing platform promising clean vehicles, transparent fixed fares, rider rewards, and WhatsApp-first driver support—designed to grow the waitlist and spotlight its low-commission model.",
     logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-    ],
-    imageSrc: "/projects/mindlar-landing-page.jpg",
-  },
-
-  {
-    name: "Zap by Paycrest",
-    link: "https://zap-beta.jeremy0x.dev/",
-    githubLink: "https://github.com/paycrest/zap",
-    description: "Hackathon-winning crypto payment solution (Deprecated).",
-    detailedDescription:
-      "Initial Paycrest payment solution from Based Africa hackathon. Winner project demonstrating core crypto-to-fiat functionality. Deprecated in favor of Noblocks.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
       <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
     ],
-    imageSrc: "/projects/zap.jpg",
+    imageSrc: "/projects/qari.jpg",
+  },
+
+  {
+    name: "Mindlar",
+    link: "https://mindlar.com",
+    githubLink: "https://github.com/mindlar/landing-page",
+    description: "Landing page for a learning community.",
+    detailedDescription:
+      "Landing page for Mindlar learning community. Features engaging design that communicates community values and offerings.",
+    logos: [
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/mindlar-landing-page.jpg",
   },
 
   {
@@ -357,6 +331,37 @@ const projectsData: ProjectData[] = [
       <SiGreensock key="greensock" title="GSAP" />,
     ],
     imageSrc: "/projects/sentfi.jpg",
+  },
+
+  {
+    name: "BahamaFoodie",
+    link: "http://hellobahamafoodie.com",
+    description: "Digital plant-based restaurant platform in the Bahamas.",
+    detailedDescription:
+      "Platform for a plant-based restaurant in The Bahamas. Featured menu browsing, online ordering, and delivery tracking. Built with vanilla JavaScript and GSAP animations.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/hellobahamafoodie.jpg",
+  },
+
+  {
+    name: "Paycrest Landing Page",
+    link: "https://paycrest.io",
+    description:
+      "Decentralized payment protocol for crypto-to-fiat transactions.",
+    detailedDescription:
+      "Cutting-edge payment protocol bridging cryptocurrency and traditional fiat. Built with Remix.js and TypeScript. Features real-time monitoring, automated settlement, and robust security.",
+    logos: [
+      <SiNextdotjs key="next.js" className="text-lg" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/paycrest.jpg",
   },
 
   {
@@ -450,16 +455,32 @@ const projectsData: ProjectData[] = [
   },
 
   {
+    name: "Zap by Paycrest",
+    link: "https://zap-beta.jeremy0x.dev/",
+    githubLink: "https://github.com/paycrest/zap",
+    description: "Hackathon-winning crypto payment solution (Deprecated).",
+    detailedDescription:
+      "Initial Paycrest payment solution from Based Africa hackathon. Winner project demonstrating core crypto-to-fiat functionality. Deprecated in favor of Noblocks.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/zap.jpg",
+  },
+
+  {
     name: "foodieFetch",
     link: "https://foodie-fetch.jeremy0x.dev",
-    githubLink: "https://github.com/jeremy0x/foodie-fetch_react",
+    githubLink: "https://github.com/jeremy0x/foodie-fetch",
     description: "Recipe finder app based on available ingredients.",
     detailedDescription:
       "Personal project helping users discover meals from available ingredients. Features ingredient search, filtering, nutritional info, and step-by-step instructions.",
     logos: [
-      <BiLogoReact key="react" title="React" />,
+      <BiLogoJavascript key="javaScript" title="JavaScript" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
     ],
     imageSrc: "/projects/foodie-fetch.jpg",
   },
@@ -472,9 +493,10 @@ const projectsData: ProjectData[] = [
     detailedDescription:
       "Personal dictionary application with definitions, synonyms, antonyms, pronunciation, and examples. Features word of the day, search history, and favorites.",
     logos: [
+      <SiVite key="vite" title="Vite" />,
       <BiLogoReact key="react" title="React" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <BiLogoJavascript key="javaScript" title="JavaScript" />,
     ],
     imageSrc: "/projects/lingo-lookup.jpg",
   },
@@ -496,11 +518,12 @@ const projectsData: ProjectData[] = [
   {
     name: "Sways",
     link: "https://sways.jeremy0x.dev",
+    githubLink: "https://github.com/jeremy0x/project-sways",
     description: "Custom Dutch brand website with modern design.",
     detailedDescription:
       "Custom website with minimalist design and smooth animations. Responsive layout optimized for all devices. Built with Next.js and Tailwind CSS.",
     logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoJavascript key="javaScript" title="JavaScript" />,
     ],
