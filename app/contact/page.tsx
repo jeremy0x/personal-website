@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { ImSpinner9 } from "react-icons/im";
 import { BiSolidPaperPlane } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -41,7 +41,9 @@ export default function Page() {
             <Blur />
             <Navbar />
 
-            <ParticlesComponent id="tsparticles" />
+            <Suspense fallback={null}>
+              <ParticlesComponent id="tsparticles" />
+            </Suspense>
 
             <div className="z-10 mx-auto flex flex-col items-center justify-center gap-20 px-2 pt-36 pb-16 sm:px-8 lg:flex-row lg:py-20">
               <article className="z-10 grid max-w-2xl flex-1 gap-10 text-center">

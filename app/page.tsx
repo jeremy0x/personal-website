@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { BsArrowRight, BsFileEarmarkPdf } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -31,7 +31,9 @@ export default function Home() {
             className="relative container mx-auto flex min-h-screen w-full items-center justify-center bg-white text-neutral-900 uppercase dark:bg-neutral-900 dark:text-white"
             {...fadeInAnimation}
           >
-            <ParticlesComponent id="tsparticles" />
+            <Suspense fallback={null}>
+              <ParticlesComponent id="tsparticles" />
+            </Suspense>
             <motion.div className="page-content" {...fadeInAnimation}>
               <Navbar />
 

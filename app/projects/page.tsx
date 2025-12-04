@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useCallback, useEffect } from "react";
+import { Suspense, useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import {
@@ -89,7 +89,9 @@ export default function Projects() {
           className="mx-auto flex min-h-dvh items-center justify-center bg-white pt-20 text-neutral-900 dark:bg-neutral-900 dark:text-white"
           {...fadeInAnimation}
         >
-          <ParticlesComponent id="tsparticles" />
+          <Suspense fallback={null}>
+            <ParticlesComponent id="tsparticles" />
+          </Suspense>
 
           <motion.div className="page-content" {...fadeInAnimation}>
             <Blur />
