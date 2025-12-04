@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://jeremy0x.dev";
+  const baseUrl = "https://www.jeremy0x.dev";
 
   return {
     rules: {
@@ -12,4 +12,3 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
-

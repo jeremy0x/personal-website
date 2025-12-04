@@ -9,8 +9,11 @@ export const metadata: Metadata = {
     title: "Featured Projects | Jeremiah Aworetan",
     description:
       "Dive into a curated selection of shipping-grade projects built with Next.js, TypeScript, and modern tooling.",
-    url: "https://jeremy0x.dev/projects",
+    url: "https://www.jeremy0x.dev/projects",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://www.jeremy0x.dev/projects",
   },
   twitter: {
     card: "summary_large_image",

@@ -13,16 +13,19 @@ export const metadata: Metadata = {
     "Frontend engineer building scalable web solutions for seamless user experiences.",
   publisher: "Jeremiah Aworetan",
   authors: [{ name: "Jeremiah Aworetan", url: "https://github.com/jeremy0x" }],
-  metadataBase: new URL("https://jeremy0x.dev"),
+  metadataBase: new URL("https://www.jeremy0x.dev"),
+  alternates: {
+    canonical: "https://www.jeremy0x.dev",
+  },
   openGraph: {
     title: "Jeremiah Aworetan | Frontend Engineer",
     description:
       "Frontend engineer building scalable web solutions for seamless user experiences.",
-    url: "https://jeremy0x.dev",
+    url: "https://www.jeremy0x.dev",
     siteName: "Jeremy",
     images: [
       {
-        url: "https://jeremy0x.dev/thumbnail.jpg",
+        url: "https://www.jeremy0x.dev/thumbnail.jpg",
       },
     ],
     locale: "en_US",
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     description:
       "Frontend engineer building scalable web solutions for seamless user experiences.",
     creator: "@thejeremy0x",
-    images: ["https://jeremy0x.dev/thumbnail.jpg"],
+    images: ["https://www.jeremy0x.dev/thumbnail.jpg"],
   },
 };
 

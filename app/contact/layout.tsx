@@ -9,8 +9,11 @@ export const metadata: Metadata = {
     title: "Contact Jeremiah Aworetan",
     description:
       "Reach out to Jeremiah for frontend engineering work, collaborations, or mentorship.",
-    url: "https://jeremy0x.dev/contact",
+    url: "https://www.jeremy0x.dev/contact",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://www.jeremy0x.dev/contact",
   },
   twitter: {
     card: "summary",

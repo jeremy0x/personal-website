@@ -6,9 +6,9 @@ This website contains information about my work as a frontend engineer, includin
 
 ## Main Pages
 
-- [Home](https://jeremy0x.dev/): Personal introduction and overview
-- [Projects](https://jeremy0x.dev/projects): Portfolio showcasing web development projects including crypto payment solutions, e-commerce platforms, and custom websites
-- [Contact](https://jeremy0x.dev/contact): Contact form and information
+- [Home](https://www.jeremy0x.dev/): Personal introduction and overview
+- [Projects](https://www.jeremy0x.dev/projects): Portfolio showcasing web development projects including crypto payment solutions, e-commerce platforms, and custom websites
+- [Contact](https://www.jeremy0x.dev/contact): Contact form and information
 
 ## Projects
 
