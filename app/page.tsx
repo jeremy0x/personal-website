@@ -114,7 +114,7 @@ export default function Home() {
                     </motion.div>
                   </Link>
 
-                  <Link
+                  <a
                     href="/Resume_JeremiahAworetan.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -140,7 +140,7 @@ export default function Home() {
                         />
                       </span>
                     </motion.div>
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
 
