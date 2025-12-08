@@ -38,7 +38,7 @@ This website contains information about my work as a frontend engineer, includin
 
 - [Lync](https://thelync.app): Landing page for Lync product. Features modern design and clear product communication.
 
-- [Valtrix](https://valtrix.jeremy0x.dev/): Official website showcasing blockchain solutions. Features clean, professional design with smooth animations.
+- [Valtrix](https://valtrix.jeremy0x.dev/): Website for a company that offers software development services. Features clean, professional design with smooth animations.
 
 - [Sesshin](https://sesshin.jeremy0x.dev): Custom brand website with immersive animations. Features GSAP-powered animations with modern design principles.
 

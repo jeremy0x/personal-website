@@ -384,9 +384,9 @@ const projectsData: ProjectData[] = [
     name: "Valtrix",
     link: "https://valtrix.jeremy0x.dev/",
     githubLink: "https://github.com/valtrix-co/website",
-    description: "Official website showcasing blockchain solutions.",
+    description: "Website for a company that offers software development services.",
     detailedDescription:
-      "Official Valtrix website with clean, professional design. Features smooth animations and effective communication of mission and services.",
+      "Official Valtrix website for a creative design agency offering software development services. Features clean, professional design with smooth animations and effective communication of mission and services.",
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
       <BiLogoHtml5 key="html" title="HTML" />,
