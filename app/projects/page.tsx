@@ -95,7 +95,9 @@ export default function Projects() {
 
           <motion.div className="page-content" {...fadeInAnimation}>
             <Blur />
-            <Navbar />
+            <Suspense fallback={null}>
+              <Navbar />
+            </Suspense>
 
             <Swiper
               effect={"coverflow"}
@@ -384,7 +386,8 @@ const projectsData: ProjectData[] = [
     name: "Valtrix",
     link: "https://valtrix.jeremy0x.dev/",
     githubLink: "https://github.com/valtrix-co/website",
-    description: "Website for a company that offers software development services.",
+    description:
+      "Website for a company that offers software development services.",
     detailedDescription:
       "Official Valtrix website for a creative design agency offering software development services. Features clean, professional design with smooth animations and effective communication of mission and services.",
     logos: [

@@ -1,28 +1,29 @@
- "use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInAnimation } from "../utils/framerAnimations";
 import { ThemeToggle } from ".";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
+import { useSearchParams } from "next/navigation";
+
 export const Navbar = ({ animationDelay = 0.5 }) => {
-  const [forceSeasonal, setForceSeasonal] = useState(false);
+  const searchParams = useSearchParams();
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const params = new URLSearchParams(window.location.search);
-    setForceSeasonal(params.get("seasonal")?.toLowerCase() === "true");
-  }, []);
-
-  const isSeasonal = useMemo(() => {
-    const now = new Date();
+  const isSeasonalWindow = (now: Date) => {
     const month = now.getMonth();
     const date = now.getDate();
+    return (month === 11 && date >= 1) || (month === 0 && date <= 5);
+  };
 
-    const inWindow = (month === 11 && date >= 1) || (month === 0 && date <= 5);
-    return forceSeasonal || inWindow;
-  }, [forceSeasonal]);
+  const isSeasonal = useMemo(() => {
+    const seasonalParam = searchParams?.get("seasonal");
+    if (seasonalParam && seasonalParam.toLowerCase() === "true") {
+      return true;
+    }
+    return isSeasonalWindow(new Date());
+  }, [searchParams]);
 
   const logoSrc = isSeasonal ? "/logo_seasonal.svg" : "/logo-icon.svg";
 

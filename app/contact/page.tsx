@@ -39,7 +39,9 @@ export default function Page() {
         >
           <motion.div className="page-content" {...fadeInAnimation}>
             <Blur />
-            <Navbar />
+            <Suspense fallback={null}>
+              <Navbar />
+            </Suspense>
 
             <Suspense fallback={null}>
               <ParticlesComponent id="tsparticles" />

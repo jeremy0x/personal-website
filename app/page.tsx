@@ -35,7 +35,9 @@ export default function Home() {
               <ParticlesComponent id="tsparticles" />
             </Suspense>
             <motion.div className="page-content" {...fadeInAnimation}>
-              <Navbar />
+              <Suspense fallback={null}>
+                <Navbar />
+              </Suspense>
 
               <Blur />
 
