@@ -1,10 +1,31 @@
+ "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInAnimation } from "../utils/framerAnimations";
 import { ThemeToggle } from ".";
-
+import { useEffect, useMemo, useState } from "react";
 export const Navbar = ({ animationDelay = 0.5 }) => {
+  const [forceSeasonal, setForceSeasonal] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    setForceSeasonal(params.get("seasonal")?.toLowerCase() === "true");
+  }, []);
+
+  const isSeasonal = useMemo(() => {
+    const now = new Date();
+    const month = now.getMonth();
+    const date = now.getDate();
+
+    const inWindow = (month === 11 && date >= 1) || (month === 0 && date <= 5);
+    return forceSeasonal || inWindow;
+  }, [forceSeasonal]);
+
+  const logoSrc = isSeasonal ? "/logo_seasonal.svg" : "/logo-icon.svg";
+
   return (
     <nav className="fixed inset-0 z-20 h-fit w-full bg-transparent backdrop-blur-sm transition-all duration-75">
       <motion.div
@@ -12,14 +33,20 @@ export const Navbar = ({ animationDelay = 0.5 }) => {
         transition={{ delay: animationDelay, duration: 0.5 }}
         className="mx-auto flex flex-row justify-between p-4 uppercase sm:container sm:p-6"
       >
-        <Link href="/" className="hover:animate-spin" title="Home">
-          <Image
-            src="/logo-icon.svg"
-            alt=""
-            width={0}
-            height={0}
-            className="w-7 invert sm:w-8 dark:invert-0"
-          />
+        <Link href="/" title="Home">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 320, damping: 22 }}
+            className="inline-block"
+          >
+            <Image
+              src={logoSrc}
+              alt="Logo"
+              width={0}
+              height={0}
+              className="w-7 invert sm:w-8 dark:invert-0"
+            />
+          </motion.div>
         </Link>
 
         <div className="flex flex-row items-center justify-between gap-8 text-sm font-medium tracking-wider sm:gap-16">
