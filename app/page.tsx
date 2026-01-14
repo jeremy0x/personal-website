@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import ParticlesComponent from "@/components/Particles";
 import {
+  BirthdayFireworks,
   Blur,
   Breadcrumbs,
   ConfettiEffect,
@@ -150,6 +151,7 @@ export default function Home() {
               <FloatingContactIcon />
 
               <ConfettiEffect />
+              <BirthdayFireworks />
             </motion.div>
           </motion.main>
         )}

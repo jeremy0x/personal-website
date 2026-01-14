@@ -1,3 +1,4 @@
+export * from "./BirthdayFireworks";
 export * from "./Blur";
 export * from "./Breadcrumbs";
 export * from "./ConfettiEffect";

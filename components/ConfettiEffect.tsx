@@ -17,17 +17,18 @@ export const ConfettiEffect: React.FC<ConfettiEffectProps> = ({
 }) => {
   useEffect(() => {
     // Check for query parameter (client-side only)
-    const urlParams = typeof window !== "undefined" 
-      ? new URLSearchParams(window.location.search)
-      : null;
-    const confettiParam = urlParams?.get("confetti");
-    
+    const urlParams =
+      typeof window !== "undefined"
+        ? new URLSearchParams(window.location.search)
+        : null;
+    const birthdayParam = urlParams?.get("birthday");
+
     // Check if it's January 15th
     const today = new Date();
     const isJanuary15 = today.getMonth() === 0 && today.getDate() === 15;
-    
+
     // Trigger if query parameter is true OR if it's January 15th
-    const shouldTrigger = confettiParam === "true" || isJanuary15;
+    const shouldTrigger = birthdayParam === "true" || isJanuary15;
 
     if (!shouldTrigger) return;
 
@@ -44,7 +45,7 @@ export const ConfettiEffect: React.FC<ConfettiEffectProps> = ({
       // Create uniform falling effect across full width
       // Random x position from 0 to 1 for full width coverage
       const randomX = Math.random();
-      
+
       confetti({
         particleCount,
         angle: 90, // Straight down
