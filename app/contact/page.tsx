@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 import { handleSubmit } from "@/utils/handleSubmit";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 import { Blur, Breadcrumbs, InputField, Navbar, Socials } from "@/components";
-import ParticlesComponent from "@/components/Particles";
+import ParticlesComponent from "@/components/particles";
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(false);

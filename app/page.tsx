@@ -5,7 +5,7 @@ import { Suspense, useState } from "react";
 import { BsArrowRight, BsFileEarmarkPdf } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
 
-import ParticlesComponent from "@/components/Particles";
+import ParticlesComponent from "@/components/particles";
 import {
   BirthdayFireworks,
   Blur,

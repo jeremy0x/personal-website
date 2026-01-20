@@ -10,7 +10,7 @@ import {
   Navbar,
   ProjectModal,
 } from "@/components";
-import ParticlesComponent from "@/components/Particles";
+import ParticlesComponent from "@/components/particles";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 import { ProjectData } from "@/types";
 
