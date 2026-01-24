@@ -107,7 +107,7 @@ export default function Projects() {
       />
       <AnimatePresence mode="wait">
         <motion.main
-          className="mx-auto flex min-h-dvh items-center justify-center bg-white pt-20 text-neutral-900 dark:bg-neutral-900 dark:text-white"
+          className="mx-auto flex min-h-dvh items-center justify-center overflow-x-hidden bg-white pt-20 text-neutral-900 dark:bg-neutral-900 dark:text-white"
           {...fadeInAnimation}
         >
           <Suspense fallback={null}>
