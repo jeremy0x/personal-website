@@ -17,10 +17,16 @@ import { ProjectData } from "@/types";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import "swiper/css/effect-cube";
 import "swiper/css/navigation";
 import type { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import {
+  EffectCoverflow,
+  EffectCube,
+  Pagination,
+  Navigation,
+} from "swiper/modules";
 
 import {
   BiLogoCss3,
@@ -45,6 +51,21 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
     null,
   );
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Track screen size for responsive Swiper effect
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
 
   const handleSlideClick = (index: number) => {
     if (swiper) {
@@ -100,10 +121,11 @@ export default function Projects() {
             </Suspense>
 
             <Swiper
-              effect={"coverflow"}
+              key={isMobile ? "cube" : "coverflow"}
+              effect={isMobile ? "cube" : "coverflow"}
               grabCursor={true}
               centeredSlides={true}
-              slidesPerView="auto"
+              slidesPerView={isMobile ? 1 : "auto"}
               coverflowEffect={{
                 rotate: 50,
                 stretch: 0,
@@ -111,13 +133,19 @@ export default function Projects() {
                 modifier: 1,
                 slideShadows: true,
               }}
+              cubeEffect={{
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+              }}
               pagination={{
                 clickable: true,
                 dynamicBullets: true,
                 dynamicMainBullets: 3,
               }}
               navigation={true}
-              modules={[EffectCoverflow, Pagination, Navigation]}
+              modules={[EffectCoverflow, EffectCube, Pagination, Navigation]}
               spaceBetween={20}
               className="mySwiper"
               onSwiper={setSwiper}
