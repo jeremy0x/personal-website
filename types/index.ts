@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 export interface ProjectData {
   name: string;
   link: string;
