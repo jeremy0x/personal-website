@@ -71,6 +71,15 @@ export default function Page() {
                       </a>
                     </p>
                   </div>
+
+                  <div className="grid gap-2">
+                    <h2 className="text-lg font-bold tracking-widest">
+                      Time Zone
+                    </h2>
+                    <p className="leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
+                      GMT+1
+                    </p>
+                  </div>
                 </div>
               </article>
 
