@@ -4,5 +4,5 @@
  */
 
 export const env = {
-  FORMSUBMIT_URL: process.env.NEXT_PUBLIC_FORMSUBMIT_URL,
+  FORMDROP_URL: process.env.NEXT_PUBLIC_FORMDROP_URL,
 };

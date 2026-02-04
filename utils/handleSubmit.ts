@@ -17,18 +17,17 @@ export const handleSubmit = ({ event, setIsLoading }: HandleSubmitProps) => {
     message: { value: string };
   };
 
-  // Validate that the formsubmit URL is configured
-  if (!env.FORMSUBMIT_URL) {
+  // Validate that the formdrop URL is configured
+  if (!env.FORMDROP_URL) {
     throw new Error(
-      "NEXT_PUBLIC_FORMSUBMIT_URL environment variable is required",
+      "NEXT_PUBLIC_FORMDROP_URL environment variable is required",
     );
   }
 
-  fetch(env.FORMSUBMIT_URL, {
+  fetch(env.FORMDROP_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Accept: "application/json",
     },
     body: JSON.stringify({
       name: target.name.value,
