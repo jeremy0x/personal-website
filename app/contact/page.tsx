@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 
 import { handleSubmit } from "@/utils/handleSubmit";
 import { fadeInAnimation } from "@/utils/framerAnimations";
-import { Blur, Breadcrumbs, InputField, Navbar, Socials } from "@/components";
+import { Breadcrumbs, InputField, Navbar, Socials } from "@/components";
 import ParticlesComponent from "@/components/particles";
 
 export default function Page() {
@@ -38,7 +38,6 @@ export default function Page() {
           {...fadeInAnimation}
         >
           <motion.div className="page-content" {...fadeInAnimation}>
-            <Blur />
             <Suspense fallback={null}>
               <Navbar />
             </Suspense>

@@ -1,5 +1,4 @@
 export * from "./birthday-fireworks";
-export * from "./blur";
 export * from "./breadcrumbs";
 export * from "./confetti-effect";
 export * from "./input";

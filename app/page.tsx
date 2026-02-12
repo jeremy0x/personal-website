@@ -10,7 +10,6 @@ const ParticlesComponent = dynamic(() => import("@/components/particles"), {
 });
 import {
   BirthdayFireworks,
-  Blur,
   Breadcrumbs,
   ConfettiEffect,
   Navbar,
@@ -35,8 +34,6 @@ export default function Home() {
             <Suspense fallback={null}>
               <Navbar animationDelay={0.2} />
             </Suspense>
-
-            <Blur />
 
             <div className="z-20 grid gap-2">
               <p className="z-10 text-xs font-medium tracking-widest text-neutral-600 sm:text-sm dark:text-gray-400">

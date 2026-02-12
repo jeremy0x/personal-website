@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Suspense } from "react";
 
-import { Blur, Breadcrumbs, Navbar } from "@/components";
+import { Breadcrumbs, Navbar } from "@/components";
 
 export const metadata: Metadata = {
   title: "Projects by Jeremiah Aworetan | Product Engineering Portfolio",
@@ -37,7 +37,6 @@ export default function ProjectsLayout({ children }: { children: ReactNode }) {
       />
       <main className="mx-auto flex min-h-dvh items-center justify-center overflow-x-hidden bg-white pt-20 text-neutral-900 dark:bg-neutral-900 dark:text-white">
         <div className="page-content">
-          <Blur />
           <Suspense fallback={null}>
             <Navbar />
           </Suspense>
