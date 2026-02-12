@@ -35,7 +35,7 @@ export default function ProjectsLayout({ children }: { children: ReactNode }) {
           { name: "Projects", item: "/projects" },
         ]}
       />
-      <main className="mx-auto flex min-h-dvh items-center justify-center overflow-x-hidden bg-white pt-20 text-neutral-900 dark:bg-neutral-900 dark:text-white">
+      <main className="mx-auto flex min-h-dvh items-center justify-center overflow-x-hidden pt-20 text-neutral-900 dark:text-white">
         <div className="page-content">
           <Suspense fallback={null}>
             <Navbar />

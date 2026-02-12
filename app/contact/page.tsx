@@ -8,7 +8,12 @@ import { useTheme } from "next-themes";
 
 import { handleSubmit } from "@/utils/handleSubmit";
 import { fadeInAnimation } from "@/utils/framerAnimations";
-import { Breadcrumbs, InputField, Navbar, Socials } from "@/components";
+import {
+  Breadcrumbs,
+  InputField,
+  Navbar,
+  Socials,
+} from "@/components";
 import ParticlesComponent from "@/components/particles";
 
 export default function Page() {
@@ -34,7 +39,7 @@ export default function Page() {
       />
       <AnimatePresence mode="wait">
         <motion.main
-          className="container mx-auto flex min-h-screen items-center justify-center bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white"
+          className="container mx-auto flex min-h-screen items-center justify-center text-neutral-900 dark:text-white"
           {...fadeInAnimation}
         >
           <motion.div className="page-content" {...fadeInAnimation}>
@@ -42,7 +47,10 @@ export default function Page() {
               <Navbar />
             </Suspense>
 
-            <motion.div {...fadeInAnimation}>
+            <motion.div
+              className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+              {...fadeInAnimation}
+            >
               <Suspense fallback={null}>
                 <ParticlesComponent id="tsparticles" />
               </Suspense>

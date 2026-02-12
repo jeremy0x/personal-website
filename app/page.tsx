@@ -5,9 +5,6 @@ import { BsArrowRight, BsFileEarmarkPdf } from "react-icons/bs";
 import { motion, useReducedMotion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-const ParticlesComponent = dynamic(() => import("@/components/particles"), {
-  ssr: false,
-});
 import {
   BirthdayFireworks,
   Breadcrumbs,
@@ -17,19 +14,27 @@ import {
 } from "@/components";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 
+const ParticlesComponent = dynamic(() => import("@/components/particles"), {
+  ssr: false,
+});
+
 export default function Home() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <>
       <Breadcrumbs items={[{ name: "Home", item: "/" }]} />
-      <main className="relative bg-white text-neutral-900 uppercase dark:bg-neutral-900 dark:text-white">
+      <main className="relative text-neutral-900 uppercase dark:text-white">
+        <motion.div
+          className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+          {...fadeInAnimation}
+        >
+          <Suspense fallback={null}>
+            <ParticlesComponent id="tsparticles" />
+          </Suspense>
+        </motion.div>
+
         <div className="container mx-auto flex min-h-screen w-full items-center justify-center">
-          <motion.div {...fadeInAnimation}>
-            <Suspense fallback={null}>
-              <ParticlesComponent id="tsparticles" />
-            </Suspense>
-          </motion.div>
           <motion.div className="page-content" {...fadeInAnimation}>
             <Suspense fallback={null}>
               <Navbar animationDelay={0.2} />
@@ -40,9 +45,7 @@ export default function Home() {
                 Hey, I&apos;m
               </p>
 
-              <motion.h1
-                className="relative z-10 text-7xl font-black tracking-wide sm:text-9xl"
-              >
+              <motion.h1 className="relative z-10 text-7xl font-black tracking-wide sm:text-9xl">
                 <span className="relative inline-block">
                   <span className="relative z-10 text-neutral-900 dark:text-white">
                     JEREMY
@@ -82,56 +85,56 @@ export default function Home() {
                 a frontend engineer
               </p>
 
-              <div className="mt-10 flex items-center justify-between max-w-4xl mx-auto w-full">
-              <Link href="/projects">
-                <motion.div
-                  className="group relative flex w-fit items-center gap-2"
-                  whileHover="hover"
-                  whileFocus="hover"
-                >
-                  <BsArrowRight className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 sm:text-lg dark:text-gray-500 dark:group-hover:text-white" />
-                  <span className="relative">
-                    <span className="text-xs font-medium tracking-wider text-neutral-500 uppercase transition-colors group-hover:text-neutral-900 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
-                      View Projects
+              <div className="mx-auto mt-10 flex w-full max-w-4xl items-center justify-between">
+                <Link href="/projects">
+                  <motion.div
+                    className="group relative flex w-fit items-center gap-2"
+                    whileHover="hover"
+                    whileFocus="hover"
+                  >
+                    <BsArrowRight className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 sm:text-lg dark:text-gray-500 dark:group-hover:text-white" />
+                    <span className="relative">
+                      <span className="text-xs font-medium tracking-wider text-neutral-500 uppercase transition-colors group-hover:text-neutral-900 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
+                        View Projects
+                      </span>
+                      <motion.div
+                        className="absolute bottom-0 left-0 h-px w-full bg-neutral-400"
+                        initial={{ scaleX: 1 }}
+                        variants={{
+                          hover: { scaleX: 0 },
+                        }}
+                        transition={{ duration: 0.3 }}
+                      />
                     </span>
-                    <motion.div
-                      className="absolute bottom-0 left-0 h-px w-full bg-neutral-400"
-                      initial={{ scaleX: 1 }}
-                      variants={{
-                        hover: { scaleX: 0 },
-                      }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </span>
-                </motion.div>
-              </Link>
+                  </motion.div>
+                </Link>
 
-              <a
-                href="/Resume_JeremiahAworetan.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <motion.div
-                  className="group relative flex w-fit items-center gap-2"
-                  whileHover="hover"
-                  whileFocus="hover"
+                <a
+                  href="/Resume_JeremiahAworetan.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <BsFileEarmarkPdf className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 sm:text-lg dark:text-gray-500 dark:group-hover:text-white" />
-                  <span className="relative">
-                    <span className="text-xs font-medium tracking-wider text-neutral-500 uppercase transition-colors group-hover:text-neutral-900 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
-                      Resume
+                  <motion.div
+                    className="group relative flex w-fit items-center gap-2"
+                    whileHover="hover"
+                    whileFocus="hover"
+                  >
+                    <BsFileEarmarkPdf className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-900 sm:text-lg dark:text-gray-500 dark:group-hover:text-white" />
+                    <span className="relative">
+                      <span className="text-xs font-medium tracking-wider text-neutral-500 uppercase transition-colors group-hover:text-neutral-900 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
+                        Resume
+                      </span>
+                      <motion.div
+                        className="absolute bottom-0 left-0 h-px w-full bg-neutral-400"
+                        initial={{ scaleX: 1 }}
+                        variants={{
+                          hover: { scaleX: 0 },
+                        }}
+                        transition={{ duration: 0.3 }}
+                      />
                     </span>
-                    <motion.div
-                      className="absolute bottom-0 left-0 h-px w-full bg-neutral-400"
-                      initial={{ scaleX: 1 }}
-                      variants={{
-                        hover: { scaleX: 0 },
-                      }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </span>
-                </motion.div>
-              </a>
+                  </motion.div>
+                </a>
               </div>
             </div>
 
