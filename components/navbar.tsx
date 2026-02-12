@@ -6,10 +6,15 @@ import { motion } from "framer-motion";
 import { fadeInAnimation } from "../utils/framerAnimations";
 import { ThemeToggle } from ".";
 import { useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
-export const Navbar = ({ animationDelay = 0.5 }) => {
+interface NavbarProps {
+  animationDelay?: number;
+}
+
+export const Navbar = ({ animationDelay = 0.5 }: NavbarProps) => {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
 
   const isSeasonalWindow = (now: Date) => {
     const month = now.getMonth();
@@ -42,17 +47,22 @@ export const Navbar = ({ animationDelay = 0.5 }) => {
           >
             <Image
               src={logoSrc}
-              alt="Logo"
-              width={0}
-              height={0}
+              alt="Jeremiah Aworetan logo"
+              width={32}
+              height={32}
               className="w-7 invert sm:w-8 dark:invert-0"
+              priority
             />
           </motion.div>
         </Link>
 
         <div className="flex flex-row items-center justify-between gap-8 text-sm font-medium tracking-wider sm:gap-16">
-          <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/projects" isActive={pathname === "/projects"}>
+            Projects
+          </NavLink>
+          <NavLink href="/contact" isActive={pathname === "/contact"}>
+            Contact
+          </NavLink>
           <ThemeToggle />
         </div>
       </motion.div>
@@ -60,21 +70,27 @@ export const Navbar = ({ animationDelay = 0.5 }) => {
   );
 };
 
-const NavLink = ({
-  href,
-  children,
-}: {
+interface NavLinkProps {
   href: string;
   children: React.ReactNode;
-}) => {
+  isActive?: boolean;
+}
+
+const NavLink = ({ href, children, isActive }: NavLinkProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} aria-current={isActive ? "page" : undefined}>
       <motion.div
         className="group relative"
         whileHover="hover"
         whileFocus="hover"
       >
-        <span className="text-xs text-gray-600 transition-all duration-300 group-hover:text-neutral-950 sm:text-sm dark:text-gray-400 dark:group-hover:text-white">
+        <span
+          className={`text-xs transition-all duration-300 sm:text-sm ${
+            isActive
+              ? "text-neutral-950 dark:text-white"
+              : "text-gray-600 dark:text-gray-400 group-hover:text-neutral-950 dark:group-hover:text-white"
+          }`}
+        >
           {children}
         </span>
         <motion.div

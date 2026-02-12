@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import confetti from "canvas-confetti";
 
@@ -31,6 +33,11 @@ export const ConfettiEffect: React.FC<ConfettiEffectProps> = ({
     const shouldTrigger = birthdayParam === "true" || isJanuary15;
 
     if (!shouldTrigger) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (prefersReducedMotion) return;
 
     const animationEnd = Date.now() + duration;
 

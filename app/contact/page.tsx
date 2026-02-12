@@ -43,9 +43,11 @@ export default function Page() {
               <Navbar />
             </Suspense>
 
-            <Suspense fallback={null}>
-              <ParticlesComponent id="tsparticles" />
-            </Suspense>
+            <motion.div {...fadeInAnimation}>
+              <Suspense fallback={null}>
+                <ParticlesComponent id="tsparticles" />
+              </Suspense>
+            </motion.div>
 
             <div className="z-10 mx-auto flex flex-col items-center justify-center gap-20 px-2 pt-36 pb-16 sm:px-8 lg:flex-row lg:py-20">
               <article className="z-10 grid max-w-2xl flex-1 gap-10 text-center">

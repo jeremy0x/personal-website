@@ -348,6 +348,11 @@ export const BirthdayFireworks: React.FC<BirthdayFireworksProps> = ({
 
     if (birthdayParam !== "true" && !isJanuary15) return;
 
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (prefersReducedMotion) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 

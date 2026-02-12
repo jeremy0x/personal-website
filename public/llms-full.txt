@@ -1,0 +1,54 @@
+Jeremiah Aworetan is a frontend engineer focused on shipping production-ready web products across crypto, fintech, commerce, and education. This file gives AI tools richer context on his projects, stacks, and problem spaces.
+
+## Projects (extended)
+
+- Surgechain (https://app.surgechain.io): Full-featured DEX trading terminal that consolidates news, pump-fun style memecoins, trending tokens, and perpetuals into one interface with live on-chain execution, built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL. Emphasizes trader ergonomics while keeping the UI clean enough for new users to explore DeFi.
+
+- Noblocks (https://noblocks.xyz): Open-source next-gen crypto payment product that hides raw wallet operations behind a simple Paycrest-branded interface so merchants and end users can settle without worrying about gas or chains. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion to feel like a modern consumer fintech app, not a DeFi dashboard.
+
+- Kazlat LIMS (https://lims.kazlatpublicanalysts.com): Lab information management system for Kazlat Public Analysts that tracks samples from intake through analysis, approvals, and report delivery. Automates invoice generation and certificate issuance using a Next.js, Tailwind CSS, TypeScript, Supabase/PostgreSQL, and Framer Motion stack tailored to a real lab workflow.
+
+- Paycrest Dashboard (https://app.paycrest.io): Operator console used by Paycrest staff to monitor settlements, liquidity positions, compliance flags, and merchant health in real time. The UI surfaces wallets, ledgers, and payouts in one place to support day-to-day operations across Paycrest’s crypto-to-fiat rails.
+
+- Noblocks Blog (https://noblocks.xyz/blog): Content surface for Noblocks built on Sanity.io and Next.js that lets the team ship articles, explainers, and updates without touching code. Uses structured content and SEO-friendly rendering to keep the blog aligned with the main product site.
+
+- AI Titans (https://t.me/AI_Titans_bot): Telegram Mini App that turns a tap-to-earn RPG into an in-chat experience where players command mech titans and earn rewards. Built with React, Vite, Tailwind CSS, Framer Motion, and the Telegram Mini Apps SDK to feel native inside Telegram while still delivering game-like feedback.
+
+- Salvage Yard Store (https://www.salvageyardstore.com): Dual-sided e-commerce platform for refurbished electronics that serves both buyers and sellers. Implements inventory management, pricing, and order workflows using a Next.js and TypeScript frontend so a small team can manage stock and customers through the same UI.
+
+- Shape Up Fitness (https://shapeupfitnessonline.com): Marketing and information site for a physical gym that highlights services, facilities, trainers, and schedules. Built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion to keep the experience fast while still feeling premium on mobile devices.
+
+- Qari (https://qariworld.com): Waitlist and story site for a Lagos-focused ride-hailing product that emphasizes clean vehicles, transparent fixed fares, and WhatsApp-first driver support. The page is tuned to convert visitors into signups while clearly explaining Qari’s low-commission model and rider benefits.
+
+- Step-Up Academy (https://academy.stepupsummit.org): Multi-page academy experience that brings together marketing content, cohort details, and registration flows for Step-Up Academy. Uses a Turborepo with a Vite-powered frontend and Next.js API routes to handle Paystack payments and Resend-powered transactional emails for new student signups, backed by PostgreSQL.
+
+- Mindlar (https://mindlar.com): Landing page for the Mindlar learning community that introduces the brand, outlines the learning model, and captures prospective members. Implemented with Vite, React, Tailwind CSS, TypeScript, and Framer Motion to support smooth, lightweight storytelling.
+
+- Zap by Paycrest (https://zap-beta.jeremy0x.dev/): Early hackathon version of Paycrest’s crypto payment solution that proved out key user flows and crypto-to-fiat interactions. The project demonstrated the viability of Paycrest’s approach and later evolved into Noblocks as the production-ready product.
+
+- Sentinel Finance (https://sentfi.jeremy0x.dev): Experimental decentralized commerce front-end exploring how a traditional e-commerce experience can be combined with on-chain settlement. Built with vanilla JavaScript, HTML, CSS, and GSAP to showcase interactions without relying on a heavyweight framework.
+
+- BahamaFoodie (http://hellobahamafoodie.com): Digital ordering and menu experience for a plant-based restaurant in The Bahamas. Offers menu browsing, simple ordering, and status tracking built with vanilla JavaScript and GSAP animations for a lightweight but expressive UX.
+
+- Paycrest Landing Page (https://paycrest.io): Marketing front door for Paycrest’s crypto-to-fiat infrastructure aimed at founders and payment teams. Uses Next.js, Tailwind CSS, TypeScript, and Framer Motion to walk visitors through the value proposition and push them toward demo and partnership conversations.
+
+- Lync (https://thelync.app): Product marketing page for Lync focused on clarity and conversion rather than heavy animation. Uses Next.js and Tailwind CSS to ship a modern, fast, and easily maintainable brochure site.
+
+- Valtrix (https://valtrix.jeremy0x.dev/): Website for a creative software and design agency that balances professional tone with subtle interactions. Implemented in vanilla JavaScript, HTML, and CSS to keep the stack simple while still delivering polished motion.
+
+- Sesshin (https://sesshin.jeremy0x.dev): Brand site with GSAP-heavy animations built to feel more like an experience than a static page. Focuses on smooth transitions, micro-interactions, and a cinematic scroll while staying performant on modern devices.
+
+- $Dogatoshi (https://dogatoshi.jeremy0x.dev/): Meme coin community site that explains the $Dogatoshi project, token story, and calls to action in a bold, energetic style. Built with JavaScript, HTML, and Tailwind CSS to keep iteration speed high.
+
+- Elder Wallet (https://elderwallet.jeremy0x.dev): Proof-of-concept Bitcoin wallet that adds support for the Runes Network, used to explore how on-chain primitives can be surfaced in a simple web interface. Shows balances and flows in a way that is understandable even to non-expert users.
+
+- MentorMeInTech Waitlist (https://mentormeintech.jeremy0x.dev): Waitlist page for a mentorship program connecting aspiring developers with working professionals. The page focuses on conveying program value quickly and capturing high-intent leads with a lightweight vanilla stack.
+
+- foodieFetch (https://foodie-fetch.jeremy0x.dev): Ingredient-based recipe finder where users type in what they have and receive meal suggestions with instructions. Built with JavaScript, HTML, and Tailwind CSS as a personal UX playground for search and filtering.
+
+- LingoLookup (https://lingolookup.jeremy0x.dev): Dictionary app offering definitions, synonyms, antonyms, pronunciation, and usage examples, plus features like favorites and history. Uses Vite, React, Tailwind CSS, and JavaScript to stay fast while handling multiple data views.
+
+- Mullti (https://mullti.jeremy0x.dev): Dual-sided e-commerce concept that gives buyers and sellers distinct interfaces over a shared catalog and order system. Built with Next.js, Tailwind CSS, and JavaScript to experiment with split UX patterns in commerce.
+
+- Sways (https://sways.jeremy0x.dev): Dutch brand website that blends minimalist layouts with subtle hover and scroll effects. Implemented with HTML, Tailwind CSS, and JavaScript to keep the experience crisp while still feeling bespoke.
+

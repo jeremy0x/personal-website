@@ -12,49 +12,53 @@ This website contains information about my work as a frontend engineer, includin
 
 ## Projects
 
-- [Noblocks](https://noblocks.xyz): Next-gen crypto payment solution with zero gas fees. Advanced crypto payment platform eliminating P2P transaction complexity. Built with Next.js, TypeScript, and Framer Motion.
+- [Surgechain](https://app.surgechain.io): DEX trading terminal that unifies news, pump-fun style memecoins, trending tokens, and perpetuals into a single interface with live on-chain execution, built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL.
 
-- [Paycrest Dashboard](https://app.paycrest.io): Operations console for Paycrest's crypto-to-fiat rails. Tracks settlements, liquidity, compliance states, and merchant analytics with real-time payout tooling.
+- [Noblocks](https://noblocks.xyz): Open-source next-gen crypto payment solution with zero gas fees that removes P2P transaction complexity using a Next.js, TypeScript, and Framer Motion frontend.
 
-- [Noblocks Blog](https://noblocks.xyz/blog): Blog platform powered by Sanity.io for Noblocks. Content management system using headless CMS with dynamic content rendering and SEO optimization.
+- [Kazlat LIMS](https://lims.kazlatpublicanalysts.com): Lab information management system for Kazlat Public Analysts that tracks samples from submission through analysis while generating invoices and client certificates using Next.js, Tailwind CSS, TypeScript, Supabase/PostgreSQL, and Framer Motion.
+
+- [Paycrest Dashboard](https://app.paycrest.io): Operations console for Paycrest's crypto-to-fiat rails that monitors settlements, liquidity, compliance states, and merchant analytics in real time.
+
+- [Noblocks Blog](https://noblocks.xyz/blog): Sanity-powered blog for Noblocks with dynamic content rendering and SEO-focused Next.js integration.
 
 - [AI Titans](https://t.me/AI_Titans_bot): Battle-focused tap-to-earn RPG Telegram Mini App built with React, Vite, Tailwind CSS, and the Telegram SDK for in-chat gameplay and rewards syncing.
 
-- [Qari](https://qariworld.com): Premium ride-hailing waitlist site that promotes clean vehicles, transparent pricing, and WhatsApp-first driver support for the Lagos market.
+- [Salvage Yard Store](https://www.salvageyardstore.com): Dual-sided e-commerce platform for electronic devices with inventory tracking, separate buyer/seller interfaces, and order management built on Next.js and TypeScript.
 
-- [BahamaFoodie](http://hellobahamafoodie.com): Digital plant-based restaurant platform in the Bahamas. Features menu browsing, online ordering, and delivery tracking. Built with vanilla JavaScript and GSAP animations.
+- [Shape Up Fitness](https://shapeupfitnessonline.com): Fitness platform showcasing gym services, facilities, schedules, and trainers using React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
 
-- [Salvage Yard Store](https://www.salvageyardstore.com): Dual-sided e-commerce platform for electronic devices. Features inventory management, real-time stock updates, customer accounts, and order tracking.
+- [Qari](https://qariworld.com): Premium ride-hailing waitlist site promoting clean vehicles, transparent fixed pricing, and WhatsApp-first driver support in Lagos.
 
-- [Paycrest Landing Page](https://paycrest.io): Product marketing site for Paycrest’s crypto-to-fiat infrastructure. Highlights instant settlement benefits, product sections, and demo CTAs with polished motion design.
+- [Step-Up Academy](https://academy.stepupsummit.org): Multi-page academy experience that enrolls students into cohorts with Paystack payments and Resend-powered email automations using a Turborepo with Vite, Next.js API routes, TypeScript, Tailwind CSS, Framer Motion, and PostgreSQL.
 
-- [Shape Up Fitness](https://shapeupfitnessonline.com): Platform showcasing fitness services and gym facilities. Features facility showcases, service listings, schedules, and trainer profiles.
+- [Mindlar](https://mindlar.com): Landing page for the Mindlar learning community that explains offerings and community values with a Vite, React, Tailwind CSS, and Framer Motion stack.
 
-- [Mindlar](https://mindlar.com): Landing page for a learning community. Features engaging design that communicates community values and offerings.
+- [Zap by Paycrest](https://zap-beta.jeremy0x.dev/): Hackathon-winning early crypto payment solution for Paycrest from the Based Africa hackathon, now deprecated in favor of Noblocks.
 
-- [Zap by Paycrest](https://zap-beta.jeremy0x.dev/): Hackathon-winning crypto payment solution (Deprecated). Initial Paycrest payment solution from Based Africa hackathon demonstrating core crypto-to-fiat functionality.
+- [Sentinel Finance](https://sentfi.jeremy0x.dev): Proof-of-concept decentralized commerce platform combining e-commerce with blockchain payments using vanilla JavaScript and GSAP.
 
-- [Sentinel Finance](https://sentfi.jeremy0x.dev): Decentralized commerce platform with payment integration. Proof-of-concept dCommerce platform combining e-commerce with blockchain technology.
+- [BahamaFoodie](http://hellobahamafoodie.com): Digital plant-based restaurant platform in The Bahamas with menu browsing, online ordering, and delivery tracking implemented in vanilla JavaScript and GSAP.
 
-- [Lync](https://thelync.app): Landing page for Lync product. Features modern design and clear product communication.
+- [Lync](https://thelync.app): Product landing page for Lync with a modern, conversion-focused Next.js and Tailwind CSS design.
 
-- [Valtrix](https://valtrix.jeremy0x.dev/): Website for a company that offers software development services. Features clean, professional design with smooth animations.
+- [Valtrix](https://valtrix.jeremy0x.dev/): Website for a creative software agency featuring a clean brand presence and smooth animations built in vanilla JavaScript.
 
-- [Sesshin](https://sesshin.jeremy0x.dev): Custom brand website with immersive animations. Features GSAP-powered animations with modern design principles.
+- [Sesshin](https://sesshin.jeremy0x.dev): Custom brand website with immersive GSAP animations and modern visual design.
 
-- [$Dogatoshi](https://dogatoshi.jeremy0x.dev/): Informative website for $Dogatoshi meme coin community. Community website providing project information and details with engaging UI.
+- [$Dogatoshi](https://dogatoshi.jeremy0x.dev/): Meme coin community website that explains the $Dogatoshi project with an energetic Tailwind CSS UI.
 
-- [Elder Wallet](https://elderwallet.jeremy0x.dev): Proof of concept Bitcoin wallet with Runes Network support. Bitcoin wallet demo showcasing Runes Network protocol integration.
+- [Elder Wallet](https://elderwallet.jeremy0x.dev): Proof-of-concept Bitcoin wallet demo that surfaces Runes Network assets through a simple browser UI.
 
-- [MentorMeInTech Waitlist](https://mentormeintech.jeremy0x.dev): Waitlist platform for MentorMeInTech mentorship program. Connects tech professionals with aspiring developers.
+- [MentorMeInTech Waitlist](https://mentormeintech.jeremy0x.dev): Waitlist page connecting aspiring developers with mentors, focused on capturing signups and social proof.
 
-- [foodieFetch](https://foodie-fetch.jeremy0x.dev): Recipe finder app based on available ingredients. Personal project helping users discover meals with ingredient search and filtering.
+- [foodieFetch](https://foodie-fetch.jeremy0x.dev): Recipe finder app that suggests meals from available ingredients with simple ingredient search and filtering.
 
-- [LingoLookup](https://lingolookup.jeremy0x.dev): Comprehensive dictionary app with advanced features. Features definitions, synonyms, antonyms, pronunciation, and examples.
+- [LingoLookup](https://lingolookup.jeremy0x.dev): Comprehensive dictionary app that provides definitions, synonyms, antonyms, pronunciation, and examples with search history and favorites.
 
-- [Mullti](https://mullti.jeremy0x.dev): Dual-sided e-commerce platform with unique design. Features product catalog, shopping cart, authentication, and order management.
+- [Mullti](https://mullti.jeremy0x.dev): Dual-sided e-commerce experience with product catalog, shopping cart, authentication, and order management built on Next.js and Tailwind CSS.
 
-- [Sways](https://sways.jeremy0x.dev): Custom Dutch brand website with modern design. Features minimalist design and smooth animations with responsive layout.
+- [Sways](https://sways.jeremy0x.dev): Custom Dutch brand website that pairs minimalist visuals with smooth Next.js and Tailwind CSS animations.
 
 ## Optional
 

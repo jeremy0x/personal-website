@@ -51,8 +51,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${hankenGrotesk.className} transition-colors`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+      <body
+        className={`${hankenGrotesk.className} transition-colors overflow-y-scroll`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
           <Analytics />
           <SpeedInsights />

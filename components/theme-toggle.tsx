@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
@@ -18,7 +20,7 @@ export const ThemeToggle = () => {
   return (
     <motion.button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative rounded-full p-1.5 text-xl transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800"
+      className="relative cursor-pointer rounded-full p-1.5 text-xl transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800"
       whileTap={{ scale: 0.95 }}
       title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
     >

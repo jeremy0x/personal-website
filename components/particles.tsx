@@ -65,7 +65,7 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
                 },
               },
               opacity: {
-                value: 0.5,
+                value: 0.2,
                 random: true,
                 anim: {
                   enable: false,
@@ -175,7 +175,7 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
                 },
               },
               opacity: {
-                value: 0.5,
+                value: isDark ? 0.25 : 0.2,
                 random: true,
                 anim: {
                   enable: false,
