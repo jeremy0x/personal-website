@@ -167,6 +167,8 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
           height={575}
           src={imageSrc}
           priority={index === 0}
+          sizes="(min-width: 1024px) 575px, 100vw"
+          fetchPriority={index === 0 ? "high" : "auto"}
           onLoad={() => setIsLoading(false)}
           className="rounded-xl bg-black/30 transition-all max-md:w-full"
         />
