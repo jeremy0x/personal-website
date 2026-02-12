@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { useState, useCallback, useEffect } from "react";
+import { Suspense, useState, useCallback, useEffect } from "react";
+import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
 import { ProjectModal } from "@/components";
 import { ProjectData } from "@/types";
@@ -22,6 +24,10 @@ import {
 } from "swiper/modules";
 
 import { ImSpinner9 } from "react-icons/im";
+
+const ParticlesComponent = dynamic(() => import("@/components/particles"), {
+  ssr: false,
+});
 
 export default function Projects() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
@@ -76,6 +82,15 @@ export default function Projects() {
 
   return (
     <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Suspense fallback={null}>
+          <ParticlesComponent id="tsparticles-projects" />
+        </Suspense>
+      </motion.div>
       <Swiper
         key={isMobile ? "cube" : "coverflow"}
         effect={isMobile ? "cube" : "coverflow"}
