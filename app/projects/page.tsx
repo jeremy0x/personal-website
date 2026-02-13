@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { ProjectModal } from "@/components";
 import { ProjectData } from "@/types";
 import { projectsData } from "@/data/projects";
+import { fadeInAnimation } from "@/utils/framerAnimations";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -92,51 +93,53 @@ export default function Projects() {
           <ParticlesComponent id="tsparticles-projects" />
         </Suspense>
       </motion.div>
-      <Swiper
-        key={isMobile ? "cube" : "coverflow"}
-        effect={isMobile ? "cube" : "coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={isMobile ? 1 : "auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-          dynamicMainBullets: 3,
-        }}
-        navigation={true}
-        modules={[EffectCoverflow, EffectCube, Pagination, Navigation]}
-        spaceBetween={20}
-        className="mySwiper"
-        onSwiper={setSwiper}
-        style={{ "--swiper-navigation-size": "25px" } as CSSProperties}
-      >
-        {projectsData.map((project, index) => (
-          <SwiperSlide
-            key={index}
-            onClick={() => handleSlideClick(index)}
-            style={{ maxWidth: "100%", width: "100%" }}
-          >
-            <ProjectCard
-              project={project}
-              index={index}
-              onClick={() => handleProjectClick(project)}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <motion.div {...fadeInAnimation}>
+        <Swiper
+          key={isMobile ? "cube" : "coverflow"}
+          effect={isMobile ? "cube" : "coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={isMobile ? 1 : "auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          cubeEffect={{
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+            dynamicMainBullets: 3,
+          }}
+          navigation={true}
+          modules={[EffectCoverflow, EffectCube, Pagination, Navigation]}
+          spaceBetween={20}
+          className="mySwiper"
+          onSwiper={setSwiper}
+          style={{ "--swiper-navigation-size": "25px" } as CSSProperties}
+        >
+          {projectsData.map((project, index) => (
+            <SwiperSlide
+              key={index}
+              onClick={() => handleSlideClick(index)}
+              style={{ maxWidth: "100%", width: "100%" }}
+            >
+              <ProjectCard
+                project={project}
+                index={index}
+                onClick={() => handleProjectClick(project)}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </motion.div>
 
       <ProjectModal project={selectedProject} onClose={handleCloseModal} />
     </>
