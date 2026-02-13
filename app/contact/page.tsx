@@ -1,5 +1,5 @@
 "use client";
-import { Suspense, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ImSpinner9 } from "react-icons/im";
 import { BiSolidPaperPlane } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,13 +8,7 @@ import { useTheme } from "next-themes";
 
 import { handleSubmit } from "@/utils/handleSubmit";
 import { fadeInAnimation } from "@/utils/framerAnimations";
-import {
-  Breadcrumbs,
-  InputField,
-  Navbar,
-  Socials,
-} from "@/components";
-import ParticlesComponent from "@/components/particles";
+import { Breadcrumbs, InputField } from "@/components";
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
@@ -43,19 +37,6 @@ export default function Page() {
           {...fadeInAnimation}
         >
           <motion.div className="page-content" {...fadeInAnimation}>
-            <Suspense fallback={null}>
-              <Navbar />
-            </Suspense>
-
-            <motion.div
-              className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
-              {...fadeInAnimation}
-            >
-              <Suspense fallback={null}>
-                <ParticlesComponent id="tsparticles" />
-              </Suspense>
-            </motion.div>
-
             <div className="z-10 mx-auto flex flex-col items-center justify-center gap-20 px-2 pt-36 pb-16 sm:px-8 lg:flex-row lg:py-20">
               <article className="z-10 grid max-w-2xl flex-1 gap-10 text-center">
                 <div className="space-y-5">
@@ -150,10 +131,6 @@ export default function Page() {
                 position="bottom-right"
                 theme={theme === "dark" ? "dark" : "light"}
               />
-            </div>
-
-            <div className="hidden sm:block">
-              <Socials />
             </div>
           </motion.div>
         </motion.main>

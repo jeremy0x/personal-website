@@ -1,22 +1,10 @@
 "use client";
 import Link from "next/link";
-import { Suspense } from "react";
 import { BsArrowRight, BsFileEarmarkPdf } from "react-icons/bs";
 import { motion, useReducedMotion } from "framer-motion";
-import dynamic from "next/dynamic";
 
-import {
-  BirthdayFireworks,
-  Breadcrumbs,
-  ConfettiEffect,
-  Navbar,
-  Socials,
-} from "@/components";
+import { BirthdayFireworks, Breadcrumbs, ConfettiEffect } from "@/components";
 import { fadeInAnimation } from "@/utils/framerAnimations";
-
-const ParticlesComponent = dynamic(() => import("@/components/particles"), {
-  ssr: false,
-});
 
 export default function Home() {
   const prefersReducedMotion = useReducedMotion();
@@ -25,21 +13,8 @@ export default function Home() {
     <>
       <Breadcrumbs items={[{ name: "Home", item: "/" }]} />
       <main className="relative text-neutral-900 uppercase dark:text-white">
-        <motion.div
-          className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
-          {...fadeInAnimation}
-        >
-          <Suspense fallback={null}>
-            <ParticlesComponent id="tsparticles" />
-          </Suspense>
-        </motion.div>
-
         <div className="container mx-auto flex min-h-screen w-full items-center justify-center">
           <motion.div className="page-content" {...fadeInAnimation}>
-            <Suspense fallback={null}>
-              <Navbar animationDelay={0.2} />
-            </Suspense>
-
             <div className="z-20 grid gap-2">
               <p className="z-10 text-xs font-medium tracking-widest text-neutral-600 sm:text-sm dark:text-gray-400">
                 Hey, I&apos;m
@@ -137,8 +112,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
-            <Socials />
 
             <ConfettiEffect />
             <BirthdayFireworks />

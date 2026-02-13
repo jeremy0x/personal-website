@@ -5,6 +5,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
 
+import { AppShell } from "@/components";
+
 const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -60,6 +62,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <AppShell />
           {children}
           <Analytics />
           <SpeedInsights />
