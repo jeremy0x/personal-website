@@ -1,5 +1,5 @@
 import { Dispatch, FormEvent } from "react";
-import { toast } from "sonner";
+import { sileo } from "sileo";
 import { env } from "../config/env";
 
 interface HandleSubmitProps {
@@ -41,14 +41,16 @@ export const handleSubmit = ({ event, setIsLoading }: HandleSubmitProps) => {
       target.name.value = "";
       target.email.value = "";
       target.message.value = "";
-      toast.success("Message sent successfully!", {
+      sileo.success({
+        title: "Message sent successfully!",
         description: "Keep an eye on your inbox for a response.",
       });
     })
     .catch((error) => {
       console.log(error);
       setIsLoading(false);
-      toast.error("Oops! Message MIA. Try again!", {
+      sileo.error({
+        title: "Oops! Message MIA. Try again!",
         description: "If the issue persists, reach out via email.",
       });
     });
