@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { ImSpinner9 } from "react-icons/im";
 import { BiSolidPaperPlane } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
-import { Toaster } from "sonner";
+import { Toaster } from "sileo";
 import { useTheme } from "next-themes";
 
 import { handleSubmit } from "@/utils/handleSubmit";
@@ -127,10 +127,7 @@ export default function Page() {
                 )}
               </form>
 
-              <Toaster
-                position="bottom-right"
-                theme={theme === "dark" ? "dark" : "light"}
-              />
+              <Toaster position="bottom-right" />
             </div>
           </motion.div>
         </motion.main>
