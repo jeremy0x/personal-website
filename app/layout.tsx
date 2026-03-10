@@ -4,6 +4,7 @@ import { Hanken_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
+import "goey-toast/styles.css";
 
 import { AppShell } from "@/components";
 
