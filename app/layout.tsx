@@ -4,6 +4,7 @@ import { Hanken_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
+import "goey-toast/styles.css";
 
 import { AppShell } from "@/components";
 
@@ -54,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${hankenGrotesk.className} transition-colors overflow-y-scroll`}
+        className={`${hankenGrotesk.className} overflow-y-scroll transition-colors`}
       >
         <ThemeProvider
           attribute="class"
