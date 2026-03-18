@@ -71,8 +71,8 @@ importers:
         specifier: ^12.1.2
         version: 12.1.2
       tailwindcss:
-        specifier: 4.1.14
-        version: 4.1.14
+        specifier: 4.2.1
+        version: 4.2.1
       tsparticles-engine:
         specifier: ^2.12.0
         version: 2.12.0
@@ -2011,9 +2011,6 @@ packages:
   swiper@12.1.2:
     resolution: {integrity: sha512-4gILrI3vXZqoZh71I1PALqukCFgk+gpOwe1tOvz5uE9kHtl2gTDzmYflYCwWvR4LOvCrJi6UEEU+gnuW5BtkgQ==}
     engines: {node: '>= 4.7.0'}
-
-  tailwindcss@4.1.14:
-    resolution: {integrity: sha512-b7pCxjGO98LnxVkKjaZSDeNuljC4ueKUddjENJOADtubtdo8llTaJy7HwBMeLNSSo2N5QIAgklslK1+Ir8r6CA==}
 
   tailwindcss@4.2.1:
     resolution: {integrity: sha512-/tBrSQ36vCleJkAOsy9kbNTgaxvGbyOamC30PRePTQe/o1MFwEKHQk4Cn7BNGaPtjp+PuUrByJehM1hgxfq4sw==}
@@ -4260,8 +4257,6 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   swiper@12.1.2: {}
-
-  tailwindcss@4.1.14: {}
 
   tailwindcss@4.2.1: {}
 
