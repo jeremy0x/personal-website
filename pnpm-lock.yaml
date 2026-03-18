@@ -41,7 +41,7 @@ importers:
         specifier: 16.1.6
         version: 16.1.6(@typescript-eslint/parser@8.54.0(eslint@9.38.0(jiti@2.6.1))(typescript@5.1.6))(eslint@9.38.0(jiti@2.6.1))(typescript@5.1.6)
       framer-motion:
-        specifier: ^12.31.0
+        specifier: ^12.35.2
         version: 12.35.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       goey-toast:
         specifier: ^0.3.0
