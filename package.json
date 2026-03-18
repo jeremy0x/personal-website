@@ -24,7 +24,7 @@
     "@types/node": "20.4.5",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "@vercel/analytics": "^1.6.1",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "canvas-confetti": "^1.9.4",
     "eslint": "9.38.0",
