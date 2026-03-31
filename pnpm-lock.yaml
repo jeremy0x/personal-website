@@ -44,8 +44,8 @@ importers:
         specifier: ^12.38.0
         version: 12.38.0(@emotion/is-prop-valid@0.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       goey-toast:
-        specifier: ^0.3.0
-        version: 0.3.0(framer-motion@12.38.0(@emotion/is-prop-valid@0.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: ^0.4.0
+        version: 0.4.0(framer-motion@12.38.0(@emotion/is-prop-valid@0.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next:
         specifier: 16.2.1
         version: 16.2.1(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -1285,8 +1285,8 @@ packages:
     resolution: {integrity: sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ==}
     engines: {node: '>= 0.4'}
 
-  goey-toast@0.3.0:
-    resolution: {integrity: sha512-JJiXihHDDsKy8GkWWac5ADYYPz7b1cMJjEsp91pL9QNubXIH8Yc08j6XbymLbv/Nh2NUgiVxNUxNQZXcnMejFA==}
+  goey-toast@0.4.0:
+    resolution: {integrity: sha512-ga9kKqHV3FpX12O/r7Yv+cga9iKnLifVRenTse2ShlrybNWPEPxAD/+948iVMQ+1ds3pgM2R9ox6EnTZw5J4Nw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       framer-motion: '>=10.0.0'
@@ -3573,7 +3573,7 @@ snapshots:
       define-properties: 1.2.1
       gopd: 1.2.0
 
-  goey-toast@0.3.0(framer-motion@12.38.0(@emotion/is-prop-valid@0.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  goey-toast@0.4.0(framer-motion@12.38.0(@emotion/is-prop-valid@0.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       framer-motion: 12.38.0(@emotion/is-prop-valid@0.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react: 19.2.4
