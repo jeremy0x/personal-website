@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
-import { Navbar } from "@/components";
+import { Navbar, Preloader } from "@/components";
 import { Socials } from "./socials";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 
@@ -19,6 +19,7 @@ export const AppShell = () => {
 
   return (
     <>
+      <Preloader />
       <Suspense fallback={null}>
         <Navbar animationDelay={0.2} />
       </Suspense>
@@ -34,4 +35,3 @@ export const AppShell = () => {
     </>
   );
 };
-
