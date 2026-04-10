@@ -9,6 +9,8 @@ import { createElement, useEffect, useMemo, useState } from "react";
 import type { FC, ReactElement } from "react";
 import type { ISourceOptions } from "@tsparticles/engine";
 import { useTheme } from "next-themes";
+import { useSearchParams } from "next/navigation";
+import { isSeasonalWindow } from "@/utils/dates";
 
 interface ParticlesComponentProps {
   id: string;
@@ -22,17 +24,10 @@ export default function ParticlesComponent({
   const [isReady, setIsReady] = useState(false);
   const { theme } = useTheme();
   const isDark = theme === "dark";
+  const searchParams = useSearchParams();
   const seasonalOverride = useMemo(() => {
-    if (typeof window === "undefined") {
-      return false;
-    }
-
-    const seasonalParam = new URLSearchParams(window.location.search).get(
-      "seasonal",
-    );
-
-    return seasonalParam?.toLowerCase() === "true";
-  }, []);
+    return searchParams?.get("seasonal")?.toLowerCase() === "true";
+  }, [searchParams]);
 
   useEffect(() => {
     void initParticlesEngine(async (engine) => {
@@ -42,17 +37,8 @@ export default function ParticlesComponent({
     });
   }, []);
 
-  const isSeasonalWindow = (now: Date) => {
-    const month = now.getMonth();
-    const date = now.getDate();
-
-    if (month === 11 && date >= 1) return true;
-    if (month === 0 && date <= 5) return true;
-    return false;
-  };
-
   const isHoliday = useMemo(() => {
-    return seasonalOverride || isSeasonalWindow(new Date());
+    return seasonalOverride || isSeasonalWindow();
   }, [seasonalOverride]);
 
   const options: ISourceOptions = useMemo(

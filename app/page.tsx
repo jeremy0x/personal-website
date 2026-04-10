@@ -1,9 +1,10 @@
 "use client";
+import { Suspense } from "react";
 import Link from "next/link";
 import { BsArrowRight, BsFileEarmarkPdf } from "react-icons/bs";
 import { motion, useReducedMotion } from "framer-motion";
 
-import { BirthdayFireworks, Breadcrumbs, ConfettiEffect } from "@/components";
+import { Breadcrumbs, EasterEggHints } from "@/components";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 
 export default function Home() {
@@ -112,12 +113,12 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
-            <ConfettiEffect />
-            <BirthdayFireworks />
           </motion.div>
         </div>
       </main>
+      <Suspense fallback={null}>
+        <EasterEggHints />
+      </Suspense>
     </>
   );
 }

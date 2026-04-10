@@ -7,6 +7,7 @@ import { fadeInAnimation } from "../utils/framerAnimations";
 import { ThemeToggle } from ".";
 import { useMemo } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import { isSeasonalWindow } from "@/utils/dates";
 
 interface NavbarProps {
   animationDelay?: number;
@@ -16,18 +17,12 @@ export const Navbar = ({ animationDelay = 0.5 }: NavbarProps) => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
-  const isSeasonalWindow = (now: Date) => {
-    const month = now.getMonth();
-    const date = now.getDate();
-    return (month === 11 && date >= 1) || (month === 0 && date <= 5);
-  };
-
   const isSeasonal = useMemo(() => {
     const seasonalParam = searchParams?.get("seasonal");
     if (seasonalParam && seasonalParam.toLowerCase() === "true") {
       return true;
     }
-    return isSeasonalWindow(new Date());
+    return isSeasonalWindow();
   }, [searchParams]);
 
   const logoSrc = isSeasonal ? "/logo_seasonal.svg" : "/logo-icon.svg";
@@ -88,7 +83,7 @@ const NavLink = ({ href, children, isActive }: NavLinkProps) => {
           className={`text-xs transition-all duration-300 sm:text-sm ${
             isActive
               ? "text-neutral-950 dark:text-white"
-              : "text-gray-600 dark:text-gray-400 group-hover:text-neutral-950 dark:group-hover:text-white"
+              : "text-gray-600 group-hover:text-neutral-950 dark:text-gray-400 dark:group-hover:text-white"
           }`}
         >
           {children}
