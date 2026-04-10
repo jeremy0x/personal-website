@@ -50,7 +50,7 @@ export const Navbar = ({ animationDelay = 0.5 }: NavbarProps) => {
               alt="Jeremiah Aworetan logo"
               width={32}
               height={32}
-              className="w-7 invert sm:w-8 dark:invert-0"
+              className="h-7 w-7 invert sm:h-8 sm:w-8 dark:invert-0"
               priority
             />
           </motion.div>
