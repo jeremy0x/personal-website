@@ -1,3 +1,5 @@
+import { useId } from "react";
+
 interface InputFieldProps {
   type?: string;
   name: string;
@@ -14,7 +16,8 @@ export const InputField: React.FC<InputFieldProps> = ({
   id,
   ...rest
 }) => {
-  const uniqueId = `${name}-${Math.random()}`;
+  const generatedId = useId();
+  const uniqueId = id ?? `${name}-${generatedId}`;
 
   if (textarea) {
     return (

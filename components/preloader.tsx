@@ -17,9 +17,12 @@ export const Preloader = () => {
     const hasSeenAnimation = sessionStorage.getItem(PRELOADER_SESSION_KEY);
 
     if (hasSeenAnimation) {
-      setIsLoading(false);
-      setShouldRender(false);
-      return;
+      const frameId = window.requestAnimationFrame(() => {
+        setIsLoading(false);
+        setShouldRender(false);
+      });
+
+      return () => window.cancelAnimationFrame(frameId);
     }
 
     const fadeDelay = prefersReducedMotion ? 0 : PRELOADER_VISIBLE_MS;

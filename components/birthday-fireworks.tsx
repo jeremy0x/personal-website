@@ -560,7 +560,11 @@ export const BirthdayFireworks: React.FC<BirthdayFireworksProps> = ({
     const birthdayParam = urlParams.get("birthday");
     const today = new Date();
     const isJanuary15 = today.getMonth() === 0 && today.getDate() === 15;
-    setShouldRender(birthdayParam === "true" || isJanuary15);
+    const frameId = window.requestAnimationFrame(() => {
+      setShouldRender(birthdayParam === "true" || isJanuary15);
+    });
+
+    return () => window.cancelAnimationFrame(frameId);
   }, []);
 
   if (!shouldRender) return null;

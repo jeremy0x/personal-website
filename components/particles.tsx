@@ -1,20 +1,46 @@
 "use client";
 
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
-import { FC, useCallback, useMemo } from "react";
-import { Engine, ISourceOptions } from "tsparticles-engine";
+import Particles, {
+  initParticlesEngine,
+  type IParticlesProps as TsParticlesProps,
+} from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { createElement, useEffect, useMemo, useState } from "react";
+import type { FC, ReactElement } from "react";
+import type { ISourceOptions } from "@tsparticles/engine";
 import { useTheme } from "next-themes";
-import { useSearchParams } from "next/navigation";
 
-interface IParticlesProps {
+interface ParticlesComponentProps {
   id: string;
 }
 
-const ParticlesComponent: FC<IParticlesProps> = (props) => {
+const TsParticles = Particles as unknown as FC<TsParticlesProps>;
+
+export default function ParticlesComponent({
+  id,
+}: ParticlesComponentProps): ReactElement | null {
+  const [isReady, setIsReady] = useState(false);
   const { theme } = useTheme();
   const isDark = theme === "dark";
-  const searchParams = useSearchParams();
+  const seasonalOverride = useMemo(() => {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    const seasonalParam = new URLSearchParams(window.location.search).get(
+      "seasonal",
+    );
+
+    return seasonalParam?.toLowerCase() === "true";
+  }, []);
+
+  useEffect(() => {
+    void initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setIsReady(true);
+    });
+  }, []);
 
   const isSeasonalWindow = (now: Date) => {
     const month = now.getMonth();
@@ -26,12 +52,8 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
   };
 
   const isHoliday = useMemo(() => {
-    const seasonalParam = searchParams?.get("seasonal");
-    if (seasonalParam && seasonalParam.toLowerCase() === "true") {
-      return true;
-    }
-    return isSeasonalWindow(new Date());
-  }, [searchParams]);
+    return seasonalOverride || isSeasonalWindow(new Date());
+  }, [seasonalOverride]);
 
   const options: ISourceOptions = useMemo(
     () =>
@@ -42,49 +64,44 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
                 value: 50,
                 density: {
                   enable: true,
-                  value_area: 800,
+                  width: 800,
+                  height: 800,
                 },
               },
               color: {
                 // Brighter on dark, slightly softer on light.
                 value: isDark ? "#ffffff" : "#e5e7eb",
               },
+              stroke: {
+                width: 0,
+                color: isDark ? "#000000" : "#9ca3af",
+              },
               shape: {
                 type: "circle",
-                stroke: {
-                  width: 0,
-                  color: isDark ? "#000000" : "#9ca3af",
-                },
-                polygon: {
-                  nb_sides: 5,
-                },
-                image: {
-                  src: "img/github.svg",
-                  width: 100,
-                  height: 100,
-                },
               },
               opacity: {
-                value: 0.2,
-                random: true,
-                anim: {
+                value: {
+                  min: 0.1,
+                  max: 0.2,
+                },
+                animation: {
                   enable: false,
                   speed: 1,
-                  opacity_min: 0.1,
                   sync: false,
                 },
               },
               size: {
-                value: 5,
-                random: true,
-                anim: {
+                value: {
+                  min: 0.1,
+                  max: 5,
+                },
+                animation: {
                   enable: false,
                   speed: 40,
-                  size_min: 0.1,
                   sync: false,
                 },
               },
-              line_linked: {
+              links: {
                 enable: false,
                 distance: 500,
                 color: isDark ? "#ffffff" : "#e5e7eb",
@@ -97,32 +114,39 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
                 direction: "bottom",
                 random: false,
                 straight: false,
-                out_mode: "out",
+                outModes: {
+                  default: "out",
+                },
                 bounce: false,
                 attract: {
                   enable: false,
-                  rotateX: 600,
-                  rotateY: 1200,
+                  rotate: {
+                    x: 600,
+                    y: 1200,
+                  },
                 },
               },
             },
             interactivity: {
-              detect_on: "canvas",
+              detectsOn: "canvas",
               events: {
-                onhover: {
+                onHover: {
                   enable: true,
                   mode: "bubble",
                 },
-                onclick: {
+                onClick: {
                   enable: true,
                   mode: "repulse",
                 },
-                resize: true,
+                resize: {
+                  enable: true,
+                  delay: 0.5,
+                },
               },
               modes: {
                 grab: {
                   distance: 400,
-                  line_linked: {
+                  links: {
                     opacity: 0.5,
                   },
                 },
@@ -138,14 +162,14 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
                   duration: 0.4,
                 },
                 push: {
-                  particles_nb: 4,
+                  quantity: 4,
                 },
                 remove: {
-                  particles_nb: 2,
+                  quantity: 2,
                 },
               },
             },
-            retina_detect: true,
+            detectRetina: true,
           }
         : {
             particles: {
@@ -153,48 +177,45 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
                 value: 4,
                 density: {
                   enable: true,
-                  value_area: 800,
+                  width: 800,
+                  height: 800,
                 },
               },
               color: {
                 value: isDark ? "#232323" : "#d4d4d4",
               },
+              stroke: {
+                width: 0,
+                color: isDark ? "#000000" : "#a3a3a3",
+              },
               shape: {
                 type: "polygon",
-                stroke: {
-                  width: 0,
-                  color: isDark ? "#000000" : "#a3a3a3",
-                },
-                polygon: {
-                  nb_sides: 6,
-                },
-                image: {
-                  src: "img/github.svg",
-                  width: 100,
-                  height: 100,
+                options: {
+                  polygon: {
+                    sides: 6,
+                  },
                 },
               },
               opacity: {
                 value: 0.1,
-                random: true,
-                anim: {
+                animation: {
                   enable: false,
                   speed: 1,
-                  opacity_min: 0.1,
                   sync: false,
                 },
               },
               size: {
-                value: 160,
-                random: true,
-                anim: {
+                value: {
+                  min: 0.1,
+                  max: 160,
+                },
+                animation: {
                   enable: false,
                   speed: 10,
-                  size_min: 0.1,
                   sync: false,
                 },
               },
-              line_linked: {
+              links: {
                 enable: false,
                 distance: 200,
                 color: isDark ? "#171717" : "#a3a3a3",
@@ -207,32 +228,39 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
                 direction: "none",
                 random: false,
                 straight: false,
-                out_mode: "out",
+                outModes: {
+                  default: "out",
+                },
                 bounce: false,
                 attract: {
                   enable: false,
-                  rotateX: 600,
-                  rotateY: 1200,
+                  rotate: {
+                    x: 600,
+                    y: 1200,
+                  },
                 },
               },
             },
             interactivity: {
-              detect_on: "window",
+              detectsOn: "window",
               events: {
-                onhover: {
+                onHover: {
                   enable: true,
                   mode: "repulse",
                 },
-                onclick: {
+                onClick: {
                   enable: true,
                   mode: "push",
                 },
-                resize: true,
+                resize: {
+                  enable: true,
+                  delay: 0.5,
+                },
               },
               modes: {
                 grab: {
                   distance: 400,
-                  line_linked: {
+                  links: {
                     opacity: 1,
                   },
                 },
@@ -248,25 +276,21 @@ const ParticlesComponent: FC<IParticlesProps> = (props) => {
                   duration: 0.4,
                 },
                 push: {
-                  particles_nb: 1,
+                  quantity: 1,
                 },
                 remove: {
-                  particles_nb: 2,
+                  quantity: 2,
                 },
               },
             },
-            retina_detect: true,
+            detectRetina: true,
           },
     [isDark, isHoliday],
   );
 
-  const { id } = props;
+  if (!isReady) {
+    return null;
+  }
 
-  const particlesInit = useCallback((engine: Engine): any => {
-    loadSlim(engine);
-  }, []);
-
-  return <Particles id={id} init={particlesInit} options={options} />;
-};
-
-export default ParticlesComponent;
+  return createElement(TsParticles, { id, options });
+}
