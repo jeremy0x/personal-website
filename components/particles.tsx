@@ -55,8 +55,7 @@ export default function ParticlesComponent({
                 },
               },
               color: {
-                // Brighter on dark, slightly softer on light.
-                value: isDark ? "#ffffff" : "#e5e7eb",
+                value: isDark ? "#ffffff" : "#64748b",
               },
               stroke: {
                 width: 0,
@@ -67,8 +66,8 @@ export default function ParticlesComponent({
               },
               opacity: {
                 value: {
-                  min: 0.1,
-                  max: 0.2,
+                  min: isDark ? 0.1 : 0.18,
+                  max: isDark ? 0.2 : 0.38,
                 },
                 animation: {
                   enable: false,
@@ -90,7 +89,7 @@ export default function ParticlesComponent({
               links: {
                 enable: false,
                 distance: 500,
-                color: isDark ? "#ffffff" : "#e5e7eb",
+                color: isDark ? "#ffffff" : "#64748b",
                 opacity: 0.4,
                 width: 2,
               },

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { isSeasonalWindow, isBirthdayWindow } from "@/utils/dates";
+import { DECORATIVE_LINE_CLASS, SITE_CHROME_STACK_GAP } from "@/utils/siteChrome";
 import { ConfettiEffect } from "./confetti-effect";
 import { BirthdayFireworks } from "./birthday-fireworks";
 
@@ -53,7 +54,7 @@ export const EasterEggHints = () => {
         {hints.length > 0 && (
           <motion.div
             key={hintKey}
-            className="fixed inset-x-0 bottom-6 z-10"
+            className="pointer-events-none fixed inset-x-0 bottom-6 z-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -64,11 +65,13 @@ export const EasterEggHints = () => {
             onAnimationComplete={() => setIsFirstRender(false)}
           >
             <div className="mx-auto flex w-full items-center justify-end sm:container">
-              <div className="flex flex-col items-center gap-3 pr-4 sm:pr-6">
-                <span className="h-8 w-px bg-neutral-400/60 dark:bg-neutral-600/60" />
+              <div
+                className={`pointer-events-auto flex flex-col items-center ${SITE_CHROME_STACK_GAP} pr-4 sm:pr-6`}
+              >
+                <span className={DECORATIVE_LINE_CLASS} />
                 {hints.map((hint) => (
                   <Link key={hint.href} href={hint.href} scroll={false}>
-                    <span className="text-[10px] font-medium tracking-[0.2em] text-neutral-400 uppercase [writing-mode:vertical-rl] transition-colors hover:text-neutral-600 dark:text-neutral-600 dark:hover:text-neutral-400">
+                    <span className="block text-[10px] leading-none font-medium tracking-[0.2em] text-neutral-400 uppercase [writing-mode:vertical-rl] transition-colors hover:text-neutral-600 dark:text-neutral-600 dark:hover:text-neutral-400">
                       {hint.label}
                     </span>
                   </Link>

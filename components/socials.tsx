@@ -3,13 +3,16 @@ import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { fadeInAnimation } from "../utils/framerAnimations";
+import { DECORATIVE_LINE_CLASS, SITE_CHROME_STACK_GAP } from "../utils/siteChrome";
 
 export const Socials = () => {
   return (
-    <motion.div className="fixed inset-x-0 bottom-6" {...fadeInAnimation}>
+    <motion.div className="fixed inset-x-0 bottom-6 z-10" {...fadeInAnimation}>
       <div className="mx-auto flex w-full items-center sm:container">
-        <div className="flex flex-col items-center gap-4 pl-4 text-xl text-neutral-600 sm:pl-6 dark:text-gray-400">
-          <span className="mb-2 h-12 w-px bg-neutral-400/60 dark:bg-neutral-600/60" />
+        <div
+          className={`flex flex-col items-center ${SITE_CHROME_STACK_GAP} pl-4 text-xl text-neutral-600 sm:pl-6 dark:text-gray-400`}
+        >
+          <span className={DECORATIVE_LINE_CLASS} />
 
           <Link
             href="https://github.com/jeremy0x"
