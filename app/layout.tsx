@@ -7,6 +7,9 @@ import { ThemeProvider } from "next-themes";
 import "goey-toast/styles.css";
 
 import { AppShell } from "@/components";
+import { PRELOADER_SESSION_KEY } from "@/utils/preloader-session";
+
+const preloaderHeadScript = `try{var k=${JSON.stringify(PRELOADER_SESSION_KEY)};if(sessionStorage.getItem(k)){document.documentElement.setAttribute("data-hide-site-preloader","");}}catch(e){}`;
 
 const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"] });
 
@@ -54,6 +57,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: preloaderHeadScript }} />
+      </head>
       <body
         className={`${hankenGrotesk.className} overflow-y-scroll transition-colors`}
       >

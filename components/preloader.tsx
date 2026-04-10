@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-const PRELOADER_SESSION_KEY = "hasSeenHiPreloader";
+import { PRELOADER_SESSION_KEY } from "@/utils/preloader-session";
+
 const PRELOADER_VISIBLE_MS = 1500;
 const PRELOADER_TOTAL_MS = 2000;
 
@@ -13,16 +14,13 @@ export const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [shouldRender, setShouldRender] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const hasSeenAnimation = sessionStorage.getItem(PRELOADER_SESSION_KEY);
 
     if (hasSeenAnimation) {
-      const frameId = window.requestAnimationFrame(() => {
-        setIsLoading(false);
-        setShouldRender(false);
-      });
-
-      return () => window.cancelAnimationFrame(frameId);
+      setIsLoading(false);
+      setShouldRender(false);
+      return;
     }
 
     const fadeDelay = prefersReducedMotion ? 0 : PRELOADER_VISIBLE_MS;
@@ -57,6 +55,7 @@ export const Preloader = () => {
 
   return (
     <motion.div
+      id="site-preloader"
       aria-hidden="true"
       className={`fixed inset-0 z-50 flex min-h-screen items-center justify-center bg-white uppercase text-neutral-900 dark:bg-neutral-900 dark:text-white ${
         isLoading ? "pointer-events-auto" : "pointer-events-none"

@@ -45,6 +45,12 @@ html {
   color: rgb(var(--foreground));
 }
 
+html[data-hide-site-preloader] #site-preloader {
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
 ::selection {
   background-color: rgb(var(--foreground));
   color: rgb(var(--background));
