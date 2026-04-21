@@ -31,7 +31,7 @@
     "@vercel/speed-insights": "^2.0.0",
     "canvas-confetti": "^1.9.4",
     "eslint": "9.38.0",
-    "eslint-config-next": "16.2.3",
+    "eslint-config-next": "16.2.4",
     "framer-motion": "^12.38.0",
     "goey-toast": "^0.4.0",
     "next": "16.2.4",
