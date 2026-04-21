@@ -21,6 +21,8 @@ jobs:
         run: |
           echo "Checking PR title: $PR_TITLE"
           if ! echo "$PR_TITLE" | grep -Eq '^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([^)]+\))?!?: .+'; then
-            echo "PR title must follow Conventional Commits format (e.g. feat: add contact form)."
+            echo "PR title must use Conventional Commits: <type>(<scope>)?: <description>."
+            echo "Allowed types: build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test."
+            echo "Examples: feat: add contact form, fix(auth): handle expired session."
             exit 1
           fi
