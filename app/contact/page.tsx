@@ -1,16 +1,24 @@
 "use client";
-import { useState } from "react";
-import { ImSpinner9 } from "react-icons/im";
-import { BiSolidPaperPlane } from "react-icons/bi";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GooeyToaster } from "goey-toast";
 
-import { handleSubmit } from "@/utils/handleSubmit";
 import { fadeInAnimation } from "@/utils/framerAnimations";
-import { Breadcrumbs, InputField } from "@/components";
+import { Breadcrumbs } from "@/components";
 
 export default function Page() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [calendlyUrl, setCalendlyUrl] = useState("");
+
+  useEffect(() => {
+    const frameId = window.requestAnimationFrame(() => {
+      setMounted(true);
+      setCalendlyUrl(
+        "https://calendly.com/jeremy0x/chat?hide_landing_page_details=1&hide_gdpr_banner=1",
+      );
+    });
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, []);
 
   return (
     <>
@@ -33,8 +41,7 @@ export default function Page() {
                     Contact
                   </h1>
                   <p className="max-w-lg text-sm leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
-                    Messages get delivered to my email. I&apos;ll get back to
-                    you as soon as possible.
+                    Feel free to reach out via email or schedule a quick chat with me using the calendar.
                   </p>
                 </div>
 
@@ -43,8 +50,8 @@ export default function Page() {
                     <h2 className="text-lg font-bold tracking-widest">Email</h2>
                     <p className="leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
                       <a
-                        href="mailto:aworetanjeremiah@gmail.com"
-                        className="underline-offset-2 hover:underline"
+                          href="mailto:aworetanjeremiah@gmail.com"
+                          className="underline-offset-2 hover:underline"
                       >
                         aworetanjeremiah@gmail.com
                       </a>
@@ -62,61 +69,20 @@ export default function Page() {
                 </div>
               </article>
 
-              <form
-                onSubmit={(event) => handleSubmit({ event, setIsLoading })}
-                method="POST"
-                className="grid w-full max-w-xl flex-1 gap-10 rounded-xl backdrop-blur-sm backdrop-filter md:bg-neutral-100/30 md:p-14 md:shadow-xl dark:md:bg-neutral-900/30"
-              >
-                <h1 className="text-center text-2xl font-black tracking-widest uppercase sm:text-3xl">
-                  Contact Form
-                </h1>
-
-                <p className="text-center text-sm tracking-wider text-neutral-600 dark:text-gray-400">
-                  It actually works, I promise :)
-                </p>
-
-                <div className="grid gap-8">
-                  <InputField type="text" name="name" placeholder="Your name" />
-                  <InputField
-                    type="email"
-                    name="email"
-                    placeholder="Your email"
+              <div className="z-10 w-full max-w-xl flex-1 rounded-xl border border-neutral-200/50 bg-white p-2 shadow-xl dark:border-neutral-800/20">
+                {mounted ? (
+                  <iframe
+                    src={calendlyUrl}
+                    width="100%"
+                    height="550"
+                    style={{ minWidth: "320px", border: 0, backgroundColor: "#ffffff" }}
+                    title="Schedule a chat"
+                    className="rounded-lg"
                   />
-                  <InputField
-                    textarea
-                    name="message"
-                    placeholder="Message"
-                    rows={2}
-                  />
-
-                  <button
-                    type="submit"
-                    disabled={isLoading}
-                    className="bg-opacity-30 mx-auto mt-4 flex w-fit flex-row items-center justify-center gap-3 rounded-xl bg-neutral-200 px-10 py-4 tracking-wider uppercase shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:-translate-y-0 dark:bg-zinc-800"
-                  >
-                    <span>{isLoading ? "Sending..." : "Send Message"}</span>
-                    {isLoading ? (
-                      <ImSpinner9 className="animate-spin text-xl" />
-                    ) : (
-                      <BiSolidPaperPlane className="text-xl" />
-                    )}
-                  </button>
-                </div>
-
-                {isLoading && (
-                  <motion.p
-                    className="mt-4 text-center text-sm text-neutral-600 dark:text-gray-400"
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    Please wait 30 seconds to 1 minute for message delivery.
-                  </motion.p>
+                ) : (
+                  <div className="relative h-[550px] w-full overflow-hidden rounded-lg bg-neutral-50 before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-linear-to-r before:from-transparent before:via-neutral-200/50 before:to-transparent" />
                 )}
-              </form>
-
-              <GooeyToaster position="bottom-right" />
+              </div>
             </div>
           </motion.div>
         </motion.main>

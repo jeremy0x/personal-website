@@ -3,7 +3,6 @@ export * from "./breadcrumbs";
 export * from "./app-shell";
 export * from "./confetti-effect";
 export * from "./easter-egg-hints";
-export * from "./input";
 export * from "./navbar";
 export * from "./particles";
 export * from "./preloader";
