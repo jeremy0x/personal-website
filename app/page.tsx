@@ -86,7 +86,7 @@ export default function Home() {
                 </Link>
 
                 <a
-                  href="/Resume_JeremiahAworetan.pdf"
+                  href="/Resume_JeremiahAworetan.pdf?v=20260716"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
