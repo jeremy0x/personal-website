@@ -5,6 +5,5 @@ packages:
   # if required, exclude directories
   - '!**/test/**'
 allowBuilds:
-  '@tsparticles/engine': true
   sharp: true
   unrs-resolver: true
