@@ -44,9 +44,9 @@ export const projectsData: ProjectData[] = [
     link: "https://noblocks.xyz",
     githubLink: "https://github.com/paycrest/noblocks",
     description:
-      "Open-source, next-gen crypto payment solution with zero gas fees.",
+      "Intuitive interface for moving between stablecoins and local bank or mobile money accounts.",
     detailedDescription:
-      "Open-source advanced crypto payment platform eliminating P2P transaction complexity. Built with Next.js, TypeScript, and Framer Motion. Features instant settlements, real-time tracking, and comprehensive merchant tools.",
+      "An intuitive interface for moving between stablecoins and local currency. You can cash out stablecoins to bank or mobile money, or buy stablecoins with fiat—powered by Paycrest's decentralized liquidity network across multiple regions, including Kenya (KES), Uganda (UGX), Nigeria (NGN), Tanzania (TZS), and more.",
     logos: [
       <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,

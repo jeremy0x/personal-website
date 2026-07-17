@@ -5,25 +5,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInAnimation } from "../utils/framerAnimations";
 import { ThemeToggle } from ".";
-import { useMemo } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
-import { isSeasonalWindow } from "@/utils/dates";
+import { usePathname } from "next/navigation";
+import { useSeasonalTheme } from "@/utils/useSeasonalTheme";
 
 interface NavbarProps {
   animationDelay?: number;
 }
 
 export const Navbar = ({ animationDelay = 0.5 }: NavbarProps) => {
-  const searchParams = useSearchParams();
   const pathname = usePathname();
-
-  const isSeasonal = useMemo(() => {
-    const seasonalParam = searchParams?.get("seasonal");
-    if (seasonalParam && seasonalParam.toLowerCase() === "true") {
-      return true;
-    }
-    return isSeasonalWindow();
-  }, [searchParams]);
+  const isSeasonal = useSeasonalTheme();
 
   const logoSrc = isSeasonal ? "/logo_seasonal.svg" : "/logo-icon.svg";
 

@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
-import { Navbar, Preloader } from "@/components";
+import { Navbar } from "./navbar";
+import { Preloader } from "./preloader";
 import { Socials } from "./socials";
 import { fadeInAnimation } from "@/utils/framerAnimations";
 

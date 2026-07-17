@@ -3,7 +3,7 @@
 import { useLayoutEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-import { PRELOADER_SESSION_KEY } from "@/utils/preloader-session";
+export const PRELOADER_SESSION_KEY = "hasSeenHiPreloader";
 
 const PRELOADER_VISIBLE_MS = 2000;
 const PRELOADER_TOTAL_MS = 2500;

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { Breadcrumbs } from "@/components";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Projects by Jeremiah Aworetan | Product Engineering Portfolio",

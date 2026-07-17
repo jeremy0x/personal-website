@@ -106,6 +106,16 @@ input:-webkit-autofill:active {
   }
 }
 
+div.swiper-slide-shadow-coverflow,
+div.swiper-slide-shadow-right,
+div.swiper-slide-shadow-left {
+  border-radius: 16px !important;
+}
+
+div.swiper-slide {
+  border-radius: 16px !important;
+}
+
 .swiper-pagination-bullet-active {
   background-color: rgb(var(--foreground)) !important;
 }
@@ -117,4 +127,163 @@ input:-webkit-autofill:active {
 .swiper-button-prev,
 .swiper-button-next {
   color: rgb(var(--foreground)) !important;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass:hover {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 0 16px 40px -15px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.dark .glass:hover {
+  background: rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Contact Cards */
+.contact-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 24px;
+  line-height: 1.6;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-card::before {
+  position: absolute;
+  content: "";
+  top: -4%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%);
+  z-index: 1;
+  transform-origin: bottom;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-card::after {
+  position: absolute;
+  content: "";
+  top: -8%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%);
+  z-index: 0;
+  transform-origin: bottom;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-card-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 36px 24px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-card:hover {
+  transform: translate(0px, -16px);
+}
+
+.contact-card:hover .contact-card-content {
+  background: #fafafa;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.contact-card:hover::before {
+  rotate: -8deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.contact-card:hover::after {
+  rotate: 8deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+/* Dark Mode Styles */
+.dark .contact-card-content {
+  background: #171717;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 40px -15px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.dark .contact-card::before {
+  background: rgba(23, 23, 23, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px -15px rgba(0, 0, 0, 0.35);
+}
+
+.dark .contact-card::after {
+  background: rgba(23, 23, 23, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 40px -15px rgba(0, 0, 0, 0.35);
+}
+
+.dark .contact-card:hover::before {
+  background: rgba(23, 23, 23, 0.4);
+}
+
+.dark .contact-card:hover::after {
+  background: rgba(23, 23, 23, 0.4);
+}
+
+.dark .contact-card:hover .contact-card-content {
+  background: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -4px 10px rgba(0, 0, 0, 0.2);
 }

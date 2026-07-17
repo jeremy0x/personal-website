@@ -3,8 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactElement } from "react";
 import { useTheme } from "next-themes";
-import { useSearchParams } from "next/navigation";
-import { isSeasonalWindow } from "@/utils/dates";
+import { useSeasonalTheme } from "@/utils/useSeasonalTheme";
 
 interface ParticlesComponentProps {
   id: string;
@@ -31,18 +30,11 @@ export default function ParticlesComponent({
   const [isReady, setIsReady] = useState(false);
   const { theme } = useTheme();
   const isDark = theme === "dark";
-  const searchParams = useSearchParams();
-
-  // Determine if it is holiday/seasonal mode
-  const isHoliday =
-    searchParams?.get("seasonal")?.toLowerCase() === "true" ||
-    isSeasonalWindow();
+  const isHoliday = useSeasonalTheme();
 
   useEffect(() => {
-    const frameId = window.requestAnimationFrame(() => {
-      setIsReady(true);
-    });
-    return () => window.cancelAnimationFrame(frameId);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsReady(true);
   }, []);
 
   useEffect(() => {

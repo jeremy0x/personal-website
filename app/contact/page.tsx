@@ -1,25 +1,15 @@
 "use client";
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiExternalLink } from "react-icons/fi";
+import { SiGmail, SiCalendly } from "react-icons/si";
+import { RiTimeZoneLine } from "react-icons/ri";
 
 import { fadeInAnimation } from "@/utils/framerAnimations";
-import { Breadcrumbs } from "@/components";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+
+const CALENDLY_URL = "https://calendly.com/jeremy0x/chat";
 
 export default function Page() {
-  const [mounted, setMounted] = useState(false);
-  const [calendlyUrl, setCalendlyUrl] = useState("");
-
-  useEffect(() => {
-    const frameId = window.requestAnimationFrame(() => {
-      setMounted(true);
-      setCalendlyUrl(
-        "https://calendly.com/jeremy0x/chat?hide_landing_page_details=1&hide_gdpr_banner=1",
-      );
-    });
-
-    return () => window.cancelAnimationFrame(frameId);
-  }, []);
-
   return (
     <>
       <Breadcrumbs
@@ -33,55 +23,66 @@ export default function Page() {
           className="container mx-auto flex min-h-screen items-center justify-center text-neutral-900 dark:text-white"
           {...fadeInAnimation}
         >
-          <motion.div className="page-content" {...fadeInAnimation}>
-            <div className="z-10 mx-auto flex flex-col items-center justify-center gap-20 px-2 pt-36 pb-16 sm:px-8 lg:flex-row lg:py-20">
-              <article className="z-10 grid max-w-2xl flex-1 gap-10 text-center">
-                <div className="space-y-5">
-                  <h1 className="text-3xl font-black tracking-widest uppercase">
-                    Contact
-                  </h1>
-                  <p className="max-w-lg text-sm leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
-                    Feel free to reach out via email or schedule a quick chat with me using the calendar.
-                  </p>
-                </div>
-
-                <div className="grid gap-10 text-sm">
-                  <div className="grid gap-2">
-                    <h2 className="text-lg font-bold tracking-widest">Email</h2>
-                    <p className="leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
-                      <a
-                          href="mailto:aworetanjeremiah@gmail.com"
-                          className="underline-offset-2 hover:underline"
-                      >
-                        aworetanjeremiah@gmail.com
-                      </a>
-                    </p>
-                  </div>
-
-                  <div className="grid gap-2">
-                    <h2 className="text-lg font-bold tracking-widest">
-                      Time Zone
-                    </h2>
-                    <p className="leading-loose tracking-wider text-neutral-600 dark:text-gray-400">
-                      GMT+1
-                    </p>
-                  </div>
-                </div>
+          <motion.div className="page-content w-full" {...fadeInAnimation}>
+            <div className="z-10 mx-auto flex max-w-4xl flex-col items-center justify-center gap-16 px-4 pt-36 pb-16 sm:px-8">
+              <article className="z-10 grid max-w-2xl gap-6 text-center">
+                <h1 className="text-4xl font-black tracking-widest uppercase sm:text-5xl">
+                  Contact
+                </h1>
+                <p className="mx-auto max-w-lg text-sm leading-loose tracking-wider text-neutral-600 sm:text-base dark:text-gray-400">
+                  Feel free to reach out via email or schedule a quick chat.
+                  I&apos;ll get back to you as soon as possible.
+                </p>
               </article>
 
-              <div className="z-10 w-full max-w-xl flex-1 rounded-xl border border-neutral-200/50 bg-white p-2 shadow-xl dark:border-neutral-800/20">
-                {mounted ? (
-                  <iframe
-                    src={calendlyUrl}
-                    width="100%"
-                    height="550"
-                    style={{ minWidth: "320px", border: 0, backgroundColor: "#ffffff" }}
-                    title="Schedule a chat"
-                    className="rounded-lg"
-                  />
-                ) : (
-                  <div className="relative h-[550px] w-full overflow-hidden rounded-lg bg-neutral-50 before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-linear-to-r before:from-transparent before:via-neutral-200/50 before:to-transparent" />
-                )}
+              <div className="grid w-full grid-cols-1 justify-items-center gap-12 sm:grid-cols-3">
+                {/* Email Card */}
+                <a
+                  href="mailto:aworetanjeremiah@gmail.com"
+                  className="contact-card group z-10"
+                >
+                  <div className="contact-card-content">
+                    <SiGmail className="mb-4 text-3xl text-neutral-400 transition-colors group-hover:text-neutral-900 dark:text-gray-500 dark:group-hover:text-white" />
+                    <h2 className="mb-2 text-xs font-bold tracking-widest text-neutral-400 uppercase">
+                      Email
+                    </h2>
+                    <p className="text-sm font-medium tracking-wide text-neutral-600 group-hover:text-neutral-950 dark:text-gray-400 dark:group-hover:text-white">
+                      aworetanjeremiah@gmail.com
+                    </p>
+                  </div>
+                </a>
+
+                {/* Calendar Card */}
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-card group z-10"
+                >
+                  <div className="contact-card-content">
+                    <SiCalendly className="mb-4 text-3xl text-neutral-400 transition-colors group-hover:text-neutral-900 dark:text-gray-500 dark:group-hover:text-white" />
+                    <h2 className="mb-2 text-xs font-bold tracking-widest text-neutral-400 uppercase">
+                      Calendar
+                    </h2>
+                    <p className="flex items-center gap-1.5 text-sm font-medium tracking-wide text-neutral-600 group-hover:text-neutral-950 dark:text-gray-400 dark:group-hover:text-white">
+                      Schedule a chat{" "}
+                      <FiExternalLink className="text-xs opacity-70" />
+                    </p>
+                  </div>
+                </a>
+
+                {/* Timezone Card */}
+                <div className="contact-card z-10">
+                  <div className="contact-card-content">
+                    <RiTimeZoneLine className="mb-4 text-3xl text-neutral-400 dark:text-gray-500" />
+                    <h2 className="mb-2 text-xs font-bold tracking-widest text-neutral-400 uppercase">
+                      Time Zone
+                    </h2>
+                    <p className="text-sm font-medium tracking-wide text-neutral-600 dark:text-gray-400">
+                      UTC+1
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

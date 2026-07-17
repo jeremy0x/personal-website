@@ -4,8 +4,8 @@ import { Hanken_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
-import { AppShell } from "@/components";
-import { PRELOADER_SESSION_KEY } from "@/utils/preloader-session";
+import { AppShell } from "@/components/app-shell";
+import { PRELOADER_SESSION_KEY } from "@/components/preloader";
 
 const preloaderHeadScript = `try{var k=${JSON.stringify(PRELOADER_SESSION_KEY)};if(sessionStorage.getItem(k)){document.documentElement.setAttribute("data-hide-site-preloader","");}}catch(e){}`;
 

@@ -175,7 +175,7 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="relative" onClick={onClick}>
+    <div className="relative overflow-hidden rounded-2xl border border-black/10 dark:border-white/15" onClick={onClick}>
       <div className="cursor-pointer">
         {isLoading && (
           <div className="absolute top-0 left-0 z-10 flex h-full w-full items-center justify-center">
@@ -193,15 +193,15 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
           placeholder="blur"
           blurDataURL={BLUR_DATA_URL}
           onLoad={() => setIsLoading(false)}
-          className="rounded-xl bg-black/30 transition-all max-md:w-full"
+          className="rounded-2xl bg-black/30 transition-all max-md:w-full"
         />
       </div>
 
-      <div className="absolute top-0 right-0 bottom-0 left-0 w-full cursor-pointer rounded-xl bg-white/10 opacity-40 transition-opacity duration-500 sm:opacity-100 sm:hover:opacity-20 dark:bg-black/40" />
+      <div className="absolute top-0 right-0 bottom-0 left-0 w-full cursor-pointer rounded-2xl bg-white/10 opacity-40 transition-opacity duration-500 sm:opacity-100 sm:hover:opacity-20 dark:bg-black/40" />
 
       {!isLoading && (
-        <div className="absolute bottom-0 left-0 w-full rounded-lg p-2">
-          <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-white/80 px-2 py-4 text-center backdrop-blur-xs dark:bg-black/60">
+        <div className="absolute bottom-0 left-0 w-full rounded-2xl p-2">
+          <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border border-black/10 bg-white/80 px-2 py-4 text-center backdrop-blur-xs dark:border-white/15 dark:bg-black/60">
             <p className="text-sm font-medium sm:text-base">{description}</p>
             <div className="flex items-center gap-4 text-2xl">{logos}</div>
           </div>

@@ -10,11 +10,8 @@ export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    const frameId = window.requestAnimationFrame(() => {
-      setMounted(true);
-    });
-
-    return () => window.cancelAnimationFrame(frameId);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
   }, []);
 
   if (!mounted) {
