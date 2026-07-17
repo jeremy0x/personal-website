@@ -1,5 +1,3 @@
-"use client";
-
 interface BreadcrumbItem {
   name: string;
   item: string;

@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import type { ReactElement } from "react";
+import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import { useSeasonalTheme } from "@/utils/useSeasonalTheme";
 
@@ -25,21 +24,13 @@ interface Particle {
 
 export default function ParticlesComponent({
   id,
-}: ParticlesComponentProps): ReactElement | null {
+}: ParticlesComponentProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isReady, setIsReady] = useState(false);
   const { theme } = useTheme();
   const isDark = theme === "dark";
   const isHoliday = useSeasonalTheme();
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setIsReady(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isReady) return;
-
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -238,9 +229,7 @@ export default function ParticlesComponent({
       window.removeEventListener("click", handleClick);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isReady, isHoliday, isDark]);
-
-  if (!isReady) return null;
+  }, [isHoliday, isDark]);
 
   return (
     <canvas

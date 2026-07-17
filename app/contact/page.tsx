@@ -1,5 +1,5 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 import { SiGmail, SiCalendly } from "react-icons/si";
 import { RiTimeZoneLine } from "react-icons/ri";
@@ -18,7 +18,6 @@ export default function Page() {
           { name: "Contact", item: "/contact" },
         ]}
       />
-      <AnimatePresence mode="wait">
           <motion.main
             className="container mx-auto flex min-h-screen items-center justify-center text-neutral-900 dark:text-white"
             {...fadeInAnimation}
@@ -87,7 +86,6 @@ export default function Page() {
             </div>
           </motion.div>
         </motion.main>
-      </AnimatePresence>
     </>
   );
 }

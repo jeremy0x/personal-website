@@ -1,5 +1,4 @@
 "use client";
-import { Suspense } from "react";
 import Link from "next/link";
 import { BsArrowRight, BsFileEarmarkPdf } from "react-icons/bs";
 import { motion, useReducedMotion } from "framer-motion";

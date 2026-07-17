@@ -5,7 +5,7 @@ import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { ProjectModal } from "@/components/project-modal";
-import { ProjectData } from "@/data/projects";
+import type { ProjectData } from "@/data/projects";
 import { projectsData } from "@/data/projects";
 import { getOptimizedImageUrl } from "@/utils/image";
 import { useMediaQuery } from "@/utils/useMediaQuery";
