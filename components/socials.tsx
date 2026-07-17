@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { fadeInAnimation } from "@/utils/framerAnimations";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { fadeInAnimation } from "../utils/framerAnimations";
 
 export const Socials = () => {
   return (

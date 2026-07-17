@@ -1,4 +1,4 @@
-import { ProjectData } from "@/types";
+import type { JSX } from "react";
 import {
   BiLogoCss3,
   BiLogoHtml5,
@@ -21,6 +21,16 @@ import {
   SiGoogleplay,
 } from "react-icons/si";
 import { FaAppStore } from "react-icons/fa";
+
+export interface ProjectData {
+  name: string;
+  link: string;
+  githubLink?: string;
+  description: string;
+  detailedDescription?: string;
+  logos: JSX.Element[];
+  imageSrc: string;
+}
 
 export const projectsData: ProjectData[] = [
   {

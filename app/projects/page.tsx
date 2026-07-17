@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { useState, useCallback, useEffect, useLayoutEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { ProjectModal } from "@/components";
-import { ProjectData } from "@/types";
+import { ProjectModal } from "@/components/project-modal";
+import { ProjectData } from "@/data/projects";
 import { projectsData } from "@/data/projects";
 import { getOptimizedImageUrl } from "@/utils/image";
+import { useMediaQuery } from "@/utils/useMediaQuery";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -34,17 +35,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
     null,
   );
-  const [isMobile, setIsMobile] = useState<boolean | null>(null);
-
-  useLayoutEffect(() => {
-    const mql = window.matchMedia("(max-width: 639px)");
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setIsMobile(mql.matches);
-
-    const onChange = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mql.addEventListener("change", onChange);
-    return () => mql.removeEventListener("change", onChange);
-  }, []);
+  const isMobile = useMediaQuery("(max-width: 639px)");
 
   const handleSwiperInit = useCallback((instance: SwiperType) => {
     setSwiper(instance);
@@ -83,84 +74,60 @@ export default function Projects() {
 
   return (
     <>
-      {isMobile === null ? (
-        <ProjectsSkeleton />
-      ) : (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: carouselReady ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: carouselReady ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Swiper
+          key={isMobile ? "cube" : "coverflow"}
+          effect={isMobile ? "cube" : "coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={isMobile ? 1 : "auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          cubeEffect={{
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+            dynamicMainBullets: 3,
+          }}
+          navigation={true}
+          modules={[EffectCoverflow, EffectCube, Pagination, Navigation]}
+          spaceBetween={20}
+          className="mySwiper"
+          onSwiper={handleSwiperInit}
+          style={{ "--swiper-navigation-size": "25px" } as CSSProperties}
         >
-          <Swiper
-            key={isMobile ? "cube" : "coverflow"}
-            effect={isMobile ? "cube" : "coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={isMobile ? 1 : "auto"}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            cubeEffect={{
-              shadow: true,
-              slideShadows: true,
-              shadowOffset: 20,
-              shadowScale: 0.94,
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-              dynamicMainBullets: 3,
-            }}
-            navigation={true}
-            modules={[EffectCoverflow, EffectCube, Pagination, Navigation]}
-            spaceBetween={20}
-            className="mySwiper"
-            onSwiper={handleSwiperInit}
-            style={{ "--swiper-navigation-size": "25px" } as CSSProperties}
-          >
-            {projectsData.map((project, index) => (
-              <SwiperSlide
-                key={index}
-                onClick={() => handleSlideClick(index)}
-                style={{ maxWidth: "100%", width: "100%" }}
-              >
-                <ProjectCard
-                  project={project}
-                  index={index}
-                  onClick={() => handleProjectClick(project)}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </motion.div>
-      )}
+          {projectsData.map((project, index) => (
+            <SwiperSlide
+              key={index}
+              onClick={() => handleSlideClick(index)}
+              style={{ maxWidth: "100%", width: "100%" }}
+            >
+              <ProjectCard
+                project={project}
+                index={index}
+                onClick={() => handleProjectClick(project)}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </motion.div>
 
       <ProjectModal project={selectedProject} onClose={handleCloseModal} />
     </>
-  );
-}
-
-function ProjectsSkeleton() {
-  return (
-    <div className="flex w-full items-center justify-center px-4">
-      <div className="w-full max-w-[575px]">
-        <div className="relative aspect-square w-full animate-pulse rounded-xl bg-black/10 dark:bg-white/10">
-          <div className="absolute bottom-0 left-0 w-full rounded-lg p-2">
-            <div className="flex w-full flex-col items-center justify-center rounded-lg bg-white/50 px-2 py-5 dark:bg-black/30">
-              <div className="flex gap-4">
-                <div className="size-6 rounded bg-black/10 dark:bg-white/15" />
-                <div className="size-6 rounded bg-black/10 dark:bg-white/15" />
-                <div className="size-6 rounded bg-black/10 dark:bg-white/15" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }
 

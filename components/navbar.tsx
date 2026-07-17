@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeInAnimation } from "../utils/framerAnimations";
-import { ThemeToggle } from ".";
+import { fadeInAnimation } from "@/utils/framerAnimations";
+import { ThemeToggle } from "./theme-toggle";
 import { usePathname } from "next/navigation";
 import { useSeasonalTheme } from "@/utils/useSeasonalTheme";
 

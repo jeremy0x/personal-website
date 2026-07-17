@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { BiLinkExternal, BiLogoGithub } from "react-icons/bi";
 import { useMediaQuery } from "@/utils/useMediaQuery";
-import { ProjectData } from "@/types";
+import { ProjectData } from "@/data/projects";
 import { getOptimizedImageUrl } from "@/utils/image";
 
 interface TechStackIconsProps {

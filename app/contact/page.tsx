@@ -19,11 +19,11 @@ export default function Page() {
         ]}
       />
       <AnimatePresence mode="wait">
-        <motion.main
-          className="container mx-auto flex min-h-screen items-center justify-center text-neutral-900 dark:text-white"
-          {...fadeInAnimation}
-        >
-          <motion.div className="page-content w-full" {...fadeInAnimation}>
+          <motion.main
+            className="container mx-auto flex min-h-screen items-center justify-center text-neutral-900 dark:text-white"
+            {...fadeInAnimation}
+          >
+            <motion.div className="page-content w-full" {...fadeInAnimation}>
             <div className="z-10 mx-auto flex max-w-4xl flex-col items-center justify-center gap-16 px-4 pt-36 pb-16 sm:px-8">
               <article className="z-10 grid max-w-2xl gap-6 text-center">
                 <h1 className="text-4xl font-black tracking-widest uppercase sm:text-5xl">
