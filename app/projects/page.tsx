@@ -138,7 +138,7 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project, index, onClick }: ProjectCardProps) {
-  const { name, description, logos, imageSrc } = project;
+  const { name, description, logos, imageSrc, videoSrc } = project;
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -149,31 +149,41 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
             <ImSpinner9 className="animate-spin text-4xl" />
           </div>
         )}
-        <Image
-          alt={`${name} screenshot`}
-          width={575}
-          height={575}
-          src={getOptimizedImageUrl(imageSrc, 575, 575)}
-          priority={index === 0}
-          sizes="(min-width: 1024px) 575px, 100vw"
-          fetchPriority={index === 0 ? "high" : "auto"}
-          placeholder="blur"
-          blurDataURL={BLUR_DATA_URL}
-          onLoad={() => setIsLoading(false)}
-          className="rounded-2xl bg-black/30 transition-all max-md:w-full"
-        />
+        {videoSrc ? (
+          <video
+            src={videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            onCanPlay={() => setIsLoading(false)}
+            className="w-full rounded-2xl bg-black/30 max-md:w-full"
+          />
+        ) : (
+          <Image
+            alt={`${name} screenshot`}
+            width={575}
+            height={575}
+            src={getOptimizedImageUrl(imageSrc, 575, 575)}
+            priority={index === 0}
+            sizes="(min-width: 1024px) 575px, 100vw"
+            fetchPriority={index === 0 ? "high" : "auto"}
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
+            onLoad={() => setIsLoading(false)}
+            className="rounded-2xl bg-black/30 transition-all max-md:w-full"
+          />
+        )}
       </div>
 
       <div className="absolute top-0 right-0 bottom-0 left-0 w-full cursor-pointer rounded-2xl bg-white/10 opacity-40 transition-opacity duration-500 sm:opacity-100 sm:hover:opacity-20 dark:bg-black/40" />
 
-      {!isLoading && (
-        <div className="absolute bottom-0 left-0 w-full rounded-2xl p-2">
-          <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border border-black/10 bg-white/80 px-2 py-4 text-center backdrop-blur-xs dark:border-white/15 dark:bg-black/60">
-            <p className="text-sm font-medium sm:text-base">{description}</p>
-            <div className="flex items-center gap-4 text-2xl">{logos}</div>
-          </div>
+      <div className="absolute bottom-0 left-0 w-full rounded-2xl p-2">
+        <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border border-black/10 bg-white/80 px-2 py-4 text-center backdrop-blur-xs dark:border-white/15 dark:bg-black/60">
+          <p className="text-sm font-medium sm:text-base">{description}</p>
+          <div className="flex items-center gap-4 text-2xl">{logos}</div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

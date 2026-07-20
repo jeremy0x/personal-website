@@ -30,9 +30,75 @@ export interface ProjectData {
   detailedDescription?: string;
   logos: JSX.Element[];
   imageSrc: string;
+  videoSrc?: string;
 }
 
 export const projectsData: ProjectData[] = [
+  {
+    name: "Bucks Sauce",
+    link: "https://gsap-concepts.jeremy0x.dev/bucks-sauce-intro/",
+    description: "Concept hero section intro for Bucks Sauce brand.",
+    detailedDescription:
+      "A concept animation for the hero section intro of the Bucks Sauce brand website. Features a bold, energetic opening that sets the tone for the brand.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/bucks-sauce.jpg",
+    videoSrc: "/projects/bucks-sauce.mp4",
+  },
+
+  {
+    name: "Lync",
+    link: "https://thelync.app",
+    description: "Landing page for Lync product.",
+    detailedDescription:
+      "Landing page showcasing the Lync product. Features modern design and clear product communication.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/lync-landinge-page.jpg",
+    videoSrc: "/projects/lync.mp4",
+  },
+
+  {
+    name: "Football for Peace",
+    link: "https://football-for-peace.vercel.app",
+    description:
+      "Interactive showcase of the Football for Peace initiative, celebrating its South American heritage and global mission.",
+    detailedDescription:
+      "An immersive, animated timeline experience detailing the history and impact of the Football for Peace (Fútbol Por La Paz) initiative, highlighting its United Nations partnerships (UNOSDP) and support from global icons like Pelé and Maradona.",
+    logos: [
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/ffp.jpg",
+    videoSrc: "/projects/ffp.mp4",
+  },
+
+  {
+    name: "Sesshin",
+    link: "https://sesshin.jeremy0x.dev",
+    githubLink: "https://github.com/jeremy0x/Sesshin",
+    description: "Custom brand website with immersive animations.",
+    detailedDescription:
+      "Custom website for Sesshin brand featuring GSAP-powered animations. Combines modern design with smooth transitions and interactive elements.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/sesshin.jpg",
+    videoSrc: "/projects/sesshin.mp4",
+  },
+
   {
     name: "Reelpay Mobile App",
     link: "https://reelpay-web-link.onelink.me/FMTg/925gmol4",
@@ -81,37 +147,6 @@ export const projectsData: ProjectData[] = [
       <SiFigma className="text-lg" key="figma" title="Figma" />,
     ],
     imageSrc: "/projects/briefintel.jpg",
-  },
-
-  {
-    name: "Lync",
-    link: "https://thelync.app",
-    description: "Landing page for Lync product.",
-    detailedDescription:
-      "Landing page showcasing the Lync product. Features modern design and clear product communication.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/lync-landinge-page.jpg",
-  },
-
-  {
-    name: "Football for Peace",
-    link: "https://football-for-peace.vercel.app",
-    description:
-      "Interactive showcase of the Football for Peace initiative, celebrating its South American heritage and global mission.",
-    detailedDescription:
-      "An immersive, animated timeline experience detailing the history and impact of the Football for Peace (Fútbol Por La Paz) initiative, highlighting its United Nations partnerships (UNOSDP) and support from global icons like Pelé and Maradona.",
-    logos: [
-      <SiVite className="text-xl" key="vite" title="Vite" />,
-      <BiLogoReact key="react" title="React" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <SiGreensock key="greensock" title="GSAP" />,
-    ],
-    imageSrc: "/projects/ffp.jpg",
   },
 
   {

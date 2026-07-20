@@ -160,14 +160,25 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             <div className="flex flex-1 flex-col overflow-y-auto p-6">
               <div className="space-y-6">
                 <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                  <Image
-                    src={getOptimizedImageUrl(project.imageSrc, 800, 450)}
-                    alt={`${project.name} screenshot`}
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority
-                  />
+                  {project.videoSrc ? (
+                    <video
+                      src={project.videoSrc}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="h-full w-full object-cover object-top bg-black/10"
+                    />
+                  ) : (
+                    <Image
+                      src={getOptimizedImageUrl(project.imageSrc, 800, 450)}
+                      alt={`${project.name} screenshot`}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority
+                    />
+                  )}
                 </div>
 
                 <div className="space-y-4">
