@@ -152,6 +152,7 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
         {videoSrc ? (
           <video
             src={videoSrc}
+            poster={getOptimizedImageUrl(imageSrc, 575, 575)}
             autoPlay
             muted
             loop

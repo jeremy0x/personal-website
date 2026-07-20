@@ -163,6 +163,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   {project.videoSrc ? (
                     <video
                       src={project.videoSrc}
+                      poster={getOptimizedImageUrl(project.imageSrc, 800, 450)}
                       autoPlay
                       muted
                       loop

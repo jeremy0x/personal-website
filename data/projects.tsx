@@ -35,6 +35,22 @@ export interface ProjectData {
 
 export const projectsData: ProjectData[] = [
   {
+    name: "Curtain Reveal",
+    link: "https://gsap-concepts.jeremy0x.dev/curtain-reveal/",
+    description: "Immersive curtain reveal and counting preloader animation concept.",
+    detailedDescription:
+      "A premium curtain reveal and counting preloader animation concept built with GSAP, CustomEase, and SplitText. Features elegant image fan-out and smooth typography transitions.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/curtain-reveal.jpg",
+    videoSrc: "/projects/curtain-reveal.mp4",
+  },
+
+  {
     name: "Bucks Sauce",
     link: "https://gsap-concepts.jeremy0x.dev/bucks-sauce-intro/",
     description: "Concept hero section intro for Bucks Sauce brand.",
