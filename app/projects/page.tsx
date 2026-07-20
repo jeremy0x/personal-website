@@ -85,6 +85,8 @@ export default function Projects() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={isMobile ? 1 : "auto"}
+          observer={true}
+          observeParents={true}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -142,8 +144,11 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-black/10 dark:border-white/15" onClick={onClick}>
-      <div className="cursor-pointer">
+    <div
+      className="relative aspect-square h-143.75 w-143.75 overflow-hidden rounded-2xl border border-black/10 max-md:h-auto max-md:w-full dark:border-white/15"
+      onClick={onClick}
+    >
+      <div className="relative h-full w-full cursor-pointer">
         {isLoading && (
           <div className="absolute top-0 left-0 z-10 flex h-full w-full items-center justify-center">
             <ImSpinner9 className="animate-spin text-4xl" />
@@ -153,12 +158,14 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
           <video
             src={videoSrc}
             poster={getOptimizedImageUrl(imageSrc, 575, 575)}
+            width={575}
+            height={575}
             autoPlay
             muted
             loop
             playsInline
             onCanPlay={() => setIsLoading(false)}
-            className="w-full rounded-2xl bg-black/30 max-md:w-full"
+            className="h-full w-full rounded-2xl bg-black/30 object-cover"
           />
         ) : (
           <Image
@@ -172,7 +179,7 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
             placeholder="blur"
             blurDataURL={BLUR_DATA_URL}
             onLoad={() => setIsLoading(false)}
-            className="rounded-2xl bg-black/30 transition-all max-md:w-full"
+            className="h-full w-full rounded-2xl bg-black/30 object-cover transition-all"
           />
         )}
       </div>

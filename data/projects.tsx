@@ -312,21 +312,6 @@ export const projectsData: ProjectData[] = [
   },
 
   {
-    name: "Salvage Yard Store",
-    link: "https://salvageyard.jeremy0x.dev/",
-    description: "Dual-sided e-commerce platform for electronic devices.",
-    detailedDescription:
-      "E-commerce platform with separate buyer and seller interfaces. Features inventory management, real-time stock updates, customer accounts, and order tracking. Built with Next.js and TypeScript.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/salvage-yard-store.jpg",
-  },
-
-  {
     name: "Sentinel Finance",
     link: "https://sentfi.jeremy0x.dev",
     githubLink: "https://github.com/jeremy0x/sentinel-finance",
