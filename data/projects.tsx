@@ -51,68 +51,35 @@ export const projectsData: ProjectData[] = [
   },
 
   {
-    name: "Bucks Sauce",
-    link: "https://gsap-concepts.jeremy0x.dev/bucks-sauce-intro/",
-    description: "Concept hero section intro for Bucks Sauce brand.",
+    name: "Card Shuffle Reveal",
+    link: "https://gsap-concepts.jeremy0x.dev/card-shuffle-reveal/",
+    description: "Radial card deck preloader, horizontal toss reveal, and expanding typography hero.",
     detailedDescription:
-      "A concept animation for the hero section intro of the Bucks Sauce brand website. Features a bold, energetic opening that sets the tone for the brand.",
-    logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <SiGreensock key="greensock" title="GSAP" />,
-    ],
-    imageSrc: "/projects/bucks-sauce.jpg",
-    videoSrc: "/projects/bucks-sauce.mp4",
-  },
-
-  {
-    name: "Lync",
-    link: "https://thelync.app",
-    description: "Landing page for Lync product.",
-    detailedDescription:
-      "Landing page showcasing the Lync product. Features modern design and clear product communication.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/lync-landinge-page.jpg",
-    videoSrc: "/projects/lync.mp4",
-  },
-
-  {
-    name: "Football for Peace",
-    link: "https://football-for-peace.vercel.app",
-    description:
-      "Interactive showcase of the Football for Peace initiative, celebrating its South American heritage and global mission.",
-    detailedDescription:
-      "An immersive, animated timeline experience detailing the history and impact of the Football for Peace (Fútbol Por La Paz) initiative, highlighting its United Nations partnerships (UNOSDP) and support from global icons like Pelé and Maradona.",
-    logos: [
-      <SiVite className="text-xl" key="vite" title="Vite" />,
-      <BiLogoReact key="react" title="React" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <SiGreensock key="greensock" title="GSAP" />,
-    ],
-    imageSrc: "/projects/ffp.jpg",
-    videoSrc: "/projects/ffp.mp4",
-  },
-
-  {
-    name: "Sesshin",
-    link: "https://sesshin.jeremy0x.dev",
-    githubLink: "https://github.com/jeremy0x/Sesshin",
-    description: "Custom brand website with immersive animations.",
-    detailedDescription:
-      "Custom website for Sesshin brand featuring GSAP-powered animations. Combines modern design with smooth transitions and interactive elements.",
+      "An experimental card shuffle preloader and reveal timeline concept built with GSAP and CustomEase. Features radial fan layout animations, horizontal card tossing, and dynamically scaling typography.",
     logos: [
       <BiLogoJavascript key="js" title="JavaScript" />,
       <BiLogoHtml5 key="html" title="HTML" />,
       <BiLogoCss3 key="css" title="CSS" />,
       <SiGreensock key="greensock" title="GSAP" />,
     ],
-    imageSrc: "/projects/sesshin.jpg",
-    videoSrc: "/projects/sesshin.mp4",
+    imageSrc: "/projects/card-shuffle-reveal.jpg",
+    videoSrc: "/projects/card-shuffle-reveal.mp4",
+  },
+
+  {
+    name: "Circle Wipe Intro",
+    link: "https://gsap-concepts.jeremy0x.dev/circle-wipe-intro/",
+    description: "Brand intro sequence with floating food items, radial circle wipe reveals, and interactive navigation.",
+    detailedDescription:
+      "An interactive brand intro concept featuring floating elements, smooth multi-layered radial circle wipe transition panels, and a custom overlay mobile menu powered by GSAP.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/circle-wipe-intro.jpg",
+    videoSrc: "/projects/circle-wipe-intro.mp4",
   },
 
   {
@@ -166,6 +133,23 @@ export const projectsData: ProjectData[] = [
   },
 
   {
+    name: "Football for Peace",
+    link: "https://football-for-peace.vercel.app",
+    description:
+      "Interactive showcase of the Football for Peace initiative, celebrating its South American heritage and global mission.",
+    detailedDescription:
+      "An immersive, animated timeline experience detailing the history and impact of the Football for Peace (Fútbol Por La Paz) initiative, highlighting its United Nations partnerships (UNOSDP) and support from global icons like Pelé and Maradona.",
+    logos: [
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/ffp.jpg",
+    videoSrc: "/projects/ffp.mp4",
+  },
+
+  {
     name: "Kazlat LIMS",
     link: "https://lims.kazlatpublicanalysts.com",
     description:
@@ -216,6 +200,22 @@ export const projectsData: ProjectData[] = [
   },
 
   {
+    name: "Lync",
+    link: "https://thelync.app",
+    description: "Landing page for Lync product.",
+    detailedDescription:
+      "Landing page showcasing the Lync product. Features modern design and clear product communication.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/lync-landinge-page.jpg",
+    videoSrc: "/projects/lync.mp4",
+  },
+
+  {
     name: "Noblocks Blog",
     link: "https://noblocks.xyz/blog",
     githubLink: "https://github.com/paycrest/noblocks/tree/main/app/blog",
@@ -260,6 +260,23 @@ export const projectsData: ProjectData[] = [
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
     ],
     imageSrc: "/projects/dogatoshi.jpg",
+  },
+
+  {
+    name: "Sesshin",
+    link: "https://sesshin.jeremy0x.dev",
+    githubLink: "https://github.com/jeremy0x/Sesshin",
+    description: "Custom brand website with immersive animations.",
+    detailedDescription:
+      "Custom website for Sesshin brand featuring GSAP-powered animations. Combines modern design with smooth transitions and interactive elements.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/sesshin.jpg",
+    videoSrc: "/projects/sesshin.mp4",
   },
 
   {
