@@ -7,58 +7,48 @@ This website contains information about my work as a frontend engineer, includin
 ## Main Pages
 
 - [Home](https://www.jeremy0x.dev/): Personal introduction and overview
-- [Projects](https://www.jeremy0x.dev/projects): Portfolio showcasing web development projects including crypto payment solutions, e-commerce platforms, and custom websites
+- [Projects](https://www.jeremy0x.dev/projects): Portfolio showcasing web development projects including GSAP animation concepts, crypto payment solutions, e-commerce platforms, and custom websites
 - [Contact](https://www.jeremy0x.dev/contact): Contact information and scheduling calendar
 
 ## Projects
 
-- [Surgechain](https://app.surgechain.io): DEX trading terminal that unifies news, pump-fun style memecoins, trending tokens, and perpetuals into a single interface with live on-chain execution, built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL.
+- [Curtain Reveal](https://gsap-concepts.jeremy0x.dev/curtain-reveal/): Premium curtain reveal and counting preloader animation concept built with GSAP, CustomEase, and SplitText featuring elegant image fan-out and smooth typography transitions.
 
-- [Noblocks](https://noblocks.xyz): Open-source next-gen crypto payment solution with zero gas fees that removes P2P transaction complexity using a Next.js, TypeScript, and Framer Motion frontend.
+- [Card Shuffle Reveal](https://gsap-concepts.jeremy0x.dev/card-shuffle-reveal/): Experimental radial card deck preloader and horizontal toss reveal timeline concept built with GSAP and CustomEase, featuring dynamically scaling full-width typography.
 
-- [Kazlat LIMS](https://lims.kazlatpublicanalysts.com): Lab information management system for Kazlat Public Analysts that tracks samples from submission through analysis while generating invoices and client certificates using Next.js, Tailwind CSS, TypeScript, Supabase/PostgreSQL, and Framer Motion.
+- [Circle Wipe Intro](https://gsap-concepts.jeremy0x.dev/circle-wipe-intro/): Brand intro sequence featuring floating food items, multi-layered radial circle wipe transition panels, and a custom overlay mobile menu powered by GSAP.
 
-- [Paycrest Dashboard](https://app.paycrest.io): Operations console for Paycrest's crypto-to-fiat rails that monitors settlements, liquidity, compliance states, and merchant analytics in real time.
+- [Reelpay Mobile App](https://reelpay-web-link.onelink.me/FMTg/925gmol4): Mobile application connecting UGC creators and influencers with brand collaborations, built with Flutter and Dart and available on both Google Play and the Apple App Store.
+
+- [Noblocks](https://noblocks.xyz): Open-source interface for moving between stablecoins and local bank or mobile money accounts across multiple African regions, powered by Paycrest's decentralized liquidity network. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+
+- [BriefIntel](https://reelpay.co/briefintel): AI-powered tool for brands to analyze UGC campaign performance and generate optimized content briefs directly from product links, built within the Reelpay platform using Next.js, TypeScript, and Figma.
+
+- [Football for Peace](https://football-for-peace.vercel.app): Immersive animated timeline experience detailing the history of the Football for Peace (Fútbol Por La Paz) initiative, built with React, Vite, Tailwind CSS, and GSAP.
+
+- [Kazlat LIMS](https://lims.kazlatpublicanalysts.com): Lab information management system for Kazlat Public Analysts that tracks sample submissions through analysis, automates invoice generation, and produces signed certificates. Built with Next.js, TypeScript, Supabase/PostgreSQL, and Framer Motion.
+
+- [Paycrest](https://paycrest.io): Core business infrastructure for Paycrest spanning their marketing website and Remix-based merchant operations dashboard, tracking transactions, settlements, and liquidity flows.
+
+- [Surgechain](https://app.surgechain.io): DEX trading terminal that consolidates news, pump-fun style memecoins, trending tokens, and perpetuals into a single interface with live on-chain execution, built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL.
+
+- [Lync](https://thelync.app): Product landing page for Lync with a modern, conversion-focused Next.js, TypeScript, Tailwind CSS, and Framer Motion design.
 
 - [Noblocks Blog](https://noblocks.xyz/blog): Sanity-powered blog for Noblocks with dynamic content rendering and SEO-focused Next.js integration.
 
 - [AI Titans](https://t.me/AI_Titans_bot): Battle-focused tap-to-earn RPG Telegram Mini App built with React, Vite, Tailwind CSS, and the Telegram SDK for in-chat gameplay and rewards syncing.
 
-- [Salvage Yard Store](https://www.salvageyardstore.com): Dual-sided e-commerce platform for electronic devices with inventory tracking, separate buyer/seller interfaces, and order management built on Next.js and TypeScript.
+- [$Dogatoshi](https://dogatoshi.jeremy0x.dev/): Meme coin community website that explains the $Dogatoshi project with an energetic JavaScript and Tailwind CSS UI.
 
-- [Shape Up Fitness](https://shapeupfitnessonline.com): Fitness platform showcasing gym services, facilities, schedules, and trainers using React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
-
-- [Qari](https://qariworld.com): Premium ride-hailing waitlist site promoting clean vehicles, transparent fixed pricing, and WhatsApp-first driver support in Lagos.
-
-- [Step-Up Academy](https://academy.stepupsummit.org): Multi-page academy experience that enrolls students into cohorts with Paystack payments and Resend-powered email automations using a Turborepo with Vite, Next.js API routes, TypeScript, Tailwind CSS, Framer Motion, and PostgreSQL.
-
-- [Mindlar](https://mindlar.com): Landing page for the Mindlar learning community that explains offerings and community values with a Vite, React, Tailwind CSS, and Framer Motion stack.
-
-- [Zap by Paycrest](https://zap-beta.jeremy0x.dev/): Hackathon-winning early crypto payment solution for Paycrest from the Based Africa hackathon, now deprecated in favor of Noblocks.
-
-- [Sentinel Finance](https://sentfi.jeremy0x.dev): Proof-of-concept decentralized commerce platform combining e-commerce with blockchain payments using vanilla JavaScript and GSAP.
+- [Sesshin](https://sesshin.jeremy0x.dev): Custom brand website with immersive GSAP-powered animations, smooth transitions, and cinematic interactive elements.
 
 - [BahamaFoodie](http://hellobahamafoodie.com): Digital plant-based restaurant platform in The Bahamas with menu browsing, online ordering, and delivery tracking implemented in vanilla JavaScript and GSAP.
 
-- [Lync](https://thelync.app): Product landing page for Lync with a modern, conversion-focused Next.js and Tailwind CSS design.
+- [RoomLink](https://roomlinkng.com/): Agent-free property rental platform in Nigeria that directly connects verified landlords and renters with in-app monthly payments and direct messaging, built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
-- [Valtrix](https://valtrix.jeremy0x.dev/): Website for a creative software agency featuring a clean brand presence and smooth animations built in vanilla JavaScript.
+- [Shape Up Fitness](https://shapeupfitnessonline.com): Fitness platform showcasing gym services, facilities, schedules, and trainers using React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
 
-- [Sesshin](https://sesshin.jeremy0x.dev): Custom brand website with immersive GSAP animations and modern visual design.
-
-- [$Dogatoshi](https://dogatoshi.jeremy0x.dev/): Meme coin community website that explains the $Dogatoshi project with an energetic Tailwind CSS UI.
-
-- [Elder Wallet](https://elderwallet.jeremy0x.dev): Proof-of-concept Bitcoin wallet demo that surfaces Runes Network assets through a simple browser UI.
-
-- [MentorMeInTech Waitlist](https://mentormeintech.jeremy0x.dev): Waitlist page connecting aspiring developers with mentors, focused on capturing signups and social proof.
-
-- [foodieFetch](https://foodie-fetch.jeremy0x.dev): Recipe finder app that suggests meals from available ingredients with simple ingredient search and filtering.
-
-- [LingoLookup](https://lingolookup.jeremy0x.dev): Comprehensive dictionary app that provides definitions, synonyms, antonyms, pronunciation, and examples with search history and favorites.
-
-- [Mullti](https://mullti.jeremy0x.dev): Dual-sided e-commerce experience with product catalog, shopping cart, authentication, and order management built on Next.js and Tailwind CSS.
-
-- [Sways](https://sways.jeremy0x.dev): Custom Dutch brand website that pairs minimalist visuals with smooth Next.js and Tailwind CSS animations.
+- [Sentinel Finance](https://sentfi.jeremy0x.dev): Proof-of-concept decentralized commerce platform combining e-commerce with blockchain payments using vanilla JavaScript and GSAP.
 
 ## Optional
 
