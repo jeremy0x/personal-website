@@ -16,6 +16,8 @@ This website contains information about my work as a frontend engineer, includin
 
 - [Card Shuffle Reveal](https://gsap-concepts.jeremy0x.dev/card-shuffle-reveal/): Experimental radial card deck preloader and horizontal toss reveal timeline concept built with GSAP and CustomEase, featuring dynamically scaling full-width typography.
 
+- [Trailer Intro](https://gsap-concepts.jeremy0x.dev/trailer-intro/): Kinetic title sequence reveal concept built with GSAP and Anime.js, featuring staggered text blocks, letter-by-letter typography animation, and floating replay controls.
+
 - [Circle Wipe Intro](https://gsap-concepts.jeremy0x.dev/circle-wipe-intro/): Brand intro sequence featuring floating food items, multi-layered radial circle wipe transition panels, and a custom overlay mobile menu powered by GSAP.
 
 - [Reelpay Mobile App](https://reelpay-web-link.onelink.me/FMTg/925gmol4): Mobile application connecting UGC creators and influencers with brand collaborations, built with Flutter and Dart and available on both Google Play and the Apple App Store.

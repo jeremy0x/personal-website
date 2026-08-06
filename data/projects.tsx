@@ -67,6 +67,22 @@ export const projectsData: ProjectData[] = [
   },
 
   {
+    name: "Trailer Intro",
+    link: "https://gsap-concepts.jeremy0x.dev/trailer-intro/",
+    description: "Kinetic title sequence reveal with staggered text blocks, Anime.js typography animation, and floating replay controls.",
+    detailedDescription:
+      "An experimental kinetic trailer intro reveal timeline concept built with GSAP and Anime.js. Features staggered title wipes, kinetic text block reveals, and dynamic letter-by-letter typography animations.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/trailer-intro.jpg",
+    videoSrc: "/projects/trailer-intro.mp4",
+  },
+
+  {
     name: "Circle Wipe Intro",
     link: "https://gsap-concepts.jeremy0x.dev/circle-wipe-intro/",
     description: "Brand intro sequence with floating food items, radial circle wipe reveals, and interactive navigation.",
