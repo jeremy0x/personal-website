@@ -35,6 +35,24 @@ export interface ProjectData {
 
 export const projectsData: ProjectData[] = [
   {
+    name: "Tlatoani",
+    link: "https://tiatoani.jeremy0x.dev/",
+    githubLink: "https://gitlab.com/jeremy0x/tlatoani-web",
+    description:
+      "Web application for the Tlatoani Mesoamerican RTS settlement defense game.",
+    detailedDescription:
+      "Tlatoani is an immersive Mesoamerican-themed Real-Time Strategy (RTS) and settlement-defense game built in Unity, where players take on the role of an Aztec ruler (Tlatoani) to manage villagers, build settlements, harvest resources, and command troops against relentless enemy waves.",
+    logos: [
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/tlatoani.jpg",
+    videoSrc: "/projects/tlatoani.mp4",
+  },
+
+  {
     name: "Curtain Reveal",
     link: "https://gsap-concepts.jeremy0x.dev/curtain-reveal/",
     description: "Immersive curtain reveal and counting preloader animation concept.",
@@ -66,21 +84,6 @@ export const projectsData: ProjectData[] = [
     videoSrc: "/projects/card-shuffle-reveal.mp4",
   },
 
-  {
-    name: "Trailer Intro",
-    link: "https://gsap-concepts.jeremy0x.dev/trailer-intro/",
-    description: "Kinetic title sequence reveal with staggered text blocks, Anime.js typography animation, and floating replay controls.",
-    detailedDescription:
-      "An experimental kinetic trailer intro reveal timeline concept built with GSAP and Anime.js. Features staggered title wipes, kinetic text block reveals, and dynamic letter-by-letter typography animations.",
-    logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoCss3 key="css" title="CSS" />,
-      <SiGreensock key="greensock" title="GSAP" />,
-    ],
-    imageSrc: "/projects/trailer-intro.jpg",
-    videoSrc: "/projects/trailer-intro.mp4",
-  },
 
   {
     name: "Circle Wipe Intro",
@@ -164,6 +167,7 @@ export const projectsData: ProjectData[] = [
     imageSrc: "/projects/ffp.jpg",
     videoSrc: "/projects/ffp.mp4",
   },
+
 
   {
     name: "Kazlat LIMS",
