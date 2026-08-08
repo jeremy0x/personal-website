@@ -32,6 +32,7 @@ const BLUR_DATA_URL =
 export default function Projects() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const [carouselReady, setCarouselReady] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
     null,
   );
@@ -110,6 +111,7 @@ export default function Projects() {
           spaceBetween={20}
           className="mySwiper"
           onSwiper={handleSwiperInit}
+          onSlideChange={(s) => setActiveIndex(s.activeIndex)}
           style={{ "--swiper-navigation-size": "25px" } as CSSProperties}
         >
           {projectsData.map((project, index) => (
@@ -121,6 +123,7 @@ export default function Projects() {
               <ProjectCard
                 project={project}
                 index={index}
+                isActive={index === activeIndex}
                 onClick={() => handleProjectClick(project)}
               />
             </SwiperSlide>
@@ -136,10 +139,11 @@ export default function Projects() {
 interface ProjectCardProps {
   project: ProjectData;
   index: number;
+  isActive: boolean;
   onClick: () => void;
 }
 
-function ProjectCard({ project, index, onClick }: ProjectCardProps) {
+function ProjectCard({ project, index, isActive, onClick }: ProjectCardProps) {
   const { name, description, logos, imageSrc, videoSrc } = project;
   const [isLoading, setIsLoading] = useState(true);
 
@@ -154,7 +158,7 @@ function ProjectCard({ project, index, onClick }: ProjectCardProps) {
             <ImSpinner9 className="animate-spin text-4xl" />
           </div>
         )}
-        {videoSrc ? (
+        {videoSrc && isActive ? (
           <video
             src={videoSrc}
             poster={getOptimizedImageUrl(imageSrc, 575, 575)}
