@@ -44,20 +44,12 @@
     "tailwindcss": "4.2.3",
     "typescript": "6.0.3"
   },
-  "pnpm": {
-    "overrides": {
-      "brace-expansion": "1.1.13",
-      "flatted": "3.4.2",
-      "tar": ">=7.5.2",
-      "js-yaml": ">=4.1.1"
-    },
-    "onlyBuiltDependencies": [
-      "sharp",
-      "unrs-resolver"
-    ]
-  },
   "overrides": {
     "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3"
+    "@types/react-dom": "19.2.3",
+    "brace-expansion": "1.1.13",
+    "flatted": "3.4.2",
+    "tar": ">=7.5.2",
+    "js-yaml": ">=4.1.1"
   }
 }
