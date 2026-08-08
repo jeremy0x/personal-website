@@ -13,6 +13,7 @@
     "url": "https://github.com/jeremy0x/personal-website.git"
   },
   "private": true,
+  "packageManager": "pnpm@11.20.0",
   "scripts": {
     "dev": "portless jeremy0x next dev",
     "build": "next build",
