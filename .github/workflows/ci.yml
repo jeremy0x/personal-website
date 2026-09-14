@@ -27,7 +27,12 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
+            pnpm install --frozen-lockfile --config.minimumReleaseAge=0
+          else
+            pnpm install --frozen-lockfile
+          fi
 
       - name: Type check
         run: pnpm exec tsc --noEmit
