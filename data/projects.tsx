@@ -268,38 +268,6 @@ export const projectsData: ProjectData[] = [
   },
 
   {
-    name: "$Dogatoshi",
-    link: "https://dogatoshi.jeremy0x.dev/",
-    githubLink: "https://github.com/jeremy0x/dogatoshi",
-    description: "Informative website for $Dogatoshi meme coin community.",
-    detailedDescription:
-      "Community website providing project information and details. Built with JavaScript and Tailwind CSS with an engaging, energetic UI.",
-    logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-    ],
-    imageSrc: "/projects/dogatoshi.jpg",
-  },
-
-  {
-    name: "Sesshin",
-    link: "https://sesshin.jeremy0x.dev",
-    githubLink: "https://github.com/jeremy0x/Sesshin",
-    description: "Custom brand website with immersive animations.",
-    detailedDescription:
-      "Custom website for Sesshin brand featuring GSAP-powered animations. Combines modern design with smooth transitions and interactive elements.",
-    logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoCss3 key="css" title="CSS" />,
-      <SiGreensock key="greensock" title="GSAP" />,
-    ],
-    imageSrc: "/projects/sesshin.jpg",
-    videoSrc: "/projects/sesshin.mp4",
-  },
-
-  {
     name: "BahamaFoodie",
     link: "http://hellobahamafoodie.com",
     description: "Digital plant-based restaurant platform in the Bahamas.",

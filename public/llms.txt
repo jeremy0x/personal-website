@@ -40,10 +40,6 @@ This website contains information about my work as a frontend engineer, includin
 
 - [AI Titans](https://t.me/AI_Titans_bot): Battle-focused tap-to-earn RPG Telegram Mini App built with React, Vite, Tailwind CSS, and the Telegram SDK for in-chat gameplay and rewards syncing.
 
-- [$Dogatoshi](https://dogatoshi.jeremy0x.dev/): Meme coin community website that explains the $Dogatoshi project with an energetic JavaScript and Tailwind CSS UI.
-
-- [Sesshin](https://sesshin.jeremy0x.dev): Custom brand website with immersive GSAP-powered animations, smooth transitions, and cinematic interactive elements.
-
 - [BahamaFoodie](http://hellobahamafoodie.com): Digital plant-based restaurant platform in The Bahamas with menu browsing, online ordering, and delivery tracking implemented in vanilla JavaScript and GSAP.
 
 - [RoomLink](https://roomlinkng.com/): Agent-free property rental platform in Nigeria that directly connects verified landlords and renters with in-app monthly payments and direct messaging, built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.

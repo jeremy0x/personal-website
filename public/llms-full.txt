@@ -30,10 +30,6 @@ Jeremiah Aworetan is a frontend engineer focused on shipping production-ready we
 
 - AI Titans (https://t.me/AI_Titans_bot): Telegram Mini App that turns a tap-to-earn RPG into a native in-chat experience where players command mech titans, battle through encounters, and sync rewards inside Telegram. Built with React, Vite, Tailwind CSS, Framer Motion, and the Telegram Mini Apps SDK to feel game-like while remaining lightweight.
 
-- $Dogatoshi (https://dogatoshi.jeremy0x.dev/): Meme coin community site that explains the $Dogatoshi project, token story, and community calls to action in a bold, energetic style. Built with JavaScript, HTML, and Tailwind CSS to keep iteration speed high and the vibe authentic.
-
-- Sesshin (https://sesshin.jeremy0x.dev): Custom brand site for Sesshin built to feel more like a cinematic experience than a static page. Focuses on smooth GSAP-powered transitions, immersive scroll sequences, and micro-interactions while staying performant on modern devices.
-
 - BahamaFoodie (http://hellobahamafoodie.com): Digital ordering and menu experience for a plant-based restaurant in The Bahamas. Offers menu browsing, simple ordering, and delivery tracking built with vanilla JavaScript and GSAP animations for a lightweight but expressive UX.
 
 - RoomLink (https://roomlinkng.com/): Agent-free property rental platform in Nigeria that connects verified landlords and renters directly, eliminating middleman fees. Features verified listings, secure in-app monthly payments, and direct messaging. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion for a clean and trustworthy feel.
