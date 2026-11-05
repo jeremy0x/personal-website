@@ -40,7 +40,6 @@ export default function ParticlesComponent({
     let particles: Particle[] = [];
     const mouse = { x: -1000, y: -1000 };
 
-    // Initial size setup
     const handleResize = () => {
       if (!canvas) return;
       canvas.width = window.innerWidth;
@@ -80,7 +79,7 @@ export default function ParticlesComponent({
       }
     };
 
-    // Helper to draw a regular polygon (Hexagon)
+    // Draw regular polygon
     const drawPolygon = (
       context: CanvasRenderingContext2D,
       x: number,
@@ -105,23 +104,20 @@ export default function ParticlesComponent({
         : (isDark ? "35, 35, 35" : "163, 163, 163");
 
       particles.forEach((p) => {
-        // Move particle
         p.x += p.vx;
         p.y += p.vy;
 
-        // Spin hexagon
         if (p.angle !== undefined && p.spinSpeed !== undefined) {
           p.angle += p.spinSpeed;
         }
 
-        // Screen wrap constraints
+        // Screen wrap
         const buffer = p.size * 2;
         if (p.x < -buffer) p.x = canvas.width + buffer;
         if (p.x > canvas.width + buffer) p.x = -buffer;
         if (p.y < -buffer) p.y = canvas.height + buffer;
         if (p.y > canvas.height + buffer) p.y = -buffer;
 
-        // Interaction math
         const dx = mouse.x - p.x;
         const dy = mouse.y - p.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -133,25 +129,20 @@ export default function ParticlesComponent({
           // Bubble effect within 400px
           if (dist < 400) {
             const ratio = 1 - dist / 400;
-            // Scale up to size 6 and fade to opacity 1
             drawSize = p.baseSize + (6 - p.baseSize) * ratio;
             drawOpacity = p.baseOpacity + (1 - p.baseOpacity) * ratio;
           }
         } else {
-          // Repulse & brighten hexagons within 200px
+          // Repulse & brighten within 200px
           if (dist < 200) {
             const force = (200 - dist) / 200;
-            // Push away
             p.x -= (dx / dist) * force * 5;
             p.y -= (dy / dist) * force * 5;
 
-            // Fade/brighten towards 0.45 (dark mode) or 0.45 (light mode)
-            const targetOpacity = isDark ? 0.45 : 0.45;
-            drawOpacity = p.baseOpacity + (targetOpacity - p.baseOpacity) * force;
+            drawOpacity = p.baseOpacity + (0.45 - p.baseOpacity) * force;
           }
         }
 
-        // Render particle
         ctx.fillStyle = `rgba(${baseColor}, ${drawOpacity})`;
         if (p.sides && p.angle !== undefined) {
           drawPolygon(ctx, p.x, p.y, drawSize, p.sides, p.angle);
@@ -165,7 +156,6 @@ export default function ParticlesComponent({
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    // Track mouse coordinates
     const handleMouseMove = (e: MouseEvent) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
@@ -176,12 +166,11 @@ export default function ParticlesComponent({
       mouse.y = -1000;
     };
 
-    // Click handler for push/repulse behaviors
     const handleClick = () => {
       if (mouse.x < 0 || mouse.y < 0) return;
 
       if (isHoliday) {
-        // Repulse particles on click within 200px
+        // Repulse within 200px
         particles.forEach((p) => {
           const dx = p.x - mouse.x;
           const dy = p.y - mouse.y;
@@ -193,9 +182,9 @@ export default function ParticlesComponent({
           }
         });
       } else {
-        // Push: spawn 1 new hexagon at click location
+        // Spawn hexagon at click, max 25
         if (particles.length >= 25) {
-          particles.shift(); // Keep maximum of 25 hexagons to optimize memory/visuals
+          particles.shift();
         }
         const size = Math.random() * 159.9 + 0.1;
         particles.push({
