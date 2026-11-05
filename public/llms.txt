@@ -16,11 +16,11 @@ This website contains information about my work as a frontend engineer, includin
 
 - [OWLchemi](https://owlchemi.com): E-commerce storefront for OWLchemi's third-party tested research peptides, with a compliance age gate, GSAP scroll-driven product reveals, Lenis smooth scrolling, and Stripe checkout. Built with React, Vite, Tailwind CSS, and GSAP.
 
+- [Tlatoani](https://tiatoani.jeremy0x.dev/): Web application for the Tlatoani Mesoamerican RTS settlement-defense game, built with React, Vite, Tailwind CSS, and GSAP.
+
 - [Curtain Reveal](https://gsap-concepts.jeremy0x.dev/curtain-reveal/): Premium curtain reveal and counting preloader animation concept built with GSAP, CustomEase, and SplitText featuring elegant image fan-out and smooth typography transitions.
 
 - [Card Shuffle Reveal](https://gsap-concepts.jeremy0x.dev/card-shuffle-reveal/): Experimental radial card deck preloader and horizontal toss reveal timeline concept built with GSAP and CustomEase, featuring dynamically scaling full-width typography.
-
-- [Trailer Intro](https://gsap-concepts.jeremy0x.dev/trailer-intro/): Kinetic title sequence reveal concept built with GSAP and Anime.js, featuring staggered text blocks, letter-by-letter typography animation, and floating replay controls.
 
 - [Circle Wipe Intro](https://gsap-concepts.jeremy0x.dev/circle-wipe-intro/): Brand intro sequence featuring floating food items, multi-layered radial circle wipe transition panels, and a custom overlay mobile menu powered by GSAP.
 

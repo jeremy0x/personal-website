@@ -6,11 +6,11 @@ Jeremiah Aworetan is a frontend engineer focused on shipping production-ready we
 
 - OWLchemi (https://owlchemi.com): E-commerce storefront for OWLchemi's third-party tested research peptides, with a compliance age gate, GSAP scroll-driven product reveals, Lenis smooth scrolling, and Stripe checkout. Built with React, Vite, Tailwind CSS, and GSAP.
 
+- Tlatoani (https://tiatoani.jeremy0x.dev/): Web application for Tlatoani, an immersive Mesoamerican-themed RTS and settlement-defense game built in Unity, where players rule as an Aztec Tlatoani managing villagers, building settlements, harvesting resources, and commanding troops against enemy waves. Built with React, Vite, Tailwind CSS, and GSAP.
+
 - Curtain Reveal (https://gsap-concepts.jeremy0x.dev/curtain-reveal/): Premium curtain reveal preloader animation concept built with GSAP, CustomEase, and SplitText. Features a fanned multi-image stack that performs a vertical wipe entrance, a live counting preloader, and staggered random character typography on reveal. Designed as a reusable concept demonstrating high-quality motion craft.
 
 - Card Shuffle Reveal (https://gsap-concepts.jeremy0x.dev/card-shuffle-reveal/): Experimental card shuffle preloader and hero reveal concept built with GSAP and CustomEase. Cards begin stacked at center, fan out radially, collapse back, then are tossed horizontally across the viewport while a full-width typography element grows to fill the screen. Demonstrates timeline sequencing, radial placement math, and dynamic font scaling.
-
-- Trailer Intro (https://gsap-concepts.jeremy0x.dev/trailer-intro/): Experimental kinetic trailer intro reveal timeline concept built with GSAP and Anime.js. Features staggered title wipes, kinetic text block reveals, and dynamic letter-by-letter typography animations with floating replay controls. Demonstrates precise timing synchronization between GSAP timelines and Anime.js text animations.
 
 - Circle Wipe Intro (https://gsap-concepts.jeremy0x.dev/circle-wipe-intro/): Brand intro concept featuring floating food imagery, layered radial circle wipe transition panels, and a mobile menu overlay animation. Built with vanilla JavaScript, HTML, CSS, and GSAP. Demonstrates multi-step preloader sequencing, clip-path animation, and interactive mobile UX within a concept brand context.
 
