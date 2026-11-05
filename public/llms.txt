@@ -12,6 +12,10 @@ This website contains information about my work as a frontend engineer, includin
 
 ## Projects
 
+- [Rock The House](https://rth-prototype.jeremy0x.dev/): Cinematic desktop website prototype for Rock The House, a live event production group, featuring an image-collage preloader, video hero, Lenis smooth scrolling, and a WebGL-curved featured work reel. Built with React, Vite, Tailwind CSS, GSAP, and Three.js.
+
+- [OWLchemi](https://owlchemi.com): E-commerce storefront for OWLchemi's third-party tested research peptides, with a compliance age gate, GSAP scroll-driven product reveals, Lenis smooth scrolling, and Stripe checkout. Built with React, Vite, Tailwind CSS, and GSAP.
+
 - [Curtain Reveal](https://gsap-concepts.jeremy0x.dev/curtain-reveal/): Premium curtain reveal and counting preloader animation concept built with GSAP, CustomEase, and SplitText featuring elegant image fan-out and smooth typography transitions.
 
 - [Card Shuffle Reveal](https://gsap-concepts.jeremy0x.dev/card-shuffle-reveal/): Experimental radial card deck preloader and horizontal toss reveal timeline concept built with GSAP and CustomEase, featuring dynamically scaling full-width typography.
@@ -27,6 +31,8 @@ This website contains information about my work as a frontend engineer, includin
 - [BriefIntel](https://reelpay.co/briefintel): AI-powered tool for brands to analyze UGC campaign performance and generate optimized content briefs directly from product links, built within the Reelpay platform using Next.js, TypeScript, and Figma.
 
 - [Football for Peace](https://football-for-peace.vercel.app): Immersive animated timeline experience detailing the history of the Football for Peace (Fútbol Por La Paz) initiative, built with React, Vite, Tailwind CSS, and GSAP.
+
+- [Evolve Foundation](https://evolve-foundation-malkain.webflow.io/): Webflow website for Evolve Foundation, a clean energy workforce development nonprofit connecting untapped talent to technical careers, with GSAP ScrollTrigger and SplitText animations and Lenis smooth scrolling.
 
 - [Kazlat LIMS](https://lims.kazlatpublicanalysts.com): Lab information management system for Kazlat Public Analysts that tracks sample submissions through analysis, automates invoice generation, and produces signed certificates. Built with Next.js, TypeScript, Supabase/PostgreSQL, and Framer Motion.
 

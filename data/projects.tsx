@@ -19,6 +19,9 @@ import {
   SiFlutter,
   SiDart,
   SiGoogleplay,
+  SiThreedotjs,
+  SiStripe,
+  SiWebflow,
 } from "react-icons/si";
 import { FaAppStore } from "react-icons/fa";
 
@@ -34,6 +37,42 @@ export interface ProjectData {
 }
 
 export const projectsData: ProjectData[] = [
+  {
+    name: "Rock The House",
+    link: "https://rth-prototype.jeremy0x.dev/",
+    description:
+      "Cinematic website prototype for Rock The House, a live event production group.",
+    detailedDescription:
+      "A desktop website prototype for Rock The House, a live event production group operating since 1999. Features an image-collage preloader, a full-bleed video hero, Lenis smooth scrolling, and a WebGL-curved featured work reel of video textures built with Three.js and GSAP.",
+    logos: [
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+      <SiThreedotjs className="text-lg" key="three" title="Three.js" />,
+    ],
+    imageSrc: "/projects/rth.jpg",
+    videoSrc: "/projects/rth.mp4",
+  },
+
+  {
+    name: "OWLchemi",
+    link: "https://owlchemi.com",
+    description:
+      "E-commerce store for third-party tested research peptides and compounds.",
+    detailedDescription:
+      "An animated storefront for OWLchemi, a supplier of research-grade peptides with batch-specific Certificates of Analysis. Features a compliance age gate, GSAP scroll-driven product reveals, Lenis smooth scrolling, a research merch line, and Stripe-powered checkout.",
+    logos: [
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+      <SiStripe className="text-lg" key="stripe" title="Stripe" />,
+    ],
+    imageSrc: "/projects/owlchemi.jpg",
+    videoSrc: "/projects/owlchemi.mp4",
+  },
+
   {
     name: "Tlatoani",
     link: "https://tiatoani.jeremy0x.dev/",
@@ -166,6 +205,22 @@ export const projectsData: ProjectData[] = [
     ],
     imageSrc: "/projects/ffp.jpg",
     videoSrc: "/projects/ffp.mp4",
+  },
+
+  {
+    name: "Evolve Foundation",
+    link: "https://evolve-foundation-malkain.webflow.io/",
+    description:
+      "Website for Evolve Foundation, a clean energy workforce development nonprofit.",
+    detailedDescription:
+      "A Webflow site for Evolve Foundation, which connects untapped talent to careers in the clean energy industry through training, employer partnerships, and wraparound support. Features GSAP ScrollTrigger and SplitText animations with Lenis smooth scrolling.",
+    logos: [
+      <SiWebflow className="text-lg" key="webflow" title="Webflow" />,
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/evolve-foundation.jpg",
+    videoSrc: "/projects/evolve-foundation.mp4",
   },
 
 

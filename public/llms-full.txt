@@ -2,6 +2,10 @@ Jeremiah Aworetan is a frontend engineer focused on shipping production-ready we
 
 ## Projects (extended)
 
+- Rock The House (https://rth-prototype.jeremy0x.dev/): Cinematic desktop website prototype for Rock The House, a live event production group, featuring an image-collage preloader, video hero, Lenis smooth scrolling, and a WebGL-curved featured work reel. Built with React, Vite, Tailwind CSS, GSAP, and Three.js.
+
+- OWLchemi (https://owlchemi.com): E-commerce storefront for OWLchemi's third-party tested research peptides, with a compliance age gate, GSAP scroll-driven product reveals, Lenis smooth scrolling, and Stripe checkout. Built with React, Vite, Tailwind CSS, and GSAP.
+
 - Curtain Reveal (https://gsap-concepts.jeremy0x.dev/curtain-reveal/): Premium curtain reveal preloader animation concept built with GSAP, CustomEase, and SplitText. Features a fanned multi-image stack that performs a vertical wipe entrance, a live counting preloader, and staggered random character typography on reveal. Designed as a reusable concept demonstrating high-quality motion craft.
 
 - Card Shuffle Reveal (https://gsap-concepts.jeremy0x.dev/card-shuffle-reveal/): Experimental card shuffle preloader and hero reveal concept built with GSAP and CustomEase. Cards begin stacked at center, fan out radially, collapse back, then are tossed horizontally across the viewport while a full-width typography element grows to fill the screen. Demonstrates timeline sequencing, radial placement math, and dynamic font scaling.
@@ -17,6 +21,8 @@ Jeremiah Aworetan is a frontend engineer focused on shipping production-ready we
 - BriefIntel (https://reelpay.co/briefintel): AI-powered brand intelligence tool inside the Reelpay platform that lets brands analyze UGC campaign performance and auto-generate optimized content briefs from product links. Streamlines brief creation and reduces back-and-forth between brands and creators. Built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Figma.
 
 - Football for Peace (https://football-for-peace.vercel.app): Immersive animated timeline experience documenting the history and global impact of the Football for Peace (Fútbol Por La Paz) initiative, including UN partnerships (UNOSDP) and endorsements from Pelé and Maradona. Built with React, Vite, Tailwind CSS, and GSAP to create a cinematic scrolling documentary feel.
+
+- Evolve Foundation (https://evolve-foundation-malkain.webflow.io/): Webflow website for Evolve Foundation, a clean energy workforce development nonprofit connecting untapped talent to technical careers, with GSAP ScrollTrigger and SplitText animations and Lenis smooth scrolling.
 
 - Kazlat LIMS (https://lims.kazlatpublicanalysts.com): Production lab information management system for Kazlat Public Analysts. Handles sample intake, routing through analysis stages, approval workflows, automated invoice generation, and signed certificate delivery for clients. Built on Next.js, TypeScript, Tailwind CSS, Supabase/PostgreSQL, and Framer Motion to support a real laboratory's day-to-day operations.
 
