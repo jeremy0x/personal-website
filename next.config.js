@@ -8,6 +8,14 @@ const nextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: "/:file(llms.txt|llms-full.txt)",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+    ];
+  },
   async redirects() {
     return [
       // Redirect all jeremy0x.dev traffic to www.jeremy0x.dev
