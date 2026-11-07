@@ -38,6 +38,23 @@ export interface ProjectData {
 
 export const projectsData: ProjectData[] = [
   {
+    name: "Pure H2o",
+    link: "https://pureh2o.jeremy0x.dev/",
+    description:
+      "Work-in-progress redesign of Pure H2o, a UK water purification company.",
+    detailedDescription:
+      "An in-progress redesign of pureh2o.co.uk for Pure H2o, a UK manufacturer of reverse osmosis and ultra-pure water treatment systems. Features scroll-driven storytelling with a split-word about section, a pinned customer journey timeline, industry and product carousels, animated stats, and a past projects showcase built with Framer Motion.",
+    logos: [
+      <SiVite className="text-xl" key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/pureh2o.jpg",
+    videoSrc: "/projects/pureh2o.mp4",
+  },
+
+  {
     name: "Rock The House",
     link: "https://rth-prototype.jeremy0x.dev/",
     description:

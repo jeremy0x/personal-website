@@ -2,6 +2,8 @@ Jeremiah Aworetan is a frontend engineer focused on shipping production-ready we
 
 ## Projects (extended)
 
+- Pure H2o (https://pureh2o.jeremy0x.dev/): Work-in-progress redesign of pureh2o.co.uk for Pure H2o, a UK manufacturer of reverse osmosis and ultra-pure water treatment systems. Features scroll-driven storytelling with a split-word about section, a pinned customer journey timeline, industry and product carousels, animated stats, and a past projects showcase. Built with React, Vite, and Framer Motion.
+
 - Rock The House (https://rth-prototype.jeremy0x.dev/): Cinematic desktop website prototype for Rock The House, a live event production group, featuring an image-collage preloader, video hero, Lenis smooth scrolling, and a WebGL-curved featured work reel. Built with React, Vite, Tailwind CSS, GSAP, and Three.js.
 
 - OWLchemi (https://owlchemi.com): E-commerce storefront for OWLchemi's third-party tested research peptides, with a compliance age gate, GSAP scroll-driven product reveals, Lenis smooth scrolling, and Stripe checkout. Built with React, Vite, Tailwind CSS, and GSAP.
