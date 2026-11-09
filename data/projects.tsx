@@ -43,7 +43,7 @@ export const projectsData: ProjectData[] = [
     description:
       "Work-in-progress redesign of Pure H2o, a UK water purification company.",
     detailedDescription:
-      "An in-progress redesign of pureh2o.co.uk for Pure H2o, a UK manufacturer of reverse osmosis and ultra-pure water treatment systems. Features scroll-driven storytelling with a split-word about section, a pinned customer journey timeline, industry and product carousels, animated stats, and a past projects showcase built with Framer Motion.",
+      "An in-progress redesign of pureh2o.co.uk for Pure H2o, a UK manufacturer of reverse osmosis and ultra-pure water treatment systems, covering the homepage and About page. The homepage features scroll-driven storytelling with a split-word about section, a pinned customer journey timeline, industry and product carousels, animated stats, and a past projects showcase. The About page adds a pinned mission slider, a scroll-driven globe section, and a company history timeline, all built with Framer Motion.",
     logos: [
       <SiVite className="text-xl" key="vite" title="Vite" />,
       <BiLogoReact key="react" title="React" />,
