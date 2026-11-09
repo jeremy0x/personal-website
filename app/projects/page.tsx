@@ -168,7 +168,9 @@ function ProjectCard({ project, index, isActive, onClick }: ProjectCardProps) {
             muted
             loop
             playsInline
-            onCanPlay={() => setIsLoading(false)}
+            onLoadStart={() => setIsLoading(true)}
+            onWaiting={() => setIsLoading(true)}
+            onPlaying={() => setIsLoading(false)}
             className="h-full w-full rounded-2xl bg-black/30 object-cover"
           />
         ) : (

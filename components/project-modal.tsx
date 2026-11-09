@@ -5,9 +5,35 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { BiLinkExternal, BiLogoGithub } from "react-icons/bi";
+import { ImSpinner9 } from "react-icons/im";
 import { useMediaQuery } from "@/utils/useMediaQuery";
 import { ProjectData } from "@/data/projects";
 import { getOptimizedImageUrl } from "@/utils/image";
+
+function ModalVideo({ src, poster }: { src: string; poster: string }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  return (
+    <>
+      {isLoading && (
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <ImSpinner9 className="animate-spin text-3xl" />
+        </div>
+      )}
+      <video
+        src={src}
+        poster={poster}
+        autoPlay
+        muted
+        loop
+        playsInline
+        onWaiting={() => setIsLoading(true)}
+        onPlaying={() => setIsLoading(false)}
+        className="h-full w-full object-cover object-top bg-black/10"
+      />
+    </>
+  );
+}
 
 interface TechStackIconsProps {
   logos: JSX.Element[];
@@ -161,14 +187,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               <div className="space-y-6">
                 <div className="relative aspect-video w-full overflow-hidden rounded-lg">
                   {project.videoSrc ? (
-                    <video
+                    <ModalVideo
+                      key={project.videoSrc}
                       src={project.videoSrc}
                       poster={getOptimizedImageUrl(project.imageSrc, 800, 450)}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="h-full w-full object-cover object-top bg-black/10"
                     />
                   ) : (
                     <Image
