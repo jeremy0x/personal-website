@@ -185,16 +185,16 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
             <div className="flex flex-1 flex-col overflow-y-auto p-6">
               <div className="space-y-6">
-                <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                <div className="relative aspect-square w-full overflow-hidden rounded-lg">
                   {project.videoSrc ? (
                     <ModalVideo
                       key={project.videoSrc}
                       src={project.videoSrc}
-                      poster={getOptimizedImageUrl(project.imageSrc, 800, 450)}
+                      poster={getOptimizedImageUrl(project.imageSrc, 800, 800)}
                     />
                   ) : (
                     <Image
-                      src={getOptimizedImageUrl(project.imageSrc, 800, 450)}
+                      src={getOptimizedImageUrl(project.imageSrc, 800, 800)}
                       alt={`${project.name} screenshot`}
                       fill
                       className="object-cover object-top"
