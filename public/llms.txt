@@ -12,7 +12,7 @@ This website contains information about my work as a frontend engineer, includin
 
 ## Projects
 
-- [Pure H2o](https://pureh2o.jeremy0x.dev/): Work-in-progress redesign of pureh2o.co.uk for Pure H2o, a UK water purification company, covering the homepage and About page. Features scroll-driven storytelling, a pinned customer journey timeline, industry and product carousels, a scroll-driven globe section, a company history timeline, and a past projects showcase. Built with React, Vite, and Framer Motion.
+- [Pure H2o](https://pureh2o.jeremy0x.dev/): Redesign of pureh2o.co.uk for Pure H2o, a UK water purification company, covering the homepage and About page. Features scroll-driven storytelling, a pinned customer journey timeline, industry and product carousels, a scroll-driven globe section, a company history timeline, and a past projects showcase. Built with React, Vite, and Framer Motion.
 
 - [Rock The House](https://rth-prototype.jeremy0x.dev/): Cinematic desktop website prototype for Rock The House, a live event production group, featuring an image-collage preloader, video hero, Lenis smooth scrolling, and a WebGL-curved featured work reel. Built with React, Vite, Tailwind CSS, GSAP, and Three.js.
 
