@@ -22,6 +22,8 @@ import {
   SiThreedotjs,
   SiStripe,
   SiWebflow,
+  SiExpo,
+  SiFirebase,
 } from "react-icons/si";
 import { FaAppStore } from "react-icons/fa";
 
@@ -62,9 +64,30 @@ export const projectsData: ProjectData[] = [
     detailedDescription:
       "A podcast and community app for iPhone and iPad. Listeners discover, download, and play episodes offline, scroll a short-form reels feed from creators, join or run communities with real-time group chats, and message creators directly. Includes exclusive creator-only content, a built-in Muse AI assistant inside communities, and safety tooling with reporting, blocking, moderation, and age-appropriate content controls.",
     logos: [
+      <BiLogoReact key="react-native" title="React Native" />,
+      <SiExpo className="text-lg" key="expo" title="Expo" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <BiLogoTailwindCss key="nativewind" title="NativeWind" />,
+      <SiFirebase className="text-lg" key="firebase" title="Firebase" />,
       <FaAppStore className="text-lg" key="appstore" title="Apple App Store" />,
     ],
     imageSrc: "/projects/muse-podcasts.jpg",
+  },
+
+  {
+    name: "Reelpay Mobile App",
+    link: "https://reelpay-web-link.onelink.me/FMTg/925gmol4",
+    description:
+      "Mobile application connecting UGC creators and influencers with brand collaborations.",
+    detailedDescription:
+      "A dedicated mobile platform built for content creators. It enables creators to find brand campaigns, manage job workflows, build professional video portfolios, and receive secure payments.",
+    logos: [
+      <SiFlutter className="text-lg" key="flutter" title="Flutter" />,
+      <SiDart className="text-lg" key="dart" title="Dart" />,
+      <SiGoogleplay className="text-lg" key="googleplay" title="Google Play Store" />,
+      <FaAppStore className="text-lg" key="appstore" title="Apple App Store" />,
+    ],
+    imageSrc: "/projects/reelpay-app-store.jpg",
   },
 
   {
@@ -118,22 +141,6 @@ export const projectsData: ProjectData[] = [
     ],
     imageSrc: "/projects/ffp.jpg",
     videoSrc: "/projects/ffp.mp4",
-  },
-
-  {
-    name: "Reelpay Mobile App",
-    link: "https://reelpay-web-link.onelink.me/FMTg/925gmol4",
-    description:
-      "Mobile application connecting UGC creators and influencers with brand collaborations.",
-    detailedDescription:
-      "A dedicated mobile platform built for content creators. It enables creators to find brand campaigns, manage job workflows, build professional video portfolios, and receive secure payments.",
-    logos: [
-      <SiFlutter className="text-lg" key="flutter" title="Flutter" />,
-      <SiDart className="text-lg" key="dart" title="Dart" />,
-      <SiGoogleplay className="text-lg" key="googleplay" title="Google Play Store" />,
-      <FaAppStore className="text-lg" key="appstore" title="Apple App Store" />,
-    ],
-    imageSrc: "/projects/reelpay-app-store.jpg",
   },
 
   {
