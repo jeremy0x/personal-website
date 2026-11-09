@@ -349,6 +349,7 @@ export const projectsData: ProjectData[] = [
       <SiGreensock key="greensock" title="GSAP" />,
     ],
     imageSrc: "/projects/hellobahamafoodie.jpg",
+    videoSrc: "/projects/bahamafoodie.mp4",
   },
 
   {
