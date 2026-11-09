@@ -55,6 +55,19 @@ export const projectsData: ProjectData[] = [
   },
 
   {
+    name: "Muse Podcasts",
+    link: "https://apps.apple.com/ng/app/muse-podcasts/id6748816132",
+    description:
+      "Mobile app where podcasts meet community: shows, reels, and creator-led communities in one place.",
+    detailedDescription:
+      "A podcast and community app for iPhone and iPad. Listeners discover, download, and play episodes offline, scroll a short-form reels feed from creators, join or run communities with real-time group chats, and message creators directly. Includes exclusive creator-only content, a built-in Muse AI assistant inside communities, and safety tooling with reporting, blocking, moderation, and age-appropriate content controls.",
+    logos: [
+      <FaAppStore className="text-lg" key="appstore" title="Apple App Store" />,
+    ],
+    imageSrc: "/projects/muse-podcasts.jpg",
+  },
+
+  {
     name: "Rock The House",
     link: "https://rth-prototype.jeremy0x.dev/",
     description:
@@ -91,21 +104,86 @@ export const projectsData: ProjectData[] = [
   },
 
   {
-    name: "Tlatoani",
-    link: "https://tiatoani.jeremy0x.dev/",
-    githubLink: "https://gitlab.com/jeremy0x/tlatoani-web",
+    name: "Football for Peace",
+    link: "https://football-for-peace.vercel.app",
     description:
-      "Web application for the Tlatoani Mesoamerican RTS settlement defense game.",
+      "Interactive showcase of the Football for Peace initiative, celebrating its South American heritage and global mission.",
     detailedDescription:
-      "Tlatoani is an immersive Mesoamerican-themed Real-Time Strategy (RTS) and settlement-defense game built in Unity, where players take on the role of an Aztec ruler (Tlatoani) to manage villagers, build settlements, harvest resources, and command troops against relentless enemy waves.",
+      "An immersive, animated timeline experience detailing the history and impact of the Football for Peace (Fútbol Por La Paz) initiative, highlighting its United Nations partnerships (UNOSDP) and support from global icons like Pelé and Maradona.",
     logos: [
       <SiVite className="text-xl" key="vite" title="Vite" />,
       <BiLogoReact key="react" title="React" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <SiGreensock key="greensock" title="GSAP" />,
     ],
-    imageSrc: "/projects/tlatoani.jpg",
-    videoSrc: "/projects/tlatoani.mp4",
+    imageSrc: "/projects/ffp.jpg",
+    videoSrc: "/projects/ffp.mp4",
+  },
+
+  {
+    name: "Reelpay Mobile App",
+    link: "https://reelpay-web-link.onelink.me/FMTg/925gmol4",
+    description:
+      "Mobile application connecting UGC creators and influencers with brand collaborations.",
+    detailedDescription:
+      "A dedicated mobile platform built for content creators. It enables creators to find brand campaigns, manage job workflows, build professional video portfolios, and receive secure payments.",
+    logos: [
+      <SiFlutter className="text-lg" key="flutter" title="Flutter" />,
+      <SiDart className="text-lg" key="dart" title="Dart" />,
+      <SiGoogleplay className="text-lg" key="googleplay" title="Google Play Store" />,
+      <FaAppStore className="text-lg" key="appstore" title="Apple App Store" />,
+    ],
+    imageSrc: "/projects/reelpay-app-store.jpg",
+  },
+
+  {
+    name: "Noblocks",
+    link: "https://noblocks.xyz",
+    githubLink: "https://github.com/paycrest/noblocks",
+    description:
+      "Intuitive interface for moving between stablecoins and local bank or mobile money accounts.",
+    detailedDescription:
+      "An intuitive interface for moving between stablecoins and local currency. You can cash out stablecoins to bank or mobile money, or buy stablecoins with fiat—powered by Paycrest's decentralized liquidity network across multiple regions, including Kenya (KES), Uganda (UGX), Nigeria (NGN), Tanzania (TZS), and more.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/noblocks.jpg",
+  },
+
+  {
+    name: "Reelpay Web App",
+    link: "https://reelpay.co",
+    description:
+      "Platform for brands to launch UGC campaigns and get authentic videos from vetted human creators.",
+    detailedDescription:
+      "Reelpay's brand-facing web app and marketing site. Brands post campaign briefs, get matched with vetted creators by niche and content style, then review submissions, request revisions, approve, and download ready-to-use videos from a single dashboard, with secure payments and creator payouts built in. Includes BriefIntel, an AI tool that generates optimized content briefs straight from a product link and analyzes UGC campaign performance, plus a public creator gallery and pricing.",
+    logos: [
+      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+      <SiFigma className="text-lg" key="figma" title="Figma" />,
+    ],
+    imageSrc: "/projects/reelpay-web.jpg",
+  },
+
+  {
+    name: "Trailer Intro",
+    link: "https://gsap-concepts.jeremy0x.dev/trailer-intro/",
+    description: "Kinetic title sequence reveal with staggered text blocks, Anime.js typography animation, and floating replay controls.",
+    detailedDescription:
+      "An experimental kinetic trailer intro reveal timeline concept built with GSAP and Anime.js. Features staggered title wipes, kinetic text block reveals, and dynamic letter-by-letter typography animations.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/trailer-intro.jpg",
+    videoSrc: "/projects/trailer-intro.mp4",
   },
 
   {
@@ -140,7 +218,6 @@ export const projectsData: ProjectData[] = [
     videoSrc: "/projects/card-shuffle-reveal.mp4",
   },
 
-
   {
     name: "Circle Wipe Intro",
     link: "https://gsap-concepts.jeremy0x.dev/circle-wipe-intro/",
@@ -158,73 +235,6 @@ export const projectsData: ProjectData[] = [
   },
 
   {
-    name: "Reelpay Mobile App",
-    link: "https://reelpay-web-link.onelink.me/FMTg/925gmol4",
-    description:
-      "Mobile application connecting UGC creators and influencers with brand collaborations.",
-    detailedDescription:
-      "A dedicated mobile platform built for content creators. It enables creators to find brand campaigns, manage job workflows, build professional video portfolios, and receive secure payments.",
-    logos: [
-      <SiFlutter className="text-lg" key="flutter" title="Flutter" />,
-      <SiDart className="text-lg" key="dart" title="Dart" />,
-      <SiGoogleplay className="text-lg" key="googleplay" title="Google Play Store" />,
-      <FaAppStore className="text-lg" key="appstore" title="Apple App Store" />,
-    ],
-    imageSrc: "/projects/reelpay-play-store.jpg",
-  },
-
-  {
-    name: "Noblocks",
-    link: "https://noblocks.xyz",
-    githubLink: "https://github.com/paycrest/noblocks",
-    description:
-      "Intuitive interface for moving between stablecoins and local bank or mobile money accounts.",
-    detailedDescription:
-      "An intuitive interface for moving between stablecoins and local currency. You can cash out stablecoins to bank or mobile money, or buy stablecoins with fiat—powered by Paycrest's decentralized liquidity network across multiple regions, including Kenya (KES), Uganda (UGX), Nigeria (NGN), Tanzania (TZS), and more.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/noblocks.jpg",
-  },
-
-  {
-    name: "BriefIntel",
-    link: "https://reelpay.co/briefintel",
-    description:
-      "AI-powered tool for brands to optimize UGC briefs and analyze campaign performance.",
-    detailedDescription:
-      "An intelligent platform within Reelpay that enables brands to analyze UGC campaign performance and generate optimized content briefs. Streamlines the brief creation process by generating requirements directly from product links.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-      <SiFigma className="text-lg" key="figma" title="Figma" />,
-    ],
-    imageSrc: "/projects/briefintel.jpg",
-  },
-
-  {
-    name: "Football for Peace",
-    link: "https://football-for-peace.vercel.app",
-    description:
-      "Interactive showcase of the Football for Peace initiative, celebrating its South American heritage and global mission.",
-    detailedDescription:
-      "An immersive, animated timeline experience detailing the history and impact of the Football for Peace (Fútbol Por La Paz) initiative, highlighting its United Nations partnerships (UNOSDP) and support from global icons like Pelé and Maradona.",
-    logos: [
-      <SiVite className="text-xl" key="vite" title="Vite" />,
-      <BiLogoReact key="react" title="React" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <SiGreensock key="greensock" title="GSAP" />,
-    ],
-    imageSrc: "/projects/ffp.jpg",
-    videoSrc: "/projects/ffp.mp4",
-  },
-
-  {
     name: "Evolve Foundation",
     link: "https://evolve-foundation-malkain.webflow.io/",
     description:
@@ -239,7 +249,6 @@ export const projectsData: ProjectData[] = [
     imageSrc: "/projects/evolve-foundation.jpg",
     videoSrc: "/projects/evolve-foundation.mp4",
   },
-
 
   {
     name: "Kazlat LIMS",
@@ -259,20 +268,19 @@ export const projectsData: ProjectData[] = [
   },
 
   {
-    name: "Paycrest",
-    link: "https://paycrest.io",
+    name: "Paycrest Dashboard",
+    link: "https://app.paycrest.io",
     description:
-      "Core business infrastructure for Paycrest, spanning their marketing website and merchant operations dashboard.",
+      "Operations dashboard for Paycrest's senders and liquidity providers.",
     detailedDescription:
-      "Crafted Paycrest's end-to-end customer-facing rails, including the high-converting marketing website and the core Remix-based operations dashboard tracking merchant transactions, settlements, and liquidity flows.",
+      "The web app senders and liquidity providers use to run on Paycrest's stablecoin payment routing protocol. Senders complete KYB, manage API keys and webhooks, set their own fees, and track on-ramp and off-ramp orders. Providers set rates for their currency pairs, configure payment service providers and their provision node, and monitor liquidity and order settlements.",
     logos: [
-      <SiNextdotjs key="next.js" className="text-lg" title="Next.js" />,
       <SiRemix key="remix" className="text-sm" title="Remix JS" />,
       <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
       <BiLogoTypescript key="typescript" title="TypeScript" />,
       <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
     ],
-    imageSrc: "/projects/paycrest.jpg",
+    imageSrc: "/projects/paycrest-dashboard.jpg",
   },
 
   {
@@ -289,22 +297,6 @@ export const projectsData: ProjectData[] = [
       <SiPostgresql className="text-lg" key="postgres" title="PostgreSQL" />,
     ],
     imageSrc: "/projects/surgechain.jpg",
-  },
-
-  {
-    name: "Lync",
-    link: "https://thelync.app",
-    description: "Landing page for Lync product.",
-    detailedDescription:
-      "Landing page showcasing the Lync product. Features modern design and clear product communication.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/lync-landinge-page.jpg",
-    videoSrc: "/projects/lync.mp4",
   },
 
   {
@@ -352,22 +344,6 @@ export const projectsData: ProjectData[] = [
       <SiGreensock key="greensock" title="GSAP" />,
     ],
     imageSrc: "/projects/hellobahamafoodie.jpg",
-  },
-
-  {
-    name: "RoomLink",
-    link: "https://roomlinkng.com/",
-    description:
-      "Nigeria's agent-free property rental platform connecting verified landlords and renters.",
-    detailedDescription:
-      "An agent-free rental platform in Nigeria that directly connects verified landlords and renters, facilitating verified listings, secure in-app monthly payments, and direct messaging to eliminate middleman fees.",
-    logos: [
-      <SiNextdotjs className="text-xl" key="next.js" title="Next.js" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/roomlink.jpg",
   },
 
   {

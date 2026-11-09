@@ -4,11 +4,21 @@ Jeremiah Aworetan is a frontend engineer focused on shipping production-ready we
 
 - Pure H2o (https://pureh2o.jeremy0x.dev/): Redesign of pureh2o.co.uk for Pure H2o, a UK manufacturer of reverse osmosis and ultra-pure water treatment systems. Covers the homepage and About page. The homepage features scroll-driven storytelling with a split-word about section, a pinned customer journey timeline, industry and product carousels, animated stats, and a past projects showcase. The About page adds a pinned mission slider, a scroll-driven globe section, and a company history timeline. Built with React, Vite, and Framer Motion.
 
+- Muse Podcasts (https://apps.apple.com/ng/app/muse-podcasts/id6748816132): Podcast and community app for iPhone and iPad. Listeners discover, download, and play episodes offline, scroll a short-form reels feed from creators, join or run communities with real-time group chats, and message creators directly. Includes exclusive creator-only content, a built-in Muse AI assistant inside communities, and safety tooling with reporting, blocking, moderation, and age-appropriate content controls.
+
 - Rock The House (https://rth-prototype.jeremy0x.dev/): Cinematic desktop website prototype for Rock The House, a live event production group, featuring an image-collage preloader, video hero, Lenis smooth scrolling, and a WebGL-curved featured work reel. Built with React, Vite, Tailwind CSS, GSAP, and Three.js.
 
 - OWLchemi (https://owlchemi.com): E-commerce storefront for OWLchemi's third-party tested research peptides, with a compliance age gate, GSAP scroll-driven product reveals, Lenis smooth scrolling, and Stripe checkout. Built with React, Vite, Tailwind CSS, and GSAP.
 
-- Tlatoani (https://tiatoani.jeremy0x.dev/): Web application for Tlatoani, an immersive Mesoamerican-themed RTS and settlement-defense game built in Unity, where players rule as an Aztec Tlatoani managing villagers, building settlements, harvesting resources, and commanding troops against enemy waves. Built with React, Vite, Tailwind CSS, and GSAP.
+- Football for Peace (https://football-for-peace.vercel.app): Immersive animated timeline experience documenting the history and global impact of the Football for Peace (Fútbol Por La Paz) initiative, including UN partnerships (UNOSDP) and endorsements from Pelé and Maradona. Built with React, Vite, Tailwind CSS, and GSAP to create a cinematic scrolling documentary feel.
+
+- Reelpay Mobile App (https://reelpay-web-link.onelink.me/FMTg/925gmol4): Dedicated mobile platform for content creators built with Flutter and Dart, available on both the Google Play Store and Apple App Store. Enables creators to discover brand campaigns, manage job workflows, build professional video portfolios, and receive secure payments. Core product of the Reelpay ecosystem.
+
+- Noblocks (https://noblocks.xyz): Open-source next-gen interface for moving between stablecoins and local currency without friction. Lets users cash out stablecoins to bank or mobile money accounts, or buy stablecoins with fiat, all powered by Paycrest's decentralized liquidity network across Kenya, Uganda, Nigeria, Tanzania, and more. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion to feel like a modern consumer fintech app, not a DeFi dashboard.
+
+- Reelpay Web App (https://reelpay.co): Reelpay's brand-facing web app and marketing site. Brands post campaign briefs, get matched with vetted creators by niche and content style, then review submissions, request revisions, approve, and download ready-to-use videos from a single dashboard, with secure payments and creator payouts built in. Includes BriefIntel, an AI tool that generates optimized content briefs straight from a product link and analyzes UGC campaign performance, plus a public creator gallery and pricing. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+
+- Trailer Intro (https://gsap-concepts.jeremy0x.dev/trailer-intro/): Experimental kinetic trailer intro reveal timeline concept built with GSAP and Anime.js. Features staggered title wipes, kinetic text block reveals, and dynamic letter-by-letter typography animations with floating replay controls. Demonstrates precise timing synchronization between GSAP timelines and Anime.js text animations.
 
 - Curtain Reveal (https://gsap-concepts.jeremy0x.dev/curtain-reveal/): Premium curtain reveal preloader animation concept built with GSAP, CustomEase, and SplitText. Features a fanned multi-image stack that performs a vertical wipe entrance, a live counting preloader, and staggered random character typography on reveal. Designed as a reusable concept demonstrating high-quality motion craft.
 
@@ -16,31 +26,19 @@ Jeremiah Aworetan is a frontend engineer focused on shipping production-ready we
 
 - Circle Wipe Intro (https://gsap-concepts.jeremy0x.dev/circle-wipe-intro/): Brand intro concept featuring floating food imagery, layered radial circle wipe transition panels, and a mobile menu overlay animation. Built with vanilla JavaScript, HTML, CSS, and GSAP. Demonstrates multi-step preloader sequencing, clip-path animation, and interactive mobile UX within a concept brand context.
 
-- Reelpay Mobile App (https://reelpay-web-link.onelink.me/FMTg/925gmol4): Dedicated mobile platform for content creators built with Flutter and Dart, available on both the Google Play Store and Apple App Store. Enables creators to discover brand campaigns, manage job workflows, build professional video portfolios, and receive secure payments. Core product of the Reelpay ecosystem.
-
-- Noblocks (https://noblocks.xyz): Open-source next-gen interface for moving between stablecoins and local currency without friction. Lets users cash out stablecoins to bank or mobile money accounts, or buy stablecoins with fiat, all powered by Paycrest's decentralized liquidity network across Kenya, Uganda, Nigeria, Tanzania, and more. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion to feel like a modern consumer fintech app, not a DeFi dashboard.
-
-- BriefIntel (https://reelpay.co/briefintel): AI-powered brand intelligence tool inside the Reelpay platform that lets brands analyze UGC campaign performance and auto-generate optimized content briefs from product links. Streamlines brief creation and reduces back-and-forth between brands and creators. Built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Figma.
-
-- Football for Peace (https://football-for-peace.vercel.app): Immersive animated timeline experience documenting the history and global impact of the Football for Peace (Fútbol Por La Paz) initiative, including UN partnerships (UNOSDP) and endorsements from Pelé and Maradona. Built with React, Vite, Tailwind CSS, and GSAP to create a cinematic scrolling documentary feel.
-
 - Evolve Foundation (https://evolve-foundation-malkain.webflow.io/): Webflow website for Evolve Foundation, a clean energy workforce development nonprofit connecting untapped talent to technical careers, with GSAP ScrollTrigger and SplitText animations and Lenis smooth scrolling.
 
 - Kazlat LIMS (https://lims.kazlatpublicanalysts.com): Production lab information management system for Kazlat Public Analysts. Handles sample intake, routing through analysis stages, approval workflows, automated invoice generation, and signed certificate delivery for clients. Built on Next.js, TypeScript, Tailwind CSS, Supabase/PostgreSQL, and Framer Motion to support a real laboratory's day-to-day operations.
 
-- Paycrest (https://paycrest.io): End-to-end customer-facing infrastructure for Paycrest covering both the high-converting marketing website and the core Remix-based merchant operations dashboard. The dashboard tracks merchant transactions, settlements, liquidity positions, and compliance states in real time. Stack spans Next.js, Remix, TypeScript, Tailwind CSS, and Framer Motion.
+- Paycrest Dashboard (https://app.paycrest.io): The web app senders and liquidity providers use to run on Paycrest's stablecoin payment routing protocol. Senders complete KYB, manage API keys and webhooks, set their own fees, and track on-ramp and off-ramp orders. Providers set rates for their currency pairs, configure payment service providers and their provision node, and monitor liquidity and order settlements. Built with Remix, TypeScript, Tailwind CSS, and Framer Motion.
 
 - Surgechain (https://app.surgechain.io): Full-featured DEX trading terminal that consolidates news, pump-fun style memecoins, trending tokens, and perpetuals into a single interface with live on-chain order execution. Emphasizes trader ergonomics and information density while keeping the UI accessible enough for new users exploring DeFi. Built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL.
-
-- Lync (https://thelync.app): Product marketing page for Lync focused on clarity and conversion. Uses Next.js, TypeScript, Tailwind CSS, and Framer Motion to deliver a modern, fast, and easily maintainable site with smooth micro-interactions.
 
 - Noblocks Blog (https://noblocks.xyz/blog): Content platform for Noblocks built on Sanity.io and Next.js that lets the team publish articles, explainers, and updates without touching code. Uses structured content and SEO-friendly rendering to keep the blog aligned with the main product site.
 
 - AI Titans (https://t.me/AI_Titans_bot): Telegram Mini App that turns a tap-to-earn RPG into a native in-chat experience where players command mech titans, battle through encounters, and sync rewards inside Telegram. Built with React, Vite, Tailwind CSS, Framer Motion, and the Telegram Mini Apps SDK to feel game-like while remaining lightweight.
 
 - BahamaFoodie (http://hellobahamafoodie.com): Digital ordering and menu experience for a plant-based restaurant in The Bahamas. Offers menu browsing, simple ordering, and delivery tracking built with vanilla JavaScript and GSAP animations for a lightweight but expressive UX.
-
-- RoomLink (https://roomlinkng.com/): Agent-free property rental platform in Nigeria that connects verified landlords and renters directly, eliminating middleman fees. Features verified listings, secure in-app monthly payments, and direct messaging. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion for a clean and trustworthy feel.
 
 - Shape Up Fitness (https://shapeupfitnessonline.com): Marketing and information site for a physical gym highlighting services, facilities, schedules, trainer profiles, and a shopping management system with admin features. Built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
 
