@@ -176,21 +176,20 @@ export const projectsData: ProjectData[] = [
     ],
     imageSrc: "/projects/reelpay-web.jpg",
   },
-
   {
-    name: "Trailer Intro",
-    link: "https://gsap-concepts.jeremy0x.dev/trailer-intro/",
-    description: "Kinetic title sequence reveal with staggered text blocks, Anime.js typography animation, and floating replay controls.",
+    name: "Paycrest Dashboard",
+    link: "https://app.paycrest.io",
+    description:
+      "Operations dashboard for Paycrest's senders and liquidity providers.",
     detailedDescription:
-      "An experimental kinetic trailer intro reveal timeline concept built with GSAP and Anime.js. Features staggered title wipes, kinetic text block reveals, and dynamic letter-by-letter typography animations.",
+      "The web app senders and liquidity providers use to run on Paycrest's stablecoin payment routing protocol. Senders complete KYB, manage API keys and webhooks, set their own fees, and track on-ramp and off-ramp orders. Providers set rates for their currency pairs, configure payment service providers and their provision node, and monitor liquidity and order settlements.",
     logos: [
-      <BiLogoJavascript key="js" title="JavaScript" />,
-      <BiLogoHtml5 key="html" title="HTML" />,
-      <BiLogoCss3 key="css" title="CSS" />,
-      <SiGreensock key="greensock" title="GSAP" />,
+      <SiRemix key="remix" className="text-sm" title="Remix JS" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
     ],
-    imageSrc: "/projects/trailer-intro.jpg",
-    videoSrc: "/projects/trailer-intro.mp4",
+    imageSrc: "/projects/paycrest-dashboard.jpg",
   },
 
   {
@@ -240,6 +239,21 @@ export const projectsData: ProjectData[] = [
     imageSrc: "/projects/circle-wipe-intro.jpg",
     videoSrc: "/projects/circle-wipe-intro.mp4",
   },
+  {
+    name: "Trailer Intro",
+    link: "https://gsap-concepts.jeremy0x.dev/trailer-intro/",
+    description: "Kinetic title sequence reveal with staggered text blocks, Anime.js typography animation, and floating replay controls.",
+    detailedDescription:
+      "An experimental kinetic trailer intro reveal timeline concept built with GSAP and Anime.js. Features staggered title wipes, kinetic text block reveals, and dynamic letter-by-letter typography animations.",
+    logos: [
+      <BiLogoJavascript key="js" title="JavaScript" />,
+      <BiLogoHtml5 key="html" title="HTML" />,
+      <BiLogoCss3 key="css" title="CSS" />,
+      <SiGreensock key="greensock" title="GSAP" />,
+    ],
+    imageSrc: "/projects/trailer-intro.jpg",
+    videoSrc: "/projects/trailer-intro.mp4",
+  },
 
   {
     name: "Evolve Foundation",
@@ -272,22 +286,6 @@ export const projectsData: ProjectData[] = [
       <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
     ],
     imageSrc: "/projects/kazlat-lims.jpg",
-  },
-
-  {
-    name: "Paycrest Dashboard",
-    link: "https://app.paycrest.io",
-    description:
-      "Operations dashboard for Paycrest's senders and liquidity providers.",
-    detailedDescription:
-      "The web app senders and liquidity providers use to run on Paycrest's stablecoin payment routing protocol. Senders complete KYB, manage API keys and webhooks, set their own fees, and track on-ramp and off-ramp orders. Providers set rates for their currency pairs, configure payment service providers and their provision node, and monitor liquidity and order settlements.",
-    logos: [
-      <SiRemix key="remix" className="text-sm" title="Remix JS" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/paycrest-dashboard.jpg",
   },
 
   {
@@ -351,24 +349,6 @@ export const projectsData: ProjectData[] = [
       <SiGreensock key="greensock" title="GSAP" />,
     ],
     imageSrc: "/projects/hellobahamafoodie.jpg",
-  },
-
-  {
-    name: "Shape Up Fitness",
-    link: "https://shapeupfitnessonline.com",
-    githubLink: "https://github.com/jeremy0x/project-suf",
-    description:
-      "Fitness platform with integrated shopping management and admin dashboard features.",
-    detailedDescription:
-      "Information and business platform for Shape Up Fitness gym. Features facility showcases, schedules, trainer profiles, shopping management capabilities, and admin features.",
-    logos: [
-      <SiVite key="vite" title="Vite" />,
-      <BiLogoReact key="react" title="React" />,
-      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
-      <BiLogoTypescript key="typescript" title="TypeScript" />,
-      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
-    ],
-    imageSrc: "/projects/shape-up-fitness.jpg",
   },
 
   {
