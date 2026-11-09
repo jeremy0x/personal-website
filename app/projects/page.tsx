@@ -31,16 +31,23 @@ const BLUR_DATA_URL =
 
 export default function Projects() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
-  const [carouselReady, setCarouselReady] = useState(false);
+  const [readyEffect, setReadyEffect] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
     null,
   );
   const isMobile = useMediaQuery("(max-width: 639px)");
+  const effect = isMobile ? "cube" : "coverflow";
+  const carouselReady = readyEffect === effect;
 
   const handleSwiperInit = useCallback((instance: SwiperType) => {
     setSwiper(instance);
-    setCarouselReady(true);
+    // reveal after Swiper's first layout pass
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() =>
+        setReadyEffect(instance.params.effect ?? null),
+      ),
+    );
   }, []);
 
   const handleSlideClick = (index: number) => {
@@ -75,14 +82,22 @@ export default function Projects() {
 
   return (
     <>
+      {!carouselReady && (
+        <div className="pointer-events-none fixed inset-0 z-10 flex items-center justify-center px-4 pt-20">
+          <div className="flex aspect-square w-143.75 max-w-full animate-pulse items-center justify-center rounded-2xl border border-black/10 bg-black/5 dark:border-white/15 dark:bg-white/5">
+            <ImSpinner9 className="animate-spin text-4xl" />
+          </div>
+        </div>
+      )}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: carouselReady ? 1 : 0 }}
         transition={{ duration: 0.3 }}
+        className="max-sm:w-screen"
       >
         <Swiper
-          key={isMobile ? "cube" : "coverflow"}
-          effect={isMobile ? "cube" : "coverflow"}
+          key={effect}
+          effect={effect}
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={isMobile ? 1 : "auto"}

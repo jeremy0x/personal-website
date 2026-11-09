@@ -29,7 +29,7 @@ function ModalVideo({ src, poster }: { src: string; poster: string }) {
         playsInline
         onWaiting={() => setIsLoading(true)}
         onPlaying={() => setIsLoading(false)}
-        className="h-full w-full object-cover object-top bg-black/10"
+        className="h-full w-full bg-black/10 object-cover object-top"
       />
     </>
   );
