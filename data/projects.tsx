@@ -321,6 +321,24 @@ export const projectsData: ProjectData[] = [
   },
 
   {
+    name: "Shape Up Fitness",
+    link: "https://shapeupfitnessonline.com",
+    githubLink: "https://github.com/jeremy0x/project-suf",
+    description:
+      "Website and online shop for Shape Up Fitness, a gym in Akure, Nigeria.",
+    detailedDescription:
+      "Bold, editorial site for a community gym near FUTA South Gate. Covers its nine programmes from body toning to boxing and dance aerobics, a live session timetable that tracks the next class in Akure time, membership plans with an FAQ, a gallery, and member testimonials. The built-in shop lets members browse gym wear and accessories with search, a wishlist, a cart, and stock badges, then order on WhatsApp, with admin features for managing products.",
+    logos: [
+      <SiVite key="vite" title="Vite" />,
+      <BiLogoReact key="react" title="React" />,
+      <BiLogoTailwindCss key="tailwind" title="Tailwind CSS" />,
+      <BiLogoTypescript key="typescript" title="TypeScript" />,
+      <SiFramer className="text-lg" key="framer" title="Framer Motion" />,
+    ],
+    imageSrc: "/projects/shape-up-fitness.jpg",
+  },
+
+  {
     name: "AI Titans",
     link: "https://t.me/AI_Titans_bot",
     description: "Battle-focused tap-to-earn RPG built as a Telegram Mini App.",

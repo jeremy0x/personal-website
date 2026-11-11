@@ -36,6 +36,8 @@ Jeremiah Aworetan is a frontend engineer focused on shipping production-ready we
 
 - Noblocks Blog (https://noblocks.xyz/blog): Content platform for Noblocks built on Sanity.io and Next.js that lets the team publish articles, explainers, and updates without touching code. Uses structured content and SEO-friendly rendering to keep the blog aligned with the main product site.
 
+- Shape Up Fitness (https://shapeupfitnessonline.com): Editorial website and online shop for a community gym near FUTA South Gate, Akure. Covers nine training programmes, a live session timetable that tracks the next class in Akure time, membership plans with an FAQ, a gallery, and member testimonials. The shop has search, a wishlist, a cart, and stock badges, with orders placed on WhatsApp and admin features for managing products. Built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
+
 - AI Titans (https://t.me/AI_Titans_bot): Telegram Mini App that turns a tap-to-earn RPG into a native in-chat experience where players command mech titans, battle through encounters, and sync rewards inside Telegram. Built with React, Vite, Tailwind CSS, Framer Motion, and the Telegram Mini Apps SDK to feel game-like while remaining lightweight.
 
 - BahamaFoodie (http://hellobahamafoodie.com): Digital ordering and menu experience for a plant-based restaurant in The Bahamas. Offers menu browsing, simple ordering, and delivery tracking built with vanilla JavaScript and GSAP animations for a lightweight but expressive UX.

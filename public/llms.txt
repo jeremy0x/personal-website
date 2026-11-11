@@ -46,6 +46,8 @@ This website contains information about my work as a frontend engineer, includin
 
 - [Noblocks Blog](https://noblocks.xyz/blog): Sanity-powered blog for Noblocks with dynamic content rendering and SEO-focused Next.js integration.
 
+- [Shape Up Fitness](https://shapeupfitnessonline.com): Website and online shop for a gym in Akure, Nigeria, with programmes, a live session timetable, membership plans, and WhatsApp ordering, built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
+
 - [AI Titans](https://t.me/AI_Titans_bot): Battle-focused tap-to-earn RPG Telegram Mini App built with React, Vite, Tailwind CSS, and the Telegram SDK for in-chat gameplay and rewards syncing.
 
 - [BahamaFoodie](http://hellobahamafoodie.com): Digital plant-based restaurant platform in The Bahamas with menu browsing, online ordering, and delivery tracking implemented in vanilla JavaScript and GSAP.
